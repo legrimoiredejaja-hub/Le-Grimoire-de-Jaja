@@ -45,15 +45,11 @@
 }
 
 .hero-art img{
+    border:10px solid red;
     position:absolute;
     right:120px;
     bottom:0;
-    height:110%;
-    width:auto;
-    max-width:none;
-    object-fit:contain;
-    opacity:.95;
-    pointer-events:none;
+    width:500px;
 }
 
 .hero-content{
