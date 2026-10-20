@@ -46,7 +46,7 @@
 
 .hero-art img{
     position:absolute;
-    right:-120px;
+    right:120px;
     bottom:0;
     height:110%;
     width:auto;
