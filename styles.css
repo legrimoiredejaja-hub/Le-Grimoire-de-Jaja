@@ -46,9 +46,9 @@
 
 .hero-art img{
     position:absolute;
-    right:200px;
+    right:-120px;
     bottom:0;
-    height:60%;
+    height:110%;
     width:auto;
     max-width:none;
     object-fit:contain;
