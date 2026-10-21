@@ -98,7 +98,7 @@ a { color: inherit; text-decoration: none; }
    - width : change la taille (minimum, idéal, maximum). Exemple : clamp(200px, 18vw, 340px) */
 .hero-logo {
   grid-area: logo; position: relative; z-index: 2;
-  width: clamp(170px, 15vw, 280px); height: auto;
+  width: clamp(130px, 11vw, 200px); height: auto;
   filter: drop-shadow(0 15px 35px rgba(0,0,0,.55));
   cursor: pointer; -webkit-tap-highlight-color: transparent;
   transition: transform .3s ease;
@@ -185,6 +185,18 @@ h1 em, h2 em { color: var(--gold); font-weight: 400; }
 .window-glow { transition: opacity .3s; }
 .contact-art:hover .window-glow { opacity: .6; }
 
+/* Fenêtre « Écrire au Grimoire » (ordinateur). */
+.mail-dialog { width: min(420px, calc(100% - 36px)); padding: 30px; color: var(--text); background: var(--panel); border: 1px solid var(--gold); }
+.mail-dialog::backdrop { background: rgba(0,0,0,.72); }
+.mail-dialog h3 { margin: 0 0 6px; font-size: 22px; }
+.mail-dialog p { margin: 0 0 18px; color: var(--muted); }
+.mail-options { display: grid; gap: 10px; }
+.mail-options .button { width: 100%; justify-content: space-between; }
+.mail-options .button-outline { background: transparent; cursor: pointer; }
+.mail-copied { min-height: 1.4em; margin: 12px 0 0; color: var(--gold); font-size: 15px; }
+.mail-close { display: block; margin: 6px auto 0; padding: 6px 10px; color: var(--muted); background: none; border: 0; font: 12px var(--display); cursor: pointer; }
+.mail-close:hover { color: var(--gold); }
+
 /* 16. PAGE DES TÉLÉCHARGEMENTS. */
 .downloads-hero { padding-top: 95px; padding-bottom: 45px; }
 .downloads-hero .hero-copy { max-width: 680px; }
@@ -262,11 +274,12 @@ h1 em, h2 em { color: var(--gold); font-weight: 400; }
   .brand small { max-width: 230px; font-size: 11px; }
   :root { --gutter: 22px; }
   .hero { min-height: 0; grid-template-columns: 1fr; grid-template-areas: "text" "logo" "card"; padding: 60px 22px; row-gap: 34px; }
-  .hero-logo { width: 55%; max-width: 230px; justify-self: center; }
+  .hero-logo { width: 40%; max-width: 170px; justify-self: center; }
   .hero-copy { font-size: 18px; }
   .section-wrap { width: calc(100% - 36px); }
   .intro { padding-top: 70px; }
-  .videos-channel { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .videos-channel { gap: 18px; }
+  .videos-channel .lead { font-size: 18px; }
   .download-item { grid-template-columns: 1fr; gap: 14px; }
   .download-links { grid-template-columns: 1fr; }
   .download-category > summary { gap: 14px; padding: 22px 2px; }

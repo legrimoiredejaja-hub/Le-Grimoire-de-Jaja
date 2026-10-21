@@ -198,7 +198,7 @@
             </g>
           </svg>
         </a>
-        <p class="contact-mail">Le clic ouvre un e-mail à <a href="mailto:legrimoiredeJaja@gmail.com">legrimoiredeJaja@gmail.com</a></p>
+        <p class="contact-mail">Clique pour m'écrire à <a href="mailto:legrimoiredeJaja@gmail.com">legrimoiredeJaja@gmail.com</a></p>
       </div>
     </section>
   </main>
@@ -210,8 +210,23 @@
     <div class="footer-links"><a href="index.html">Accueil</a><a href="telechargements.html">Téléchargements</a><a href="mailto:legrimoiredeJaja@gmail.com">Contact</a></div>
     <small>© <span id="year"></span> Le Grimoire de Jaja · Site indépendant</small>
   </footer>
+
+  <!-- FENÊTRE « ÉCRIRE » (ordinateur) : propose plusieurs façons d'envoyer le message. Voir contact.js. -->
+  <dialog class="mail-dialog" id="mail-dialog" aria-labelledby="mail-title">
+    <h3 id="mail-title">Écrire au Grimoire de Jaja</h3>
+    <p>Choisis comment envoyer ton message :</p>
+    <div class="mail-options">
+      <a class="button button-primary" href="mailto:legrimoiredeJaja@gmail.com">Ouvrir mon application mail <span>↗</span></a>
+      <a class="button button-outline" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=legrimoiredeJaja@gmail.com" target="_blank" rel="noopener noreferrer">Écrire avec Gmail <span>↗</span></a>
+      <button class="button button-outline" type="button" data-copy="legrimoiredeJaja@gmail.com">Copier l'adresse <span>⧉</span></button>
+    </div>
+    <p class="mail-copied" role="status" aria-live="polite"></p>
+    <button class="mail-close" type="button" data-close>Fermer</button>
+  </dialog>
   <script src="script.js"></script>
   <!-- Musique de Jaja : liste des morceaux dans musique.js -->
   <script src="musique.js"></script>
+  <!-- Fenêtre « Écrire au Grimoire » -->
+  <script src="contact.js"></script>
 </body>
 </html>

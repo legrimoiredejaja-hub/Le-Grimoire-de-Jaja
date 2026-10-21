@@ -4,7 +4,7 @@
    (jamais deux fois le même d'affilée). Un second clic l'arrête.
 
    POUR AJOUTER OU CHANGER UNE MUSIQUE :
-   - Mets le fichier .mp3 dans le dossier "musiques" de ton dépôt GitHub.
+   - Mets le fichier .mp3 à la racine de ton dépôt GitHub (ou dans un dossier "musiques").
    - Ajoute son chemin dans la liste PISTES ci-dessous.
    Chaque morceau peut avoir plusieurs noms possibles : le script essaie
    le premier, puis le suivant si le fichier est introuvable.
@@ -14,10 +14,10 @@
   'use strict';
 
   var PISTES = [
-    ['musiques/musique-1.mp3', 'musiques/Le grimoire de Jaja - Musique 1.mp3', 'musiques/Le_grimoire_de_Jaja_-_Musique_1.mp3'],
-    ['musiques/musique-2.mp3', 'musiques/Le Grimoire de Jaja - Musique 2.mp3', 'musiques/Le_Grimoire_de_Jaja_-_Musique_2.mp3'],
-    ['musiques/musique-3.mp3', 'musiques/Le Grimoire de Jaja - Musique 3.mp3', 'musiques/Le_Grimoire_de_Jaja_-_Musique_3.mp3'],
-    ['musiques/musique-4.mp3', 'musiques/Le Grimoire de Jaja - Musique 4.mp3', 'musiques/Le_Grimoire_de_Jaja_-_Musique_4.mp3']
+    ['musique-1.mp3', 'musiques/musique-1.mp3'],
+    ['musique-2.mp3', 'musiques/musique-2.mp3'],
+    ['musique-3.mp3', 'musiques/musique-3.mp3'],
+    ['musique-4.mp3', 'musiques/musique-4.mp3']
   ];
   var VOLUME = 0.8; // De 0 (muet) à 1 (maximum).
 
@@ -58,7 +58,7 @@
       var autre = choisir(exclus);
       if (autre === -1) {
         afficher(false);
-        if (window.console) { console.error('Musique de Jaja : aucun fichier trouvé. Vérifie le dossier "musiques" et les noms dans musique.js.'); }
+        if (window.console) { console.error('Musique de Jaja : aucun fichier trouvé. Vérifie les noms des fichiers .mp3 dans musique.js.'); }
         return;
       }
       return jouer(autre, 0, exclus, numero);
