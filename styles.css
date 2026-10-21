@@ -168,10 +168,10 @@ h1 em, h2 em { color: var(--gold); font-weight: 400; }
 .contact-section { display: grid; grid-template-columns: 1fr 1.15fr; gap: 60px; align-items: center; padding-top: 75px; padding-bottom: 100px; border-top: 1px solid var(--line); }
 .contact-section > div:first-child > p:last-child { max-width: 450px; color: var(--muted); }
 .contact-art { display: block; overflow: hidden; border: 1px solid var(--line); background: #141214; transition: border-color .2s; }
+.contact-art { display: block; width: 100%; max-width: 300px; margin-left: auto; overflow: hidden; border: 1px solid var(--line); background: #141214; transition: border-color .2s; }
 .contact-art:hover { border-color: var(--gold); }
 .contact-art svg { display: block; width: 100%; height: auto; }
-.contact-mail { margin: 12px 0 0; text-align: center; color: var(--muted); font-size: 15px; }
-.contact-mail a { color: var(--gold); }
+.contact-mail { max-width: 300px; margin: 12px 0 0 auto; text-align: center; color: var(--muted); font-size: 15px; }
 
 /* Animations douces des corbeaux, de la fumée et du panneau. */
 @keyframes wing-flap { from { transform: rotate(-14deg); } to { transform: rotate(16deg); } }
