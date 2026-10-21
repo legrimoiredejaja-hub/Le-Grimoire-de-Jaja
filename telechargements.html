@@ -1,0 +1,68 @@
+<!doctype html>
+<!-- Page dédiée à tous les fichiers téléchargeables. -->
+<html lang="fr">
+<head>
+  <meta charset="utf-8"><!-- Affichage des accents. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Adaptation mobile. -->
+  <meta name="theme-color" content="#100f10"><!-- Couleur du navigateur mobile. -->
+  <meta name="description" content="Téléchargez les fiches d'aide de jeu du Grimoire de Jaja en français et en anglais."><!-- Résumé de la page. -->
+  <title>Téléchargements — Le Grimoire de Jaja</title><!-- Titre de l'onglet. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><!-- Prépare le chargement des polices. -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet"><!-- Polices du site. -->
+  <link rel="stylesheet" href="styles.css"><!-- Style commun aux deux pages. -->
+</head>
+<body>
+  <div class="topline" aria-hidden="true"></div><!-- Ligne décorative. -->
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Le Grimoire de Jaja, accueil"><span class="brand-mark" aria-hidden="true">✦</span><span><strong>LE GRIMOIRE DE JAJA</strong><small>Le p'tit coup de pouce aux règles de ton jeu de rôle préféré</small></span></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="navigation">Menu <span>☰</span></button>
+    <nav id="navigation" class="navigation" aria-label="Navigation principale"><a href="index.html#presentation">Présentation</a><a class="active" href="telechargements.html">Téléchargements</a><a href="index.html#images">Images</a><a href="index.html#videos">Vidéos YouTube</a><a class="nav-support" href="mailto:legrimoiredeJaja@gmail.com">Me contacter</a></nav>
+  </header>
+
+  <main>
+    <!-- En-tête de la bibliothèque de téléchargements. -->
+    <section class="downloads-hero section-wrap"><p class="eyebrow">Bibliothèque de ressources</p><h1>Téléchargements<br><em>du Grimoire</em></h1><p class="hero-copy">Retrouve ici les fiches d'aide pour D&D. Chaque ressource peut proposer une version française et une version anglaise.</p></section>
+
+    <!-- Liste des fichiers. Pour ajouter une fiche, copie un bloc download-item. -->
+    <section class="downloads-content section-wrap">
+      <div class="download-category"><p class="eyebrow">Catégorie 01</p><h2>Fiches d'aide pour <em>D&D</em></h2><p class="category-intro">Remplace les titres et les adresses des fichiers dans les blocs ci-dessous. Tu peux supprimer les exemples ou les dupliquer.</p>
+
+        <!-- FICHE 1 : remplace le thème, le titre FR et le lien de téléchargement FR. -->
+        <article class="download-item">
+          <div class="download-info"><span class="download-number">01</span><div><h3>Déplacements et escalade</h3><p>Fiche pratique — exemple à remplacer par ton descriptif.</p></div></div>
+          <div class="download-links">
+            <!-- LIEN FR : remplace # par l'adresse directe du PDF ou du fichier hébergé sur GitHub. -->
+            <a href="#" class="file-link" target="_blank" rel="noopener noreferrer"><span>FR</span> Télécharger la fiche en français <b>↓</b></a>
+            <!-- LIEN US : remplace # par l'adresse du fichier anglais. -->
+            <a href="#" class="file-link" target="_blank" rel="noopener noreferrer"><span>US</span> Download the English sheet <b>↓</b></a>
+          </div>
+        </article>
+
+        <!-- FICHE 2 : copie l'article entier pour créer une nouvelle fiche. -->
+        <article class="download-item">
+          <div class="download-info"><span class="download-number">02</span><div><h3>Combat et actions</h3><p>Fiche pratique — exemple à remplacer par ton descriptif.</p></div></div>
+          <div class="download-links">
+            <a href="#" class="file-link" target="_blank" rel="noopener noreferrer"><span>FR</span> Télécharger la fiche en français <b>↓</b></a>
+            <a href="#" class="file-link" target="_blank" rel="noopener noreferrer"><span>US</span> Download the English sheet <b>↓</b></a>
+          </div>
+        </article>
+
+        <!-- FICHE 3 : autre exemple prêt à personnaliser. -->
+        <article class="download-item">
+          <div class="download-info"><span class="download-number">03</span><div><h3>Exploration et interactions</h3><p>Fiche pratique — exemple à remplacer par ton descriptif.</p></div></div>
+          <div class="download-links">
+            <a href="#" class="file-link" target="_blank" rel="noopener noreferrer"><span>FR</span> Télécharger la fiche en français <b>↓</b></a>
+            <a href="#" class="file-link" target="_blank" rel="noopener noreferrer"><span>US</span> Download the English sheet <b>↓</b></a>
+          </div>
+        </article>
+      </div>
+      <p class="download-note">Important : un lien contenant encore <code>#</code> est un exemple et ne télécharge aucun fichier. Remplace-le par l'adresse réelle du document.</p>
+      <div class="downloads-back"><a class="button button-outline" href="index.html">← Retour à l'accueil</a></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="footer-brand" href="index.html">✦ LE GRIMOIRE DE JAJA</a><p>Des aides pratiques pour les parties de D&D.</p><div class="footer-links"><a href="index.html">Accueil</a><a href="telechargements.html">Téléchargements</a><a href="mailto:legrimoiredeJaja@gmail.com">Contact</a></div><small>© <span id="year"></span> Le Grimoire de Jaja · Site indépendant</small></footer>
+  <script src="script.js"></script><!-- Menu mobile et année automatique. -->
+</body>
+</html>
