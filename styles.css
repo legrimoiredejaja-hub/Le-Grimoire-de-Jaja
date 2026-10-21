@@ -110,7 +110,14 @@ h1 em, h2 em { color: var(--gold); font-weight: 400; }
   border: 1px solid var(--line); background: #141214;
 }
 /* IMAGE 1 : ROND AVEC TÊTE DE JAJA - change left, top et width pour déplacer ou redimensionner l'image. */
-.image-slot-1 { left: 4%; top: 2%; width: 10%; }
+/* IMAGE 1 : position et taille */
+.image-slot-1 {
+    position: absolute;
+    left: 4%;
+    top: 2%;
+    width: 10%;
+    height: auto;
+}
 /* IMAGE 2 : change left, top et width pour déplacer ou redimensionner l'image. */
 .image-slot-2 { left: 35%; top: 28%; width: 30%; }
 /* IMAGE 3 : change left, top et width pour déplacer ou redimensionner l'image. */
