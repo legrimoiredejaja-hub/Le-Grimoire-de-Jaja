@@ -111,12 +111,21 @@ h1 em, h2 em { color: var(--gold); font-weight: 400; }
 }
 /* IMAGE 1 : ROND AVEC TÊTE DE JAJA - change left, top et width pour déplacer ou redimensionner l'image. */
 /* IMAGE 1 : position et taille */
-.image-slot-1 {
-    position: absolute;
-    left: 4%;
-    top: 2%;
-    width: 10%;
-    height: auto;
+
+css
+.image-slot { position: absolute; height: auto; aspect-ratio: 3 / 2; object-fit: cover; border: 1px solid var(--gold); box-shadow: 0 15px 45px #0008; }
+
+/* IMAGE 1 : rond avec la tête de Jaja */
+.image-slot.image-slot-1 {
+  left: 4%;
+  top: 2%;
+  width: 30%;          /* change cette valeur pour agrandir ou réduire */
+  aspect-ratio: 1 / 1; /* garde l'image ronde */
+  object-fit: contain;
+  border: none;
+  box-shadow: none;
+  z-index: 5;          /* met l'image au premier plan */
+
 }
 /* IMAGE 2 : change left, top et width pour déplacer ou redimensionner l'image. */
 .image-slot-2 { left: 35%; top: 28%; width: 30%; }
