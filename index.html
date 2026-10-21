@@ -52,12 +52,8 @@
         <a class="button button-outline" href="telechargements.html">Ouvrir les téléchargements <span>↗</span></a>
       </div>
 
-      <!-- IMAGE DE JAJA + MUSIQUE : un clic lance une musique au hasard (musique.js), un second clic l'arrête.
-           Sa taille se règle avec .jaja-player dans styles.css. -->
-      <button class="jaja-player" type="button" aria-pressed="false" aria-label="Lancer une musique du Grimoire de Jaja">
-        <img class="hero-logo" src="https://raw.githubusercontent.com/legrimoiredejaja-hub/Le-Grimoire-de-Jaja/ab074197572624d56526b7a4580527c47f8d15cf/Le%20Grimoire%20de%20Jaja.png" alt="Jaja, un sourire aux lèvres, lisant un grimoire">
-        <span class="push-me" aria-hidden="true"><span>Push Me</span><span class="eq"><i></i><i></i><i></i></span></span>
-      </button>
+      <!-- IMAGE DE JAJA : cliquable, un clic lance une musique au hasard (voir musique.js). Sa taille se règle avec .hero-logo dans styles.css. -->
+      <img class="hero-logo" src="https://raw.githubusercontent.com/legrimoiredejaja-hub/Le-Grimoire-de-Jaja/ab074197572624d56526b7a4580527c47f8d15cf/Le%20Grimoire%20de%20Jaja.png" alt="Jaja, un sourire aux lèvres, lisant un grimoire" role="button" tabindex="0" aria-pressed="false" aria-label="Lancer une musique du Grimoire de Jaja">
 
       <div class="hero-side-note" aria-hidden="true">AIDES DE JEU • D&D</div>
     </section>
@@ -77,17 +73,16 @@
       <div class="divider-ornament"><span></span> ✦ <span></span></div>
     </section>
 
-    <!-- VIDÉOS : le dé rouge ouvre la chaîne YouTube. -->
+    <!-- VIDÉOS : titre à gauche, le petit dé rouge (cliquable) et son texte au milieu. -->
     <section class="videos-section section-wrap" id="videos">
       <div class="videos-grid">
         <div class="section-heading">
           <p class="eyebrow">À regarder</p>
           <h2>Vidéos <em>YouTube</em></h2>
+          <p class="videos-intro">Retrouve ici les vidéos pour mieux comprendre les règles en images.</p>
         </div>
-        <p class="videos-intro">Retrouve ici les vidéos pour mieux comprendre les règles en images.</p>
         <div class="videos-channel">
-          <p class="lead">Si tu ne connais pas ma chaîne du Grimoire de Jaja, c'est par ici !</p>
-          <!-- DÉ YOUTUBE : le lien mène à la chaîne. Pour changer l'adresse, modifie href. -->
+          <!-- DÉ YOUTUBE : le lien mène à la chaîne. Pour changer l'adresse, modifie href. Pour changer sa taille : .d20-link svg dans styles.css. -->
           <a class="d20-link" href="https://www.youtube.com/results?search_query=le+grimoire+de+jaja" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir la chaîne YouTube du Grimoire de Jaja">
             <svg viewBox="0 0 200 200" role="img" aria-hidden="true">
               <g stroke="#ffffff" stroke-width="3" stroke-linejoin="round">
@@ -106,6 +101,7 @@
             </svg>
             <span>Ouvrir la chaîne ↗</span>
           </a>
+          <p class="lead">Si tu ne connais pas ma chaîne du Grimoire de Jaja, c'est par ici !</p>
         </div>
       </div>
     </section>

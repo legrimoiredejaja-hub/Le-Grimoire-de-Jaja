@@ -11,6 +11,7 @@
   --gold: #c7a96b;           /* Doré médiéval. */
   --soft-red: #c27b74;       /* Rouge doux de la petite croix « bientôt ». */
   --line: rgba(199,169,107,.25); /* Traits et séparateurs. */
+  --gutter: clamp(24px, 5vw, 105px); /* Marge gauche commune : aligne tous les titres de l'accueil. */
   --serif: "Crimson Text", Georgia, serif; /* Police de lecture. */
   --display: "Cinzel", Georgia, serif;     /* Police des titres. */
 }
@@ -93,48 +94,21 @@ a { color: inherit; text-decoration: none; }
 .hero-card h2 { margin-bottom: 12px; font-size: clamp(24px, 2.6vw, 38px); }
 .hero-card p:not(.eyebrow) { max-width: 420px; margin: 0 auto 24px; color: var(--muted); font-size: 16px; }
 
-/* IMAGE DE JAJA (à droite) = bouton qui lance la musique.
+/* IMAGE DE JAJA (à droite) : cliquable, elle lance la musique.
    - width : change la taille (minimum, idéal, maximum). Exemple : clamp(200px, 18vw, 340px) */
-.jaja-player {
-  grid-area: logo; position: relative; z-index: 2;
-  display: flex; flex-direction: column; align-items: center; gap: 16px;
-  width: clamp(170px, 15vw, 280px);
-  padding: 0; margin: 0; background: none; border: 0; color: inherit; font: inherit;
-  cursor: pointer; -webkit-tap-highlight-color: transparent;
-}
 .hero-logo {
-  display: block; width: 100%; height: auto; border-radius: 50%;
+  grid-area: logo; position: relative; z-index: 2;
+  width: clamp(170px, 15vw, 280px); height: auto;
   filter: drop-shadow(0 15px 35px rgba(0,0,0,.55));
-  transition: transform .3s ease, box-shadow .3s ease;
+  cursor: pointer; -webkit-tap-highlight-color: transparent;
+  transition: transform .3s ease;
 }
-.jaja-player:hover .hero-logo { transform: scale(1.04); }
-.jaja-player:focus-visible { outline: 1px solid var(--gold); outline-offset: 10px; }
-
-/* Texte « Push Me » sous l'image. */
-.push-me {
-  display: inline-flex; align-items: center; gap: 10px;
-  padding: 8px 16px; color: var(--gold);
-  font: 11px var(--display); letter-spacing: .22em; text-transform: uppercase;
-  border: 1px solid var(--line); background: rgba(16,15,16,.6);
-  transition: border-color .2s, background .2s;
-}
-.jaja-player:hover .push-me { border-color: var(--gold); background: rgba(199,169,107,.08); }
-
-/* Petites barres de son : visibles seulement quand la musique joue. */
-.eq { display: none; align-items: flex-end; gap: 2px; height: 11px; }
-.eq i { display: block; width: 2px; height: 100%; background: var(--gold); transform-origin: bottom; animation: eq-bounce .9s ease-in-out infinite alternate; }
-.eq i:nth-child(2) { animation-delay: -.3s; }
-.eq i:nth-child(3) { animation-delay: -.6s; }
-@keyframes eq-bounce { from { transform: scaleY(.25); } to { transform: scaleY(1); } }
-
-/* Pendant la musique : l'image pulse doucement avec un halo doré. */
-@keyframes jaja-pulse {
-  0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(199,169,107,.0); }
-  50% { transform: scale(1.045); box-shadow: 0 0 38px 6px rgba(199,169,107,.35); }
-}
-.jaja-player.is-playing .hero-logo { animation: jaja-pulse 1.8s ease-in-out infinite; }
-.jaja-player.is-playing .eq { display: inline-flex; }
-.jaja-player.is-playing .push-me { border-color: var(--gold); }
+.hero-logo:hover { transform: scale(1.03); }
+.hero-logo:focus:not(:focus-visible) { outline: none; }
+.hero-logo:focus-visible { outline: 1px solid var(--gold); outline-offset: 8px; border-radius: 50%; }
+/* Pendant la musique : l'image pulse doucement (seulement un léger agrandissement). */
+@keyframes jaja-pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.045); } }
+.hero-logo.is-playing { animation: jaja-pulse 1.8s ease-in-out infinite; }
 
 .eyebrow { margin: 0 0 18px; color: var(--gold); font: 11px var(--display); letter-spacing: .17em; text-transform: uppercase; }
 .hero-content .eyebrow { display: flex; align-items: center; gap: 12px; }
@@ -163,22 +137,30 @@ h1 em, h2 em { color: var(--gold); font-weight: 400; }
 .divider-ornament { display: flex; align-items: center; justify-content: center; gap: 18px; margin-top: 60px; color: var(--gold); }
 .divider-ornament span { width: 90px; height: 1px; background: var(--line); }
 
+/* Sections de l'accueil : pleine largeur, alignées à gauche comme le titre « Le Grimoire de Jaja ». */
+.intro.section-wrap, .videos-section.section-wrap, .contact-section.section-wrap {
+  width: auto; max-width: none; margin: 0;
+  padding-left: var(--gutter); padding-right: var(--gutter);
+}
+
 /* 13. PRÉSENTATION : titre à gauche, texte à droite. */
 .intro { padding-top: 100px; padding-bottom: 70px; }
-.intro-split { display: grid; grid-template-columns: 1fr 1.6fr; gap: 50px; align-items: start; }
+.intro-split { display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; align-items: start; }
 .intro-split .section-heading { margin-bottom: 0; }
 .intro-split h2 { font-size: clamp(32px, 4vw, 52px); }
 .intro-body .lead { margin-bottom: 16px; }
 .intro-text { margin: 0; color: var(--muted); }
 
-/* 14. VIDÉOS : titre | petit texte | chaîne avec le dé rouge. */
-.videos-section { padding: 15px 0 95px; }
-.videos-grid { display: grid; grid-template-columns: .9fr 1fr 1.5fr; gap: 40px; align-items: start; }
+/* 14. VIDÉOS : titre à gauche, petit dé cliquable + texte au milieu. */
+.videos-section { padding-top: 15px; padding-bottom: 95px; }
+.videos-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; align-items: center; }
 .videos-grid .section-heading { margin-bottom: 0; }
-.videos-intro { margin: 8px 0 0; color: var(--muted); font-size: 16px; }
-.videos-channel { text-align: center; }
-.d20-link { display: inline-flex; flex-direction: column; align-items: center; gap: 12px; margin-top: 18px; color: var(--muted); font: 11px var(--display); letter-spacing: .08em; transition: color .2s; }
-.d20-link svg { width: clamp(120px, 12vw, 160px); height: auto; filter: drop-shadow(0 10px 22px rgba(255,0,0,.22)); transition: transform .6s ease; }
+.videos-intro { max-width: 380px; margin: 8px 0 0; color: var(--muted); font-size: 16px; }
+.videos-channel { display: flex; align-items: center; gap: 28px; }
+.videos-channel .lead { font-size: 22px; }
+.d20-link { display: inline-flex; flex: 0 0 auto; flex-direction: column; align-items: center; gap: 8px; color: var(--muted); font: 10px var(--display); letter-spacing: .08em; transition: color .2s; }
+/* TAILLE DU D20 : change width (minimum, idéal, maximum). */
+.d20-link svg { width: clamp(72px, 7vw, 100px); height: auto; filter: drop-shadow(0 8px 16px rgba(255,0,0,.22)); transition: transform .6s ease; }
 .d20-link:hover { color: var(--gold); }
 .d20-link:hover svg { transform: rotate(60deg) scale(1.06); }
 
@@ -269,8 +251,6 @@ h1 em, h2 em { color: var(--gold); font-weight: 400; }
   .navigation .nav-support { padding: 12px; }
   .intro-split { grid-template-columns: 1fr; gap: 24px; }
   .videos-grid { grid-template-columns: 1fr; gap: 20px; }
-  .videos-channel { text-align: left; }
-  .d20-link { align-items: flex-start; }
   .contact-section { grid-template-columns: 1fr; gap: 30px; }
 }
 
@@ -280,11 +260,13 @@ h1 em, h2 em { color: var(--gold); font-weight: 400; }
   .brand { min-width: 0; gap: 8px; }
   .brand strong { font-size: 11px; }
   .brand small { max-width: 230px; font-size: 11px; }
+  :root { --gutter: 22px; }
   .hero { min-height: 0; grid-template-columns: 1fr; grid-template-areas: "text" "logo" "card"; padding: 60px 22px; row-gap: 34px; }
-  .jaja-player { width: 55%; max-width: 230px; justify-self: center; }
+  .hero-logo { width: 55%; max-width: 230px; justify-self: center; }
   .hero-copy { font-size: 18px; }
   .section-wrap { width: calc(100% - 36px); }
   .intro { padding-top: 70px; }
+  .videos-channel { flex-direction: column; align-items: flex-start; gap: 16px; }
   .download-item { grid-template-columns: 1fr; gap: 14px; }
   .download-links { grid-template-columns: 1fr; }
   .download-category > summary { gap: 14px; padding: 22px 2px; }
@@ -295,7 +277,7 @@ h1 em, h2 em { color: var(--gold); font-weight: 400; }
 
 /* Respecte les personnes qui préfèrent moins d'animations. */
 @media (prefers-reduced-motion: reduce) {
-  .raven-wing, .raven-drift, .smoke, .sign, .eq i, .jaja-player.is-playing .hero-logo { animation: none; }
+  .raven-wing, .raven-drift, .smoke, .sign, .hero-logo.is-playing { animation: none; }
   .d20-link:hover svg { transform: none; }
   html { scroll-behavior: auto; }
 }
