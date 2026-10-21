@@ -183,7 +183,7 @@ h1 em, h2 em { color: var(--gold); font-weight: 400; }
 .smoke { transform-box: fill-box; transform-origin: center; animation: smoke-rise 4.2s ease-out infinite; opacity: 0; }
 .sign { transform-box: fill-box; transform-origin: 50% 0; animation: sign-swing 4.5s ease-in-out infinite; }
 .window-glow { transition: opacity .3s; }
-.contact-art { display: block; max-width: 300px; overflow: hidden; border: 1px solid var(--line); background: #141214; transition: border-color .2s; }
+.contact-art { display: block; max-width: 350px; overflow: hidden; border: 1px solid var(--line); background: #141214; transition: border-color .2s; }
 
 /* Fenêtre « Écrire au Grimoire » (ordinateur). */
 .mail-dialog { width: min(420px, calc(100% - 36px)); padding: 30px; color: var(--text); background: var(--panel); border: 1px solid var(--gold); }
