@@ -9,6 +9,7 @@
   --text: #eee7dc;           /* Couleur principale du texte. */
   --muted: #b8ada0;          /* Texte secondaire. */
   --gold: #c7a96b;           /* Doré médiéval. */
+  --soft-red: #c27b74;       /* Rouge doux de la petite croix « bientôt ». */
   --line: rgba(199,169,107,.25); /* Traits et séparateurs. */
   --serif: "Crimson Text", Georgia, serif; /* Police de lecture. */
   --display: "Cinzel", Georgia, serif;     /* Police des titres. */
@@ -32,6 +33,9 @@ body {
 
 /* 05. Couleur commune des liens. */
 a { color: inherit; text-decoration: none; }
+
+/* Texte lu seulement par les lecteurs d'écran. */
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
 /* 06. Petite ligne dorée tout en haut de la page. */
 .topline { height: 3px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
@@ -57,40 +61,55 @@ a { color: inherit; text-decoration: none; }
 .navigation a:hover, .navigation a.active { color: var(--gold); }
 .navigation .nav-support { color: var(--gold); border: 1px solid var(--line); padding: 10px 13px; }
 
+/* « Ajouts Compatibles » : pas encore disponible. Texte adouci + petite croix rouge discrète. */
+.nav-soon { display: inline-flex; align-items: center; gap: 8px; cursor: not-allowed; }
+.nav-soon > span:not(.sr-only) { color: var(--muted); opacity: .55; }
+.soon-cross {
+  display: inline-grid; place-items: center; width: 16px; height: 16px;
+  font-style: normal; font-size: 9px; line-height: 1;
+  color: var(--soft-red); border: 1px solid rgba(194,123,116,.5); border-radius: 50%;
+  background: rgba(194,123,116,.08);
+}
+
 /* 10. Bouton de menu masqué sur ordinateur. */
 .menu-toggle { display: none; color: var(--text); background: transparent; border: 1px solid var(--line); padding: 8px 12px; font: 12px var(--display); }
 
-/* 11. Zone d'accueil : texte à gauche, image de Jaja à droite. */
+/* 11. ACCUEIL : trois blocs — titre, bibliothèque, image de Jaja. */
 .hero {
-  position: relative; min-height: 590px; display: flex; align-items: center;
-  justify-content: space-between; gap: 40px;
-  padding: 90px clamp(24px, 10vw, 150px); overflow: hidden;
+  position: relative; min-height: 590px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.2fr) auto;
+  grid-template-areas: "text card logo";
+  align-items: center; gap: clamp(28px, 4vw, 72px);
+  padding: 90px clamp(56px, 7vw, 110px) 90px clamp(24px, 5vw, 105px);
+  overflow: hidden;
   background: radial-gradient(ellipse at 75% 45%, rgba(112,78,45,.16), transparent 38%), linear-gradient(120deg, #100f10 30%, #191516 100%);
   border-bottom: 1px solid var(--line);
 }
 .hero::after { content: ""; position: absolute; inset: 18px; border: 1px solid rgba(199,169,107,.08); pointer-events: none; }
-.hero-content { position: relative; z-index: 1; max-width: 720px; }
+.hero-content { grid-area: text; position: relative; z-index: 1; }
+.hero-card { grid-area: card; position: relative; z-index: 1; padding: 46px 8%; text-align: center; background: linear-gradient(135deg, #1d1918, #141214); border: 1px solid var(--line); }
+.hero-card .eyebrow { margin-bottom: 14px; }
+.hero-card h2 { margin-bottom: 12px; font-size: clamp(24px, 2.6vw, 38px); }
+.hero-card p:not(.eyebrow) { max-width: 420px; margin: 0 auto 24px; color: var(--muted); font-size: 16px; }
 
-/* IMAGE DE JAJA (à droite du titre) :
-   - width : change la taille (min, idéal, max). Exemple : clamp(220px, 30vw, 420px)
-   - margin-right : l'éloigne ou la rapproche du bord droit. */
+/* IMAGE DE JAJA (à droite) :
+   - width : change la taille (minimum, idéal, maximum). Exemple : clamp(200px, 18vw, 340px) */
 .hero-logo {
-  position: relative; z-index: 2;
-  flex: 0 0 auto;
-  width: clamp(200px, 28vw, 380px);
-  height: auto;
-  margin-right: 20px;
+  grid-area: logo; position: relative; z-index: 2;
+  width: clamp(170px, 15vw, 280px); height: auto;
   filter: drop-shadow(0 15px 35px rgba(0,0,0,.55));
 }
 
 .eyebrow { margin: 0 0 18px; color: var(--gold); font: 11px var(--display); letter-spacing: .17em; text-transform: uppercase; }
-.hero .eyebrow { display: flex; align-items: center; gap: 12px; }
-.hero .eyebrow span { width: 25px; height: 1px; background: var(--gold); }
+.hero-content .eyebrow { display: flex; align-items: center; gap: 12px; }
+.hero-content .eyebrow span { width: 25px; height: 1px; background: var(--gold); }
 h1, h2, h3 { margin-top: 0; font-family: var(--display); font-weight: 500; line-height: 1.2; }
-.hero h1, .downloads-hero h1 { margin: 0; font-size: clamp(42px, 7vw, 82px); letter-spacing: -.035em; }
+.hero h1 { margin: 0; font-size: clamp(36px, 3.9vw, 64px); letter-spacing: -.035em; }
+.downloads-hero h1 { margin: 0; font-size: clamp(42px, 6vw, 68px); letter-spacing: -.035em; }
 h1 em, h2 em { color: var(--gold); font-weight: 400; }
-.hero-copy { max-width: 570px; margin: 26px 0 30px; color: var(--muted); font-size: 21px; }
-.hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 24px; }
+.hero-copy { max-width: 570px; margin: 26px 0 0; color: var(--muted); font-size: 21px; }
+.hero-rule { display: block; width: 190px; height: 3px; margin-top: 28px; background: var(--gold); }
 .button { display: inline-flex; align-items: center; justify-content: center; gap: 20px; padding: 13px 18px; font: 11px var(--display); letter-spacing: .06em; transition: background .2s, border-color .2s; }
 .button-primary { color: #17130d; background: var(--gold); border: 1px solid var(--gold); }
 .button-primary:hover { background: #dfc38a; }
@@ -98,124 +117,150 @@ h1 em, h2 em { color: var(--gold); font-weight: 400; }
 .button-outline:hover { border-color: var(--gold); }
 .text-link { color: var(--text); font: 12px var(--display); }
 .text-link span { color: var(--gold); }
-.hero-note { display: flex; align-items: center; gap: 13px; margin-top: 46px; color: var(--text); font-size: 15px; }
-.sigil { color: var(--gold); font-size: 27px; }
-.hero-note small { color: var(--muted); font-size: 13px; }
-.hero-side-note { position: absolute; right: 4%; top: 50%; color: rgba(199,169,107,.55); font: 10px var(--display); letter-spacing: .2em; writing-mode: vertical-rl; }
+.text-link:hover { color: var(--gold); }
+.hero-side-note { position: absolute; right: 2.2%; top: 50%; transform: translateY(-50%); color: rgba(199,169,107,.55); font: 10px var(--display); letter-spacing: .2em; writing-mode: vertical-rl; }
 
 /* 12. Largeur commune des sections. */
 .section-wrap { width: min(1120px, calc(100% - 48px)); margin: 0 auto; }
-.intro { padding-top: 100px; padding-bottom: 70px; }
 .section-heading { margin-bottom: 36px; }
-.section-heading h2, .download-callout h2, .contact-section h2 { margin-bottom: 12px; font-size: clamp(30px, 4.5vw, 48px); }
-.section-heading-row { display: flex; align-items: end; justify-content: space-between; gap: 35px; }
-.section-heading-row > p { max-width: 390px; margin: 0 0 8px; color: var(--muted); }
-.intro-grid { display: grid; grid-template-columns: 50px 1fr 1fr; gap: 25px; align-items: start; }
-.ornament { color: var(--gold); font-size: 30px; }
+.section-heading h2, .contact-section h2 { margin-bottom: 12px; font-size: clamp(30px, 4.5vw, 48px); }
 .lead { margin: 0; font-size: 24px; line-height: 1.4; }
-.intro-text { margin: 0; color: var(--muted); }
 .divider-ornament { display: flex; align-items: center; justify-content: center; gap: 18px; margin-top: 60px; color: var(--gold); }
 .divider-ornament span { width: 90px; height: 1px; background: var(--line); }
 
-/* 13. Galerie : la zone sert de repère pour placer les images 2 et 3. */
-.image-section { padding: 50px 0 90px; }
-.image-stage {
-  position: relative; min-height: 420px; overflow: hidden;
-  border: 1px solid var(--line); background: #141214;
-}
-.image-slot { position: absolute; height: auto; aspect-ratio: 3 / 2; object-fit: cover; border: 1px solid var(--gold); box-shadow: 0 15px 45px #0008; }
-/* IMAGE 2 : change left, top et width pour déplacer ou redimensionner l'image. */
-.image-slot-2 { left: 35%; top: 28%; width: 30%; }
-/* IMAGE 3 : change left, top et width pour déplacer ou redimensionner l'image. */
-.image-slot-3 { left: 66%; top: 12%; width: 30%; }
-.image-help { color: var(--muted); font-size: 14px; }
+/* 13. PRÉSENTATION : titre à gauche, texte à droite. */
+.intro { padding-top: 100px; padding-bottom: 70px; }
+.intro-split { display: grid; grid-template-columns: 1fr 1.6fr; gap: 50px; align-items: start; }
+.intro-split .section-heading { margin-bottom: 0; }
+.intro-split h2 { font-size: clamp(32px, 4vw, 52px); }
+.intro-body .lead { margin-bottom: 16px; }
+.intro-text { margin: 0; color: var(--muted); }
 
-/* 14. Bandeau qui mène vers la bibliothèque de fichiers. */
-.download-callout { padding: 65px 8%; margin-bottom: 75px; text-align: center; background: linear-gradient(135deg, #1d1918, #141214); border: 1px solid var(--line); }
-.download-callout p:not(.eyebrow) { max-width: 570px; margin: 0 auto 25px; color: var(--muted); }
-
-/* 15. Liste des liens YouTube. */
+/* 14. VIDÉOS : titre | petit texte | chaîne avec le dé rouge. */
 .videos-section { padding: 15px 0 95px; }
-.video-list { border-top: 1px solid var(--line); }
-.video-link { display: flex; align-items: center; gap: 18px; padding: 20px 10px; border-bottom: 1px solid var(--line); }
-.video-link:hover strong { color: var(--gold); }
-.video-play { display: grid; place-items: center; flex: 0 0 42px; height: 42px; color: var(--gold); border: 1px solid var(--line); }
-.video-link strong, .video-link small { display: block; }
-.video-link small { color: var(--muted); font-size: 14px; }
-.rule-arrow { margin-left: auto; color: var(--gold); }
+.videos-grid { display: grid; grid-template-columns: .9fr 1fr 1.5fr; gap: 40px; align-items: start; }
+.videos-grid .section-heading { margin-bottom: 0; }
+.videos-intro { margin: 8px 0 0; color: var(--muted); font-size: 16px; }
+.videos-channel { text-align: center; }
+.d20-link { display: inline-flex; flex-direction: column; align-items: center; gap: 12px; margin-top: 18px; color: var(--muted); font: 11px var(--display); letter-spacing: .08em; transition: color .2s; }
+.d20-link svg { width: clamp(120px, 12vw, 160px); height: auto; filter: drop-shadow(0 10px 22px rgba(255,0,0,.22)); transition: transform .6s ease; }
+.d20-link:hover { color: var(--gold); }
+.d20-link:hover svg { transform: rotate(60deg) scale(1.06); }
 
-/* 16. Contact et panneau e-mail. */
-.contact-section { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; padding-top: 75px; padding-bottom: 100px; border-top: 1px solid var(--line); }
+/* 15. CONTACT : texte à gauche, hutte et corbeaux à droite. */
+.contact-section { display: grid; grid-template-columns: 1fr 1.15fr; gap: 60px; align-items: center; padding-top: 75px; padding-bottom: 100px; border-top: 1px solid var(--line); }
 .contact-section > div:first-child > p:last-child { max-width: 450px; color: var(--muted); }
-.contact-panel { padding: 28px; background: var(--panel); border: 1px solid var(--line); }
-.contact-seal { display: block; margin-bottom: 12px; color: var(--gold); font-size: 27px; }
-.contact-panel strong { font: 16px var(--display); }
-.contact-panel p { color: var(--muted); }
+.contact-art { display: block; overflow: hidden; border: 1px solid var(--line); background: #141214; transition: border-color .2s; }
+.contact-art:hover { border-color: var(--gold); }
+.contact-art svg { display: block; width: 100%; height: auto; }
+.contact-mail { margin: 12px 0 0; text-align: center; color: var(--muted); font-size: 15px; }
+.contact-mail a { color: var(--gold); }
 
-/* 17. Page des téléchargements. */
-.downloads-hero { padding-top: 95px; padding-bottom: 55px; }
-.downloads-hero h1 { font-size: clamp(42px, 6vw, 68px); }
+/* Animations douces des corbeaux, de la fumée et du panneau. */
+@keyframes wing-flap { from { transform: rotate(-14deg); } to { transform: rotate(16deg); } }
+@keyframes raven-drift { from { transform: translate(0, 0); } to { transform: translate(14px, -8px); } }
+@keyframes smoke-rise { 0% { transform: translateY(0) scale(.7); opacity: 0; } 20% { opacity: .4; } 100% { transform: translateY(-46px) scale(1.6); opacity: 0; } }
+@keyframes sign-swing { 0%, 100% { transform: rotate(-2deg); } 50% { transform: rotate(2deg); } }
+.raven-wing { transform-box: fill-box; transform-origin: 50% 100%; animation: wing-flap .8s ease-in-out infinite alternate; }
+.raven-drift { animation: raven-drift 3.2s ease-in-out infinite alternate; }
+.smoke { transform-box: fill-box; transform-origin: center; animation: smoke-rise 4.2s ease-out infinite; opacity: 0; }
+.sign { transform-box: fill-box; transform-origin: 50% 0; animation: sign-swing 4.5s ease-in-out infinite; }
+.window-glow { transition: opacity .3s; }
+.contact-art:hover .window-glow { opacity: .6; }
+
+/* 16. PAGE DES TÉLÉCHARGEMENTS. */
+.downloads-hero { padding-top: 95px; padding-bottom: 45px; }
 .downloads-hero .hero-copy { max-width: 680px; }
 .downloads-content { padding-bottom: 90px; }
-.download-category h2 { margin-bottom: 8px; font-size: clamp(28px, 4vw, 42px); }
+
+/* Chaque thème est un menu qui s'ouvre et se ferme au clic. */
+.download-category { border-top: 1px solid var(--line); }
+.download-category:last-of-type { border-bottom: 1px solid var(--line); }
+.download-category > summary { display: flex; align-items: center; gap: 22px; padding: 26px 6px; cursor: pointer; list-style: none; transition: background .2s; }
+.download-category > summary::-webkit-details-marker { display: none; }
+.download-category > summary:hover { background: rgba(199,169,107,.05); }
+.download-category > summary:focus-visible { outline: 1px solid var(--gold); outline-offset: -1px; }
+.cat-number { color: var(--gold); font: 13px var(--display); }
+.cat-title { margin: 0; font-size: clamp(26px, 3.6vw, 40px); transition: color .2s; }
+.cat-meta { margin-left: auto; color: var(--muted); font-size: 15px; }
+.cat-toggle { position: relative; flex: 0 0 34px; height: 34px; border: 1px solid var(--line); }
+.cat-toggle::before, .cat-toggle::after { content: ""; position: absolute; left: 50%; top: 50%; width: 12px; height: 1px; background: var(--gold); transform: translate(-50%, -50%); transition: transform .25s ease; }
+.cat-toggle::after { transform: translate(-50%, -50%) rotate(90deg); }
+.download-category[open] > summary .cat-title { color: var(--gold); }
+.download-category[open] > summary .cat-toggle::after { transform: translate(-50%, -50%) rotate(0deg); }
+.category-panel { padding: 0 6px 34px; }
 .category-intro, .download-note { color: var(--muted); }
-.download-item { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; padding: 25px 0; border-top: 1px solid var(--line); }
+.category-intro { margin: 0 0 18px; }
+
+.download-item { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: center; padding: 20px 0; border-top: 1px solid var(--line); }
 .download-info { display: flex; align-items: flex-start; gap: 18px; }
 .download-number { color: var(--gold); font: 13px var(--display); }
-.download-info h3 { margin: 0 0 6px; font-size: 19px; }
+.download-info h3 { margin: 0 0 4px; font-size: 19px; }
 .download-info p { margin: 0; color: var(--muted); font-size: 15px; }
-.download-links { display: grid; gap: 8px; }
+.download-links { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
 .file-link { display: flex; align-items: center; gap: 12px; padding: 11px 13px; background: var(--panel); border: 1px solid transparent; font-size: 15px; }
 .file-link:hover { border-color: var(--line); color: var(--gold); }
 .file-link span { min-width: 34px; padding: 3px 5px; text-align: center; color: var(--gold); border: 1px solid var(--line); font: 10px var(--display); }
 .file-link b { margin-left: auto; color: var(--gold); }
-.download-note { padding: 15px; background: var(--panel); font-size: 14px; }
-.download-note code { color: var(--gold); }
+/* Tant que le lien est href="#", la fiche s'affiche en « bientôt » et n'est pas cliquable. */
+.file-link[href="#"] { opacity: .5; pointer-events: none; }
+.file-link[href="#"] b { display: none; }
+.file-link[href="#"]::after { content: "bientôt"; margin-left: auto; color: var(--muted); font-size: 13px; font-style: italic; }
+.download-note { margin-top: 28px; padding: 15px; background: var(--panel); font-size: 15px; }
+.download-note a { color: var(--gold); }
 .downloads-back { margin-top: 30px; }
 
-/* 18. Pied de page commun aux pages. */
+/* 17. Pied de page commun aux pages. */
 .site-footer { padding: 38px 24px; text-align: center; border-top: 1px solid var(--line); background: #0c0b0c; }
 .footer-brand { color: var(--gold); font: 12px var(--display); letter-spacing: .1em; }
 .site-footer p, .site-footer small { color: var(--muted); font-size: 14px; }
 .footer-links { display: flex; justify-content: center; gap: 22px; margin: 20px 0; font-size: 14px; }
 .footer-links a:hover { color: var(--gold); }
 
-/* 19. Réglages pour les écrans de taille moyenne. */
+/* 18. Écrans moyens : le bloc bibliothèque passe sous le titre. */
+@media (max-width: 1100px) {
+  .hero { grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "text logo" "card card"; row-gap: 40px; padding: 70px clamp(24px, 6vw, 70px); }
+  .hero h1 { font-size: clamp(40px, 7vw, 64px); }
+  .hero-side-note { display: none; }
+}
+
+/* 19. Menu mobile et écrans de taille moyenne. */
 @media (max-width: 950px) {
   .site-header { flex-wrap: wrap; }
   .menu-toggle { display: block; }
   .navigation { display: none; flex-basis: 100%; flex-direction: column; align-items: stretch; gap: 0; padding-top: 12px; }
   .navigation.is-open { display: flex; }
-  .navigation a { padding: 12px 0; border-top: 1px solid var(--line); }
+  .navigation a, .navigation .nav-soon { padding: 12px 0; border-top: 1px solid var(--line); }
   .navigation .nav-support { padding: 12px; }
-  .intro-grid { grid-template-columns: 35px 1fr; }
-  .intro-text { grid-column: 2; }
-  .image-stage { min-height: 340px; }
-  .section-heading-row { align-items: flex-start; flex-direction: column; gap: 10px; }
-  .hero-logo { width: clamp(160px, 26vw, 260px); margin-right: 20px; }
+  .intro-split { grid-template-columns: 1fr; gap: 24px; }
+  .videos-grid { grid-template-columns: 1fr; gap: 20px; }
+  .videos-channel { text-align: left; }
+  .d20-link { align-items: flex-start; }
+  .contact-section { grid-template-columns: 1fr; gap: 30px; }
 }
 
-/* 20. Réglages pour les téléphones. */
+/* 20. Téléphones. */
 @media (max-width: 620px) {
   .site-header { padding: 14px 18px; }
   .brand { min-width: 0; gap: 8px; }
   .brand strong { font-size: 11px; }
   .brand small { max-width: 230px; font-size: 11px; }
-  .hero { min-height: 570px; padding: 65px 25px; flex-direction: column; align-items: flex-start; gap: 35px; }
-  .hero-logo { width: 55%; max-width: 240px; margin: 0 auto; }
-  .hero-side-note { display: none; }
+  .hero { min-height: 0; grid-template-columns: 1fr; grid-template-areas: "text" "logo" "card"; padding: 60px 22px; row-gap: 34px; }
+  .hero-logo { width: 55%; max-width: 230px; justify-self: center; }
   .hero-copy { font-size: 18px; }
-  .hero-actions { align-items: flex-start; flex-direction: column; gap: 18px; }
   .section-wrap { width: calc(100% - 36px); }
   .intro { padding-top: 70px; }
-  .intro-grid { grid-template-columns: 1fr; gap: 12px; }
-  .ornament { display: none; }
-  .intro-text { grid-column: auto; }
-  .image-stage { min-height: 420px; }
-  .image-slot-2 { left: 27%; top: 8%; width: 65%; }
-  .image-slot-3 { left: 8%; top: 52%; width: 65%; }
-  .contact-section { grid-template-columns: 1fr; gap: 25px; }
-  .download-item { grid-template-columns: 1fr; gap: 18px; }
-  .download-callout { padding: 45px 20px; }
+  .download-item { grid-template-columns: 1fr; gap: 14px; }
+  .download-links { grid-template-columns: 1fr; }
+  .download-category > summary { gap: 14px; padding: 22px 2px; }
+  .cat-meta { display: none; }
+  .cat-toggle { margin-left: auto; }
   .footer-links { flex-wrap: wrap; }
+}
+
+/* Respecte les personnes qui préfèrent moins d'animations. */
+@media (prefers-reduced-motion: reduce) {
+  .raven-wing, .raven-drift, .smoke, .sign { animation: none; }
+  .d20-link:hover svg { transform: none; }
+  html { scroll-behavior: auto; }
 }
