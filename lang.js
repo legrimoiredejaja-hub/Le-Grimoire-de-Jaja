@@ -92,6 +92,14 @@
     'Écris-moi': 'Write to me',
     "Retour à l'accueil": 'Back to home',
 
+    /* ----- Recherche ----- */
+    'Rechercher une fiche': 'Search for a sheet',
+    'Rechercher une fiche : un sort, une compétence…': 'Search for a sheet: a spell, a skill…',
+    'Effacer la recherche': 'Clear the search',
+    'fiche trouvée': 'sheet found',
+    'fiches trouvées': 'sheets found',
+    'Aucune fiche trouvée pour': 'No sheet found for',
+
     /* ----- Thèmes ----- */
     'Écrans de MD D&D 2024': 'DM Screens D&D 2024',
     'Les Compétences': 'Skills',
@@ -203,7 +211,7 @@
 
   /* Parcourt la page et repère tous les textes qui ont une traduction. */
   var IGNORER = { SCRIPT: 1, STYLE: 1, TEMPLATE: 1 };
-  var ATTRIBUTS = ['alt', 'aria-label', 'title'];
+  var ATTRIBUTS = ['alt', 'aria-label', 'title', 'placeholder'];
   function parcourir(noeud) {
     var enfants = Array.prototype.slice.call(noeud.childNodes);
     enfants.forEach(function (n) {

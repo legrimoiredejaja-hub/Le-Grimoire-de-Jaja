@@ -36,6 +36,17 @@
       <p class="hero-copy">Choisis un thème, clique dessus et le menu s'ouvre avec toutes les fiches. Chacune existe en français et en anglais.</p>
     </section>
 
+    <!-- RECHERCHE : tape un nom de sort, de compétence… (voir recherche.js) -->
+    <section class="search-box section-wrap">
+      <label class="sr-only" for="search">Rechercher une fiche</label>
+      <div class="search-field">
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <input id="search" type="search" placeholder="Rechercher une fiche : un sort, une compétence…" autocomplete="off" spellcheck="false">
+        <button class="search-clear" type="button" aria-label="Effacer la recherche" hidden>✕</button>
+      </div>
+      <p class="search-status" role="status" aria-live="polite"></p>
+    </section>
+
     <!--
       MODE D'EMPLOI POUR AJOUTER TES LIENS
       - Chaque lien est écrit href="#". Tant qu'il reste "#", il s'affiche en "bientôt" et n'est pas cliquable.
@@ -150,5 +161,7 @@
   <script src="lang.js?v=6"></script>
   <!-- Fenêtre « Écrire au Grimoire » -->
   <script src="contact.js?v=6"></script>
+  <!-- Recherche dans les fiches -->
+  <script src="recherche.js?v=6"></script>
 </body>
 </html>

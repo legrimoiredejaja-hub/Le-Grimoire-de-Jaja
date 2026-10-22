@@ -209,10 +209,25 @@ h1 em, h2 em { color: var(--gold); font-weight: 400; }
 .mail-close { display: block; margin: 6px auto 0; padding: 6px 10px; color: var(--muted); background: none; border: 0; font: 12px var(--display); cursor: pointer; }
 .mail-close:hover { color: var(--gold); }
 
+/* Un élément « caché » par la recherche disparaît vraiment. */
+[hidden] { display: none !important; }
+
 /* 16. PAGE DES TÉLÉCHARGEMENTS. */
 .downloads-hero { padding-top: 95px; padding-bottom: 45px; }
 .downloads-hero .hero-copy { max-width: 680px; }
 .downloads-content { padding-bottom: 90px; }
+
+/* Barre de recherche des fiches. */
+.search-box { padding-bottom: 24px; }
+.search-field { position: relative; }
+.search-icon { position: absolute; left: 16px; top: 50%; transform: translateY(-52%); color: var(--gold); font-size: 24px; pointer-events: none; }
+.search-field input { width: 100%; padding: 15px 48px 15px 50px; color: var(--text); background: var(--panel); border: 1px solid var(--line); border-radius: 0; font: 18px var(--serif); outline: none; transition: border-color .2s; -webkit-appearance: none; appearance: none; }
+.search-field input::placeholder { color: var(--muted); opacity: .75; }
+.search-field input:focus { border-color: var(--gold); }
+.search-field input::-webkit-search-cancel-button { display: none; }
+.search-clear { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); width: 34px; height: 34px; color: var(--gold); background: none; border: 0; font-size: 15px; cursor: pointer; }
+.search-clear:hover { background: rgba(199,169,107,.1); }
+.search-status { min-height: 1.5em; margin: 10px 0 0; color: var(--muted); font-size: 15px; }
 
 /* Chaque thème est un menu qui s'ouvre et se ferme au clic. */
 .download-category { border-top: 1px solid var(--line); }
