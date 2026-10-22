@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=6">
 </head>
 <body>
   <div class="topline" aria-hidden="true"></div>
@@ -25,7 +25,7 @@
       <a class="active" href="telechargements.html" aria-current="page">Téléchargements</a>
       <span class="nav-soon" aria-disabled="true" title="Bientôt disponible"><i class="soon-cross" aria-hidden="true">✕</i><span>Ajouts Compatibles</span><span class="sr-only"> (bientôt disponible)</span></span>
       <a href="index.html#videos">Vidéos YouTube</a>
-      <a class="nav-support" href="mailto:legrimoiredeJaja@gmail.com">Me contacter</a>
+      <a class="nav-support" href="mailto:legrimoiredeJaja@gmail.com" data-mail>Me contacter</a>
     </nav>
   </header>
 
@@ -69,7 +69,7 @@
       <!-- 3. LES COMPÉTENCES (ordre alphabétique) -->
       <details class="download-category">
         <summary><span class="cat-number">03</span><h2 class="cat-title">Les Compétences</h2><span class="cat-meta">18 fiches</span><span class="cat-toggle" aria-hidden="true"></span></summary>
-        <div class="category-panel">
+        <div class="category-panel" data-sort>
           <p class="category-intro">Une fiche par compétence, classées par ordre alphabétique.</p>
           <div class="download-item"><div class="download-info"><span class="download-number">01</span><div><h3>Acrobaties</h3><p>Dextérité</p></div></div><div class="download-links"><a class="file-link" href="#"><span>FR</span>Fiche française<b>↓</b></a><a class="file-link" href="#"><span>EN</span>English sheet<b>↓</b></a></div></div>
           <div class="download-item"><div class="download-info"><span class="download-number">02</span><div><h3>Arcanes</h3><p>Intelligence</p></div></div><div class="download-links"><a class="file-link" href="#"><span>FR</span>Fiche française<b>↓</b></a><a class="file-link" href="#"><span>EN</span>English sheet<b>↓</b></a></div></div>
@@ -134,7 +134,7 @@
         </div>
       </details>
 
-      <p class="download-note">Les fiches sont mises à jour régulièrement. Une erreur ou une fiche à suggérer ? <a href="mailto:legrimoiredeJaja@gmail.com">Écris-moi</a>.</p>
+      <p class="download-note">Les fiches sont mises à jour régulièrement. Une erreur ou une fiche à suggérer ? <a href="mailto:legrimoiredeJaja@gmail.com" data-mail>Écris-moi</a>.</p>
       <p class="downloads-back"><a class="text-link" href="index.html"><span>←</span> Retour à l'accueil</a></p>
     </section>
   </main>
@@ -142,9 +142,13 @@
   <footer class="site-footer">
     <a class="footer-brand" href="index.html">✦ LE GRIMOIRE DE JAJA</a>
     <p>Des aides pratiques pour les parties de D&D.</p>
-    <div class="footer-links"><a href="index.html">Accueil</a><a href="telechargements.html">Téléchargements</a><a href="mailto:legrimoiredeJaja@gmail.com">Contact</a></div>
+    <div class="footer-links"><a href="index.html">Accueil</a><a href="telechargements.html">Téléchargements</a><a href="mailto:legrimoiredeJaja@gmail.com" data-mail>Contact</a></div>
     <small>© <span id="year"></span> Le Grimoire de Jaja · Site indépendant</small>
   </footer>
   <script src="script.js"></script>
+  <!-- Langue FR / US : fanions et traductions (voir lang.js) -->
+  <script src="lang.js?v=6"></script>
+  <!-- Fenêtre « Écrire au Grimoire » -->
+  <script src="contact.js?v=6"></script>
 </body>
 </html>

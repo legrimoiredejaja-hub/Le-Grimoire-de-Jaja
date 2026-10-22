@@ -30,11 +30,12 @@
   var fondu = null;
   var essai = 0; // Numéro de la tentative en cours, pour ignorer les anciennes.
 
-  /* Met à jour l'apparence de l'image et son texte pour les lecteurs d'écran. */
+  /* Met à jour l'apparence de l'image et son texte (dans la langue du site) pour les lecteurs d'écran. */
+  function traduire(fr) { return (window.GJ && window.GJ.t) ? window.GJ.t(fr) : fr; }
   function afficher(joue) {
     image.classList.toggle('is-playing', joue);
     image.setAttribute('aria-pressed', joue ? 'true' : 'false');
-    image.setAttribute('aria-label', joue ? 'Arrêter la musique' : 'Lancer une musique du Grimoire de Jaja');
+    image.setAttribute('aria-label', traduire(joue ? 'Arrêter la musique' : 'Lancer une musique du Grimoire de Jaja'));
   }
 
   /* Choisit un morceau au hasard, différent du précédent et pas déjà essayé. */
@@ -112,4 +113,7 @@
     if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); basculer(); }
   });
   audio.addEventListener('ended', function () { afficher(false); });
+  /* Quand on change de langue avec les fanions, on met à jour le texte. */
+  document.addEventListener('gj-lang-change', function () { afficher(image.classList.contains('is-playing')); });
+  afficher(false);
 })();

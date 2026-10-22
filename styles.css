@@ -72,6 +72,17 @@ a { color: inherit; text-decoration: none; }
   background: rgba(194,123,116,.08);
 }
 
+/* Fanions de langue (France / États-Unis) en haut à droite. */
+.lang-switch { display: flex; align-items: flex-start; gap: 10px; align-self: flex-start; margin-top: -18px; }
+.flag { padding: 0 2px 6px; background: none; border: 0; cursor: pointer; opacity: .55; filter: saturate(.55); transition: opacity .25s, filter .25s; -webkit-tap-highlight-color: transparent; }
+.flag svg { display: block; width: 30px; height: auto; transform-origin: 50% 0; animation: flag-sway 5s ease-in-out infinite alternate; }
+.flag[data-lang="en"] svg { animation-delay: -2.2s; }
+.flag:hover, .flag[aria-pressed="true"] { opacity: 1; filter: none; }
+.flag[aria-pressed="true"] { filter: drop-shadow(0 4px 8px rgba(199,169,107,.35)); }
+.flag:hover svg { animation-duration: 1.6s; }
+.flag:focus-visible { outline: 1px solid var(--gold); outline-offset: 2px; }
+@keyframes flag-sway { from { transform: rotate(-2.5deg); } to { transform: rotate(2.5deg); } }
+
 /* 10. Bouton de menu masqué sur ordinateur. */
 .menu-toggle { display: none; color: var(--text); background: transparent; border: 1px solid var(--line); padding: 8px 12px; font: 12px var(--display); }
 
@@ -167,11 +178,12 @@ h1 em, h2 em { color: var(--gold); font-weight: 400; }
 /* 15. CONTACT : texte à gauche, hutte et corbeaux à droite. */
 .contact-section { display: grid; grid-template-columns: 1fr 1.15fr; gap: 60px; align-items: center; padding-top: 75px; padding-bottom: 100px; border-top: 1px solid var(--line); }
 .contact-section > div:first-child > p:last-child { max-width: 450px; color: var(--muted); }
-.contact-art { display: block; overflow: hidden; border: 1px solid var(--line); background: #141214; transition: border-color .2s; }
-.contact-art { display: block; width: 100%; max-width: 300px; margin-left: auto; overflow: hidden; border: 1px solid var(--line); background: #141214; transition: border-color .2s; }
+/* TAILLE DE LA HUTTE : change max-width ici et dans .contact-mail juste dessous. */
+.contact-art { display: block; width: 100%; max-width: 350px; margin-left: auto; overflow: hidden; border: 1px solid var(--line); background: #141214; transition: border-color .2s; }
 .contact-art:hover { border-color: var(--gold); }
 .contact-art svg { display: block; width: 100%; height: auto; }
-.contact-mail { max-width: 300px; margin: 12px 0 0 auto; text-align: center; color: var(--muted); font-size: 15px; }
+.contact-mail { max-width: 350px; margin: 12px 0 0 auto; text-align: center; color: var(--muted); font-size: 15px; }
+.contact-mail a { color: var(--gold); }
 
 /* Animations douces des corbeaux, de la fumée et du panneau. */
 @keyframes wing-flap { from { transform: rotate(-14deg); } to { transform: rotate(16deg); } }
@@ -183,7 +195,7 @@ h1 em, h2 em { color: var(--gold); font-weight: 400; }
 .smoke { transform-box: fill-box; transform-origin: center; animation: smoke-rise 4.2s ease-out infinite; opacity: 0; }
 .sign { transform-box: fill-box; transform-origin: 50% 0; animation: sign-swing 4.5s ease-in-out infinite; }
 .window-glow { transition: opacity .3s; }
-.contact-art { display: block; max-width: 350px; overflow: hidden; border: 1px solid var(--line); background: #141214; transition: border-color .2s; }
+.contact-art:hover .window-glow { opacity: .6; }
 
 /* Fenêtre « Écrire au Grimoire » (ordinateur). */
 .mail-dialog { width: min(420px, calc(100% - 36px)); padding: 30px; color: var(--text); background: var(--panel); border: 1px solid var(--gold); }
@@ -239,6 +251,10 @@ h1 em, h2 em { color: var(--gold); font-weight: 400; }
 .download-note a { color: var(--gold); }
 .downloads-back { margin-top: 30px; }
 
+/* Version US : « bientôt » en anglais et fiches anglaises en premier. */
+html[lang="en"] .file-link[href="#"]::after { content: "soon"; }
+html[lang="en"] .download-links .file-link:first-child { order: 2; }
+
 /* 17. Pied de page commun aux pages. */
 .site-footer { padding: 38px 24px; text-align: center; border-top: 1px solid var(--line); background: #0c0b0c; }
 .footer-brand { color: var(--gold); font: 12px var(--display); letter-spacing: .1em; }
@@ -256,6 +272,10 @@ h1 em, h2 em { color: var(--gold); font-weight: 400; }
 /* 19. Menu mobile et écrans de taille moyenne. */
 @media (max-width: 950px) {
   .site-header { flex-wrap: wrap; }
+  .brand { order: 1; }
+  .menu-toggle { display: block; order: 2; }
+  .lang-switch { order: 3; margin-left: auto; }
+  .navigation { order: 4; }
   .menu-toggle { display: block; }
   .navigation { display: none; flex-basis: 100%; flex-direction: column; align-items: stretch; gap: 0; padding-top: 12px; }
   .navigation.is-open { display: flex; }
@@ -290,7 +310,7 @@ h1 em, h2 em { color: var(--gold); font-weight: 400; }
 
 /* Respecte les personnes qui préfèrent moins d'animations. */
 @media (prefers-reduced-motion: reduce) {
-  .raven-wing, .raven-drift, .smoke, .sign, .hero-logo.is-playing { animation: none; }
+  .raven-wing, .raven-drift, .smoke, .sign, .hero-logo.is-playing, .flag svg { animation: none; }
   .d20-link:hover svg { transform: none; }
   html { scroll-behavior: auto; }
 }
