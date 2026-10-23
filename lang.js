@@ -93,6 +93,7 @@
     "Retour à l'accueil": 'Back to home',
 
     /* ----- Recherche ----- */
+    'Consulte le grimoire': 'Consult the grimoire',
     'Rechercher une fiche': 'Search for a sheet',
     'Rechercher une fiche : un sort, une compétence…': 'Search for a sheet: a spell, a skill…',
     'Effacer la recherche': 'Clear the search',
@@ -183,6 +184,8 @@
 
   var CLE_STOCKAGE = 'gj-lang';
   var langue = 'fr';
+  var dejaChoisi = false; // Le visiteur a-t-il déjà cliqué sur un fanion ?
+  var noteTexte = null;
   var registre = [];
 
   /* Compare les textes sans tenir compte des espaces en trop ni de &amp;. */
@@ -257,6 +260,15 @@
     registre.forEach(appliquer);
     trier();
     mettreAJourFanions();
+    /* Note manuscrite : toujours dans l'AUTRE langue, pour guider ceux qui ne comprennent pas. */
+    if (noteTexte) {
+      noteTexte.textContent = langue === 'fr' ? "You don't understand? Click Here!" : 'Tu ne comprends rien ? Clique Ici !';
+      noteTexte.setAttribute('lang', langue === 'fr' ? 'en' : 'fr');
+    }
+    if (memoriser) {
+      var zone = document.querySelector('.lang-switch');
+      if (zone) { zone.classList.remove('has-hint'); } // Il a trouvé les fanions : la note disparaît.
+    }
     if (memoriser) { try { localStorage.setItem(CLE_STOCKAGE, langue); } catch (e) { /* mémoire indisponible : tant pis */ } }
     document.dispatchEvent(new CustomEvent('gj-lang-change', { detail: { lang: langue } }));
   }
@@ -299,6 +311,16 @@
       var bouton = e.target.closest('.flag');
       if (bouton) { choisir(bouton.getAttribute('data-lang'), true); }
     });
+    /* Note écrite à la main + flèche qui montre les fanions (visible tant qu'on n'a pas choisi). */
+    var note = document.createElement('div');
+    note.className = 'lang-hint';
+    note.setAttribute('aria-hidden', 'true');
+    note.innerHTML = '<span class="lang-hint-text"></span>' +
+      '<svg viewBox="0 0 40 46" focusable="false"><path d="M25 44C14 35 11 20 20 6" fill="none" stroke="#f1dfb0" stroke-width="2.6" stroke-linecap="round"/>' +
+      '<path d="M20 6L11.5 14.5M20 6L28.5 12" fill="none" stroke="#f1dfb0" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+    boite.appendChild(note);
+    noteTexte = note.querySelector('.lang-hint-text');
+    if (!dejaChoisi) { boite.classList.add('has-hint'); }
     entete.appendChild(boite);
   }
 
@@ -306,7 +328,7 @@
   function langueDeDepart() {
     var voulue = null;
     try { voulue = localStorage.getItem(CLE_STOCKAGE); } catch (e) { voulue = null; }
-    if (voulue === 'fr' || voulue === 'en') { return voulue; }
+    if (voulue === 'fr' || voulue === 'en') { dejaChoisi = true; return voulue; }
     var nav = (navigator.language || 'fr').toLowerCase();
     return nav.indexOf('fr') === 0 ? 'fr' : 'en';
   }
@@ -321,7 +343,8 @@
   var meta = document.querySelector('meta[name="description"]');
   if (meta && connu(norm(meta.getAttribute('content')))) { registre.push({ type: 'attr', el: meta, name: 'content', fr: meta.getAttribute('content') }); }
 
+  var depart = langueDeDepart(); // Calculée avant les fanions : on sait ainsi si le visiteur a déjà choisi.
   parcourir(document.body);
   creerFanions();
-  choisir(langueDeDepart(), false);
+  choisir(depart, false);
 })();

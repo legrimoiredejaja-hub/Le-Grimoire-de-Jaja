@@ -11,8 +11,8 @@
   <!-- Polices décoratives pour conserver le style médiéval du site. -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=6">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Crimson+Text:wght@400;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=7">
 </head>
 <body>
   <div class="topline" aria-hidden="true"></div>
@@ -30,7 +30,9 @@
       <!-- AJOUTS COMPATIBLES : pas encore disponible, donc non cliquable et marqué d'une croix rouge douce.
            Le jour où la page existe : remplace ce <span> par <a href="ajouts.html">Ajouts Compatibles</a> -->
       <span class="nav-soon" aria-disabled="true" title="Bientôt disponible"><i class="soon-cross" aria-hidden="true">✕</i><span>Ajouts Compatibles</span><span class="sr-only"> (bientôt disponible)</span></span>
-      <a href="#videos">Vidéos YouTube</a>
+      <!-- VIDÉOS YOUTUBE (masqué pour l'instant) : pour remettre ce lien dans le menu, supprime simplement le mot « hidden » ci-dessous.
+           Fais la même chose pour la section « VIDÉOS YOUTUBE » plus bas dans ce fichier. -->
+      <a href="#videos" hidden>Vidéos YouTube</a>
       <a class="nav-support" href="mailto:legrimoiredeJaja@gmail.com" data-mail>Me contacter</a>
     </nav>
   </header>
@@ -73,8 +75,15 @@
       <div class="divider-ornament"><span></span> ✦ <span></span></div>
     </section>
 
-    <!-- VIDÉOS : titre à gauche, le petit dé rouge (cliquable) et son texte au milieu. -->
-    <section class="videos-section section-wrap" id="videos">
+    <!-- ╔═══ VIDÉOS YOUTUBE : SECTION MASQUÉE POUR L'INSTANT ═══╗
+         POUR LA REMETTRE EN PLACE :
+           1) Sur la ligne <section ...> juste en dessous, supprime le mot « hidden ».
+           2) En haut de ce fichier, dans le menu, supprime aussi « hidden » sur le lien « Vidéos YouTube ».
+           3) Dans styles.css, rien à changer : les styles des vidéos y sont toujours (partie « 14. VIDÉOS »).
+         POUR LA MASQUER DE NOUVEAU : remets le mot « hidden » aux mêmes endroits.
+         (Titre à gauche, petit dé rouge cliquable et son texte au milieu.)
+         ╚════════════════════════════════════════════════════════╝ -->
+    <section class="videos-section section-wrap" id="videos" hidden>
       <div class="videos-grid">
         <div class="section-heading">
           <p class="eyebrow">À regarder</p>
@@ -214,9 +223,12 @@
   <script src="script.js"></script>
   <!-- Musique de Jaja : liste des morceaux dans musique.js -->
   <!-- Langue FR / US : fanions et traductions (voir lang.js) -->
-  <script src="lang.js?v=6"></script>
-  <script src="musique.js?v=6"></script>
+  <script src="lang.js?v=7"></script>
+  <script src="musique.js?v=7"></script>
   <!-- Fenêtre « Écrire au Grimoire » -->
-  <script src="contact.js?v=6"></script>
+  <script src="contact.js?v=7"></script>
+  <!-- SOUTIEN : bouton Ko-fi « Support me » + phrase aléatoire avec une flèche (voir soutien.js) -->
+  <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+  <script src="soutien.js?v=7"></script>
 </body>
 </html>
