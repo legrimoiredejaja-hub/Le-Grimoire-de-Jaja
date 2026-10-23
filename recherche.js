@@ -1,5 +1,5 @@
 /* ============================================================
-   RECHERCHE dans les fiches à télécharger (page Téléchargements).
+   RECHERCHE dans les parchemins (page Les Parchemins).
    On tape un mot (« athlétisme », « sort », « armure »…) : seules les
    fiches correspondantes restent affichées et leur thème s'ouvre.
    La recherche ignore les majuscules et les accents, et suit la langue
@@ -67,9 +67,9 @@
     });
 
     if (total === 0) {
-      statut.textContent = t('Aucune fiche trouvée pour') + ' « ' + champ.value.trim() + ' »';
+      statut.textContent = t('Aucun parchemin trouvé pour') + ' « ' + champ.value.trim() + ' »';
     } else {
-      statut.textContent = total + ' ' + t(total === 1 ? 'fiche trouvée' : 'fiches trouvées');
+      statut.textContent = total + ' ' + t(total === 1 ? 'parchemin trouvé' : 'parchemins trouvés');
     }
   }
 

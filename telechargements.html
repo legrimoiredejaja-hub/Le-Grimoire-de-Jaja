@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#100f10">
-  <meta name="description" content="Téléchargements du Grimoire de Jaja : guides, écrans de MD, compétences, sorts et autres fiches D&D en français et en anglais.">
-  <title>Téléchargements — Le Grimoire de Jaja</title>
+  <meta name="description" content="Les Parchemins du Grimoire de Jaja : combat, compétences, sorts, états, équipement et écrans de MD pour D&D5.5 (Donjons & Dragons 5.5), en français et en anglais.">
+  <title>Les Parchemins — Le Grimoire de Jaja — Aides de jeu D&D5.5</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Crimson+Text:wght@400;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=7">
+  <link rel="stylesheet" href="styles.css?v=8">
 </head>
 <body>
   <div class="topline" aria-hidden="true"></div>
@@ -22,7 +22,7 @@
     <button class="menu-toggle" aria-expanded="false" aria-controls="navigation">Menu <span>☰</span></button>
     <nav id="navigation" class="navigation" aria-label="Navigation principale">
       <a href="index.html#presentation">Présentation</a>
-      <a class="active" href="telechargements.html" aria-current="page">Téléchargements</a>
+      <a class="active" href="telechargements.html" aria-current="page">Les Parchemins</a>
       <span class="nav-soon" aria-disabled="true" title="Bientôt disponible"><i class="soon-cross" aria-hidden="true">✕</i><span>Ajouts Compatibles</span><span class="sr-only"> (bientôt disponible)</span></span>
       <!-- VIDÉOS YOUTUBE (masqué pour l'instant) : pour remettre ce lien, supprime le mot « hidden » ci-dessous
            (et lis le mode d'emploi « VIDÉOS YOUTUBE » dans index.html). -->
@@ -34,144 +34,54 @@
   <main>
     <section class="downloads-hero section-wrap">
       <p class="eyebrow">La bibliothèque de fichiers</p>
-      <h1>Les <em>Téléchargements</em></h1>
-      <p class="hero-copy">Choisis un thème, clique dessus et le menu s'ouvre avec toutes les fiches. Chacune existe en français et en anglais.</p>
+      <h1>Les <em>Parchemins</em></h1>
+      <p class="hero-copy">Choisis un thème, clique dessus, puis clique sur un parchemin : il s'ouvre en grand, tu n'as plus qu'à faire défiler. Tu peux aussi le télécharger.</p>
     </section>
 
     <!-- RECHERCHE : tape un nom de sort, de compétence… (voir recherche.js) -->
     <section class="search-box section-wrap">
       <p class="search-eyebrow" aria-hidden="true"><span></span><b>Consulte le grimoire</b><span></span></p>
-      <label class="sr-only" for="search">Rechercher une fiche</label>
+      <label class="sr-only" for="search">Rechercher un parchemin</label>
       <div class="search-field">
         <svg class="search-icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
           <circle cx="13" cy="13" r="8.5" fill="none" stroke="#c7a96b" stroke-width="2.2"/>
           <path d="M19.5 19.5L28 28" stroke="#c7a96b" stroke-width="3.2" stroke-linecap="round"/>
           <path d="M13 7.2L14.5 11.5L18.8 13L14.5 14.5L13 18.8L11.5 14.5L7.2 13L11.5 11.5Z" fill="#f1dfb0"/>
         </svg>
-        <input id="search" type="search" placeholder="Rechercher une fiche : un sort, une compétence…" autocomplete="off" spellcheck="false">
+        <input id="search" type="search" placeholder="Rechercher un parchemin : un sort, une compétence, une action…" autocomplete="off" spellcheck="false">
         <button class="search-clear" type="button" aria-label="Effacer la recherche" hidden>✕</button>
       </div>
       <p class="search-status" role="status" aria-live="polite"></p>
     </section>
 
-    <!--
-      MODE D'EMPLOI POUR AJOUTER TES LIENS
-      - Chaque lien est écrit href="#". Tant qu'il reste "#", il s'affiche en "bientôt" et n'est pas cliquable.
-      - Remplace "#" par l'adresse du fichier (ex. href="https://raw.githubusercontent.com/...") et il devient actif tout seul.
-      - Pour ajouter une fiche : copie un bloc <div class="download-item"> ... </div> et change le titre.
-      - Pour ajouter un thème : copie un bloc <details class="download-category"> ... </details>.
-    -->
+    <!-- Les thèmes et parchemins sont construits par parchemins.js (c'est là qu'on ajoute les fichiers). -->
     <section class="downloads-content section-wrap">
+      <div id="parchemins"></div>
 
-      <!-- 1. GUIDE -->
-      <details class="download-category">
-        <summary><span class="cat-number">01</span><h2 class="cat-title">Guide</h2><span class="cat-meta">2 fiches</span><span class="cat-toggle" aria-hidden="true"></span></summary>
-        <div class="category-panel">
-          <p class="category-intro">Pour bien démarrer et garder les repères essentiels sous la main.</p>
-          <div class="download-item"><div class="download-info"><span class="download-number">01</span><div><h3>Guide du joueur</h3><p>Créer son personnage et comprendre le déroulé d'une partie</p></div></div><div class="download-links"><a class="file-link" href="#"><span>FR</span>Fiche française<b>↓</b></a><a class="file-link" href="#"><span>EN</span>English sheet<b>↓</b></a></div></div>
-          <div class="download-item"><div class="download-info"><span class="download-number">02</span><div><h3>Guide du Maître du Jeu</h3><p>Préparer et mener une séance sans stress</p></div></div><div class="download-links"><a class="file-link" href="#"><span>FR</span>Fiche française<b>↓</b></a><a class="file-link" href="#"><span>EN</span>English sheet<b>↓</b></a></div></div>
-        </div>
-      </details>
-
-      <!-- 2. ÉCRANS DE MD -->
-      <details class="download-category">
-        <summary><span class="cat-number">02</span><h2 class="cat-title">Écrans de MD D&amp;D 2024</h2><span class="cat-meta">3 fiches</span><span class="cat-toggle" aria-hidden="true"></span></summary>
-        <div class="category-panel">
-          <p class="category-intro">Les écrans à imprimer, mis à jour pour les règles 2024.</p>
-          <div class="download-item"><div class="download-info"><span class="download-number">01</span><div><h3>Écran du Maître du Jeu</h3><p>Les règles essentielles, côté MD</p></div></div><div class="download-links"><a class="file-link" href="#"><span>FR</span>Fiche française<b>↓</b></a><a class="file-link" href="#"><span>EN</span>English sheet<b>↓</b></a></div></div>
-          <div class="download-item"><div class="download-info"><span class="download-number">02</span><div><h3>Écran de combat</h3><p>Actions, déplacements et initiative en un coup d'œil</p></div></div><div class="download-links"><a class="file-link" href="#"><span>FR</span>Fiche française<b>↓</b></a><a class="file-link" href="#"><span>EN</span>English sheet<b>↓</b></a></div></div>
-          <div class="download-item"><div class="download-info"><span class="download-number">03</span><div><h3>Tables de référence</h3><p>Degrés de difficulté, dégâts et états</p></div></div><div class="download-links"><a class="file-link" href="#"><span>FR</span>Fiche française<b>↓</b></a><a class="file-link" href="#"><span>EN</span>English sheet<b>↓</b></a></div></div>
-        </div>
-      </details>
-
-      <!-- 3. LES COMPÉTENCES (ordre alphabétique) -->
-      <details class="download-category">
-        <summary><span class="cat-number">03</span><h2 class="cat-title">Les Compétences</h2><span class="cat-meta">18 fiches</span><span class="cat-toggle" aria-hidden="true"></span></summary>
-        <div class="category-panel" data-sort>
-          <p class="category-intro">Une fiche par compétence, classées par ordre alphabétique.</p>
-          <div class="download-item"><div class="download-info"><span class="download-number">01</span><div><h3>Acrobaties</h3><p>Dextérité</p></div></div><div class="download-links"><a class="file-link" href="#"><span>FR</span>Fiche française<b>↓</b></a><a class="file-link" href="#"><span>EN</span>English sheet<b>↓</b></a></div></div>
-          <div class="download-item"><div class="download-info"><span class="download-number">02</span><div><h3>Arcanes</h3><p>Intelligence</p></div></div><div class="download-links"><a class="file-link" href="#"><span>FR</span>Fiche française<b>↓</b></a><a class="file-link" href="#"><span>EN</span>English sheet<b>↓</b></a></div></div>
-          <div class="download-item"><div class="download-info"><span class="download-number">03</span><div><h3>Athlétisme</h3><p>Force</p></div></div><div class="download-links"><a class="file-link" href="#"><span>FR</span>Fiche française<b>↓</b></a><a class="file-link" href="#"><span>EN</span>English sheet<b>↓</b></a></div></div>
-          <div class="download-item"><div class="download-info"><span class="download-number">04</span><div><h3>Discrétion</h3><p>Dextérité</p></div></div><div class="download-links"><a class="file-link" href="#"><span>FR</span>Fiche française<b>↓</b></a><a class="file-link" href="#"><span>EN</span>English sheet<b>↓</b></a></div></div>
-          <div class="download-item"><div class="download-info"><span class="download-number">05</span><div><h3>Dressage</h3><p>Sagesse</p></div></div><div class="download-links"><a class="file-link" href="#"><span>FR</span>Fiche française<b>↓</b></a><a class="file-link" href="#"><span>EN</span>English sheet<b>↓</b></a></div></div>
-          <div class="download-item"><div class="download-info"><span class="download-number">06</span><div><h3>Escamotage</h3><p>Dextérité</p></div></div><div class="download-links"><a class="file-link" href="#"><span>FR</span>Fiche française<b>↓</b></a><a class="file-link" href="#"><span>EN</span>English sheet<b>↓</b></a></div></div>
-          <div class="download-item"><div class="download-info"><span class="download-number">07</span><div><h3>Histoire</h3><p>Intelligence</p></div></div><div class="download-links"><a class="file-link" href="#"><span>FR</span>Fiche française<b>↓</b></a><a class="file-link" href="#"><span>EN</span>English sheet<b>↓</b></a></div></div>
-          <div class="download-item"><div class="download-info"><span class="download-number">08</span><div><h3>Intimidation</h3><p>Charisme</p></div></div><div class="download-links"><a class="file-link" href="#"><span>FR</span>Fiche française<b>↓</b></a><a class="file-link" href="#"><span>EN</span>English sheet<b>↓</b></a></div></div>
-          <div class="download-item"><div class="download-info"><span class="download-number">09</span><div><h3>Investigation</h3><p>Intelligence</p></div></div><div class="download-links"><a class="file-link" href="#"><span>FR</span>Fiche française<b>↓</b></a><a class="file-link" href="#"><span>EN</span>English sheet<b>↓</b></a></div></div>
-          <div class="download-item"><div class="download-info"><span class="download-number">10</span><div><h3>Médecine</h3><p>Sagesse</p></div></div><div class="download-links"><a class="file-link" href="#"><span>FR</span>Fiche française<b>↓</b></a><a class="file-link" href="#"><span>EN</span>English sheet<b>↓</b></a></div></div>
-          <div class="download-item"><div class="download-info"><span class="download-number">11</span><div><h3>Nature</h3><p>Intelligence</p></div></div><div class="download-links"><a class="file-link" href="#"><span>FR</span>Fiche française<b>↓</b></a><a class="file-link" href="#"><span>EN</span>English sheet<b>↓</b></a></div></div>
-          <div class="download-item"><div class="download-info"><span class="download-number">12</span><div><h3>Perception</h3><p>Sagesse</p></div></div><div class="download-links"><a class="file-link" href="#"><span>FR</span>Fiche française<b>↓</b></a><a class="file-link" href="#"><span>EN</span>English sheet<b>↓</b></a></div></div>
-          <div class="download-item"><div class="download-info"><span class="download-number">13</span><div><h3>Perspicacité</h3><p>Sagesse</p></div></div><div class="download-links"><a class="file-link" href="#"><span>FR</span>Fiche française<b>↓</b></a><a class="file-link" href="#"><span>EN</span>English sheet<b>↓</b></a></div></div>
-          <div class="download-item"><div class="download-info"><span class="download-number">14</span><div><h3>Persuasion</h3><p>Charisme</p></div></div><div class="download-links"><a class="file-link" href="#"><span>FR</span>Fiche française<b>↓</b></a><a class="file-link" href="#"><span>EN</span>English sheet<b>↓</b></a></div></div>
-          <div class="download-item"><div class="download-info"><span class="download-number">15</span><div><h3>Religion</h3><p>Intelligence</p></div></div><div class="download-links"><a class="file-link" href="#"><span>FR</span>Fiche française<b>↓</b></a><a class="file-link" href="#"><span>EN</span>English sheet<b>↓</b></a></div></div>
-          <div class="download-item"><div class="download-info"><span class="download-number">16</span><div><h3>Représentation</h3><p>Charisme</p></div></div><div class="download-links"><a class="file-link" href="#"><span>FR</span>Fiche française<b>↓</b></a><a class="file-link" href="#"><span>EN</span>English sheet<b>↓</b></a></div></div>
-          <div class="download-item"><div class="download-info"><span class="download-number">17</span><div><h3>Survie</h3><p>Sagesse</p></div></div><div class="download-links"><a class="file-link" href="#"><span>FR</span>Fiche française<b>↓</b></a><a class="file-link" href="#"><span>EN</span>English sheet<b>↓</b></a></div></div>
-          <div class="download-item"><div class="download-info"><span class="download-number">18</span><div><h3>Tromperie</h3><p>Charisme</p></div></div><div class="download-links"><a class="file-link" href="#"><span>FR</span>Fiche française<b>↓</b></a><a class="file-link" href="#"><span>EN</span>English sheet<b>↓</b></a></div></div>
-        </div>
-      </details>
-
-      <!-- 4. LES SORTS -->
-      <details class="download-category">
-        <summary><span class="cat-number">04</span><h2 class="cat-title">Les Sorts</h2><span class="cat-meta">3 fiches</span><span class="cat-toggle" aria-hidden="true"></span></summary>
-        <div class="category-panel">
-          <p class="category-intro">Pour lancer ses sorts sans fouiller dans les livres.</p>
-          <div class="download-item"><div class="download-info"><span class="download-number">01</span><div><h3>Lancer un sort</h3><p>Composantes, portée, durée et concentration</p></div></div><div class="download-links"><a class="file-link" href="#"><span>FR</span>Fiche française<b>↓</b></a><a class="file-link" href="#"><span>EN</span>English sheet<b>↓</b></a></div></div>
-          <div class="download-item"><div class="download-info"><span class="download-number">02</span><div><h3>Sorts mineurs</h3><p>Les tours de magie par classe</p></div></div><div class="download-links"><a class="file-link" href="#"><span>FR</span>Fiche française<b>↓</b></a><a class="file-link" href="#"><span>EN</span>English sheet<b>↓</b></a></div></div>
-          <div class="download-item"><div class="download-info"><span class="download-number">03</span><div><h3>Sorts par niveau</h3><p>Listes classées du niveau 1 au niveau 9</p></div></div><div class="download-links"><a class="file-link" href="#"><span>FR</span>Fiche française<b>↓</b></a><a class="file-link" href="#"><span>EN</span>English sheet<b>↓</b></a></div></div>
-        </div>
-      </details>
-
-      <!-- 5. LE COMBAT -->
-      <details class="download-category">
-        <summary><span class="cat-number">05</span><h2 class="cat-title">Le Combat</h2><span class="cat-meta">3 fiches</span><span class="cat-toggle" aria-hidden="true"></span></summary>
-        <div class="category-panel">
-          <p class="category-intro">Le tour de jeu et les actions possibles, sans débat.</p>
-          <div class="download-item"><div class="download-info"><span class="download-number">01</span><div><h3>Déroulé d'un tour</h3><p>Initiative, déplacement, action et réaction</p></div></div><div class="download-links"><a class="file-link" href="#"><span>FR</span>Fiche française<b>↓</b></a><a class="file-link" href="#"><span>EN</span>English sheet<b>↓</b></a></div></div>
-          <div class="download-item"><div class="download-info"><span class="download-number">02</span><div><h3>Actions en combat</h3><p>Toutes les actions disponibles</p></div></div><div class="download-links"><a class="file-link" href="#"><span>FR</span>Fiche française<b>↓</b></a><a class="file-link" href="#"><span>EN</span>English sheet<b>↓</b></a></div></div>
-          <div class="download-item"><div class="download-info"><span class="download-number">03</span><div><h3>Couvert et visibilité</h3><p>Abri, obscurité et attaques à distance</p></div></div><div class="download-links"><a class="file-link" href="#"><span>FR</span>Fiche française<b>↓</b></a><a class="file-link" href="#"><span>EN</span>English sheet<b>↓</b></a></div></div>
-        </div>
-      </details>
-
-      <!-- 6. LES ÉTATS -->
-      <details class="download-category">
-        <summary><span class="cat-number">06</span><h2 class="cat-title">Les États</h2><span class="cat-meta">1 fiche</span><span class="cat-toggle" aria-hidden="true"></span></summary>
-        <div class="category-panel">
-          <p class="category-intro">Aveuglé, empoisonné, paralysé… tout ce qu'un état change.</p>
-          <div class="download-item"><div class="download-info"><span class="download-number">01</span><div><h3>Tous les états</h3><p>Effets résumés sur une seule fiche</p></div></div><div class="download-links"><a class="file-link" href="#"><span>FR</span>Fiche française<b>↓</b></a><a class="file-link" href="#"><span>EN</span>English sheet<b>↓</b></a></div></div>
-        </div>
-      </details>
-
-      <!-- 7. L'ÉQUIPEMENT -->
-      <details class="download-category">
-        <summary><span class="cat-number">07</span><h2 class="cat-title">L'Équipement</h2><span class="cat-meta">3 fiches</span><span class="cat-toggle" aria-hidden="true"></span></summary>
-        <div class="category-panel">
-          <p class="category-intro">Armes, armures et outils, avec leurs propriétés.</p>
-          <div class="download-item"><div class="download-info"><span class="download-number">01</span><div><h3>Armes</h3><p>Dégâts, propriétés et maîtrises</p></div></div><div class="download-links"><a class="file-link" href="#"><span>FR</span>Fiche française<b>↓</b></a><a class="file-link" href="#"><span>EN</span>English sheet<b>↓</b></a></div></div>
-          <div class="download-item"><div class="download-info"><span class="download-number">02</span><div><h3>Armures</h3><p>Classe d'armure, force requise et discrétion</p></div></div><div class="download-links"><a class="file-link" href="#"><span>FR</span>Fiche française<b>↓</b></a><a class="file-link" href="#"><span>EN</span>English sheet<b>↓</b></a></div></div>
-          <div class="download-item"><div class="download-info"><span class="download-number">03</span><div><h3>Outils</h3><p>Maîtrises d'outils et ce qu'elles permettent</p></div></div><div class="download-links"><a class="file-link" href="#"><span>FR</span>Fiche française<b>↓</b></a><a class="file-link" href="#"><span>EN</span>English sheet<b>↓</b></a></div></div>
-        </div>
-      </details>
-
-      <p class="download-note">Les fiches sont mises à jour régulièrement. Une erreur ou une fiche à suggérer ? <a href="mailto:legrimoiredeJaja@gmail.com" data-mail>Écris-moi</a>.</p>
+      <p class="download-note">Les parchemins sont mis à jour régulièrement. Une erreur ou un parchemin à suggérer ? <a href="mailto:legrimoiredeJaja@gmail.com" data-mail>Écris-moi</a>.</p>
       <p class="downloads-back"><a class="text-link" href="index.html"><span>←</span> Retour à l'accueil</a></p>
     </section>
   </main>
 
   <footer class="site-footer">
     <a class="footer-brand" href="index.html">✦ LE GRIMOIRE DE JAJA</a>
-    <p>Des aides pratiques pour les parties de D&D.</p>
-    <div class="footer-links"><a href="index.html">Accueil</a><a href="telechargements.html">Téléchargements</a><a href="mailto:legrimoiredeJaja@gmail.com" data-mail>Contact</a></div>
+    <p>Des aides pratiques pour les parties de D&D5.5.</p>
+    <div class="footer-links"><a href="index.html">Accueil</a><a href="telechargements.html">Les Parchemins</a><a href="mailto:legrimoiredeJaja@gmail.com" data-mail>Contact</a></div>
     <small>© <span id="year"></span> Le Grimoire de Jaja · Site indépendant</small>
   </footer>
   <script src="script.js"></script>
   <!-- Langue FR / US : fanions et traductions (voir lang.js) -->
-  <script src="lang.js?v=7"></script>
+  <script src="lang.js?v=8"></script>
+  <!-- La liste des parchemins (c'est ici qu'on ajoute les fichiers) -->
+  <script src="parchemins.js?v=8"></script>
   <!-- Fenêtre « Écrire au Grimoire » -->
-  <script src="contact.js?v=7"></script>
-  <!-- Recherche dans les fiches -->
-  <script src="recherche.js?v=7"></script>
+  <script src="contact.js?v=8"></script>
+  <!-- Recherche dans les parchemins -->
+  <script src="recherche.js?v=8"></script>
+  <!-- Lecteur plein écran des parchemins -->
+  <script src="lecteur.js?v=8"></script>
   <!-- SOUTIEN : bouton Ko-fi « Support me » + phrase aléatoire avec une flèche (voir soutien.js) -->
   <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
-  <script src="soutien.js?v=7"></script>
+  <script src="soutien.js?v=8"></script>
 </body>
 </html>

@@ -278,7 +278,7 @@ h1 em, h2 em { color: var(--gold); font-weight: 400; }
 .download-info h3 { margin: 0 0 4px; font-size: 19px; }
 .download-info p { margin: 0; color: var(--muted); font-size: 15px; }
 .download-links { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-.file-link { display: flex; align-items: center; gap: 12px; padding: 11px 13px; background: var(--panel); border: 1px solid transparent; font-size: 15px; }
+.file-link { flex: 1; min-width: 0; display: flex; align-items: center; gap: 12px; padding: 11px 13px; background: var(--panel); border: 1px solid transparent; font-size: 15px; }
 .file-link:hover { border-color: var(--line); color: var(--gold); }
 .file-link span { min-width: 34px; padding: 3px 5px; text-align: center; color: var(--gold); border: 1px solid var(--line); font: 10px var(--display); }
 .file-link b { margin-left: auto; color: var(--gold); }
@@ -292,7 +292,7 @@ h1 em, h2 em { color: var(--gold); font-weight: 400; }
 
 /* Version US : « bientôt » en anglais et fiches anglaises en premier. */
 html[lang="en"] .file-link[href="#"]::after { content: "soon"; }
-html[lang="en"] .download-links .file-link:first-child { order: 2; }
+html[lang="en"] .download-links .file-row:first-child { order: 2; }
 
 /* Soutien Ko-fi : petite phrase manuscrite et flèche de combat qui montrent le bouton « Support me ».
    Si la flèche ne tombe pas pile sur le bouton, change --kofi-offset (plus grand = la note monte). */
@@ -366,3 +366,28 @@ html[lang="en"] .download-links .file-link:first-child { order: 2; }
   .d20-link:hover svg { transform: none; }
   html { scroll-behavior: auto; }
 }
+
+/* Mention de version (accueil) */
+.hero-edition { max-width: 570px; margin: 14px 0 0; padding-left: 12px; border-left: 2px solid var(--gold); color: var(--muted); font-size: 15px; font-style: italic; }
+
+/* Une ligne = « Lire le parchemin » + petit bouton de téléchargement */
+.file-row { display: flex; gap: 6px; align-items: stretch; }
+.file-name { margin-left: 0; font-style: normal; }
+.file-dl { flex: 0 0 46px; display: flex; align-items: center; justify-content: center; background: var(--panel); border: 1px solid transparent; color: var(--gold); font-size: 18px; }
+.file-dl:hover { border-color: var(--line); }
+
+/* Lecteur plein écran */
+html.reader-open { overflow: hidden; }
+.reader { width: 100vw; height: 100vh; height: 100dvh; max-width: none; max-height: none; margin: 0; padding: 0; border: 0; background: #1a1819; color: var(--text, #eee); }
+.reader[open] { display: flex; flex-direction: column; }
+.reader::backdrop { background: #000; }
+.reader-bar { display: flex; align-items: center; gap: 8px; padding: 10px 14px; background: #100f10; border-bottom: 1px solid var(--line); }
+.reader-title { flex: 1; min-width: 0; margin: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font: 600 15px var(--display); color: var(--gold); }
+.reader-btn { display: inline-flex; align-items: center; gap: 6px; padding: 8px 12px; background: var(--panel); border: 1px solid var(--line); color: var(--gold); font: 14px var(--display); cursor: pointer; }
+.reader-btn:hover { background: #2a2628; }
+.reader-body { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+.reader-pages { max-width: 1000px; margin: 0 auto; padding: 14px; display: grid; gap: 14px; justify-items: center; }
+.reader-pages canvas, .reader-pages img { max-width: 100%; height: auto; background: #fff; box-shadow: 0 2px 14px rgba(0,0,0,.6); }
+.reader-status { color: var(--muted); text-align: center; padding: 40px 10px; }
+.reader-status a { color: var(--gold); }
+@media (max-width: 560px) { .reader-btn span { display: none; } }

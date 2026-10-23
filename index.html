@@ -6,13 +6,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#100f10">
-  <meta name="description" content="Le Grimoire de Jaja : fiches pratiques, téléchargements et vidéos pour les joueurs et maîtres du jeu D&D.">
-  <title>Le Grimoire de Jaja — Aides de jeu D&D</title>
+  <meta name="description" content="Le Grimoire de Jaja : fiches pratiques à lire ou à télécharger pour les joueurs et maîtres du jeu de Donjons &amp; Dragons 5.5 (D&amp;D5.5).">
+  <title>Le Grimoire de Jaja — Aides de jeu D&amp;D5.5</title>
   <!-- Polices décoratives pour conserver le style médiéval du site. -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Crimson+Text:wght@400;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=7">
+  <link rel="stylesheet" href="styles.css?v=8">
 </head>
 <body>
   <div class="topline" aria-hidden="true"></div>
@@ -26,7 +26,7 @@
     <button class="menu-toggle" aria-expanded="false" aria-controls="navigation">Menu <span>☰</span></button>
     <nav id="navigation" class="navigation" aria-label="Navigation principale">
       <a href="#presentation">Présentation</a>
-      <a href="telechargements.html">Téléchargements</a>
+      <a href="telechargements.html">Les Parchemins</a>
       <!-- AJOUTS COMPATIBLES : pas encore disponible, donc non cliquable et marqué d'une croix rouge douce.
            Le jour où la page existe : remplace ce <span> par <a href="ajouts.html">Ajouts Compatibles</a> -->
       <span class="nav-soon" aria-disabled="true" title="Bientôt disponible"><i class="soon-cross" aria-hidden="true">✕</i><span>Ajouts Compatibles</span><span class="sr-only"> (bientôt disponible)</span></span>
@@ -41,23 +41,24 @@
     <!-- ACCUEIL : le titre à gauche, la bibliothèque au centre, l'image de Jaja à droite. -->
     <section class="hero" id="accueil">
       <div class="hero-content">
-        <p class="eyebrow"><span></span> Aides de jeu · Règles · Ressources <span></span></p>
+        <p class="eyebrow"><span></span> Aides de jeu · Donjons &amp; Dragons 5.5 <span></span></p>
         <h1>Le Grimoire<br><em>de Jaja</em></h1>
-        <p class="hero-copy">Des fiches pratiques pour passer moins de temps à débattre et plus de temps à jouer.</p>
+        <p class="hero-copy">Des fiches pratiques pour Donjons &amp; Dragons 5.5, pour passer moins de temps à débattre et plus de temps à jouer.</p>
         <span class="hero-rule" aria-hidden="true"></span>
+        <p class="hero-edition">Uniquement pour la version 5.5 (règles 2024) : les autres versions du jeu ne sont pas couvertes.</p>
       </div>
 
       <div class="hero-card">
         <p class="eyebrow">La bibliothèque de fichiers</p>
         <h2>Une fiche à retrouver ?<br><em>Tout est au même endroit.</em></h2>
-        <p>Les fiches françaises et anglaises sont classées par thème, avec un lien direct pour chaque fichier.</p>
-        <a class="button button-outline" href="telechargements.html">Ouvrir les téléchargements <span>↗</span></a>
+        <p>Les fiches, en français et en anglais, sont classées par thème : lis-les en un clic ou télécharge-les.</p>
+        <a class="button button-outline" href="telechargements.html">Ouvrir les parchemins <span>↗</span></a>
       </div>
 
       <!-- IMAGE DE JAJA : cliquable, un clic lance une musique au hasard (voir musique.js). Sa taille se règle avec .hero-logo dans styles.css. -->
            <img class="hero-logo" src="Le%20Grimoire%20de%20Jaja.png?v=2" alt="Jaja, un sourire aux lèvres, lisant un grimoire" role="button" tabindex="0" aria-pressed="false" aria-label="Lancer une musique du Grimoire de Jaja">
       
-      <div class="hero-side-note" aria-hidden="true">AIDES DE JEU • D&D</div>
+      <div class="hero-side-note" aria-hidden="true">AIDES DE JEU • D&amp;D5.5</div>
     </section>
 
     <!-- PRÉSENTATION : titre à gauche, texte à droite. -->
@@ -68,8 +69,8 @@
           <h2>Présentation</h2>
         </div>
         <div class="intro-body">
-          <p class="lead">Le Grimoire de Jaja, c'est un site qui regroupe des fiches d'aide, des écrans de MD et des ressources pratiques pour Dungeons &amp; Dragons.</p>
-          <p class="intro-text">Le but : retrouver vite une règle, préparer une séance et passer moins de temps à débattre pour plus de temps à jouer. Tout est classé par thème dans la page Téléchargements, en français et en anglais.</p>
+          <p class="lead">Le Grimoire de Jaja, c'est un site qui regroupe des fiches d'aide, des écrans de MD et des ressources pratiques pour Donjons &amp; Dragons 5.5.</p>
+          <p class="intro-text">Le but : retrouver vite une règle, préparer une séance et passer moins de temps à débattre pour plus de temps à jouer. Tout est classé par thème dans Les Parchemins, en français et en anglais. Attention : tout suit uniquement les règles de la version 5.5 (2024).</p>
         </div>
       </div>
       <div class="divider-ornament"><span></span> ✦ <span></span></div>
@@ -215,20 +216,20 @@
   <!-- Pied de page : liens utiles et année automatique. -->
   <footer class="site-footer">
     <a class="footer-brand" href="index.html">✦ LE GRIMOIRE DE JAJA</a>
-    <p>Des aides pratiques pour les parties de D&D.</p>
-    <div class="footer-links"><a href="index.html">Accueil</a><a href="telechargements.html">Téléchargements</a><a href="mailto:legrimoiredeJaja@gmail.com" data-mail>Contact</a></div>
+    <p>Des aides pratiques pour les parties de D&amp;D5.5.</p>
+    <div class="footer-links"><a href="index.html">Accueil</a><a href="telechargements.html">Les Parchemins</a><a href="mailto:legrimoiredeJaja@gmail.com" data-mail>Contact</a></div>
     <small>© <span id="year"></span> Le Grimoire de Jaja · Site indépendant</small>
   </footer>
 
   <script src="script.js"></script>
   <!-- Musique de Jaja : liste des morceaux dans musique.js -->
   <!-- Langue FR / US : fanions et traductions (voir lang.js) -->
-  <script src="lang.js?v=7"></script>
-  <script src="musique.js?v=7"></script>
+  <script src="lang.js?v=8"></script>
+  <script src="musique.js?v=8"></script>
   <!-- Fenêtre « Écrire au Grimoire » -->
-  <script src="contact.js?v=7"></script>
+  <script src="contact.js?v=8"></script>
   <!-- SOUTIEN : bouton Ko-fi « Support me » + phrase aléatoire avec une flèche (voir soutien.js) -->
   <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
-  <script src="soutien.js?v=7"></script>
+  <script src="soutien.js?v=8"></script>
 </body>
 </html>

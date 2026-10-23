@@ -15,18 +15,18 @@
   'use strict';
 
   var TRADUCTIONS = {
-    /* ----- Titres d'onglet et description ----- */
-    'Le Grimoire de Jaja — Aides de jeu D&D': 'Le Grimoire de Jaja — D&D Game Aids',
-    'Téléchargements — Le Grimoire de Jaja': 'Downloads — Le Grimoire de Jaja',
-    'Le Grimoire de Jaja : fiches pratiques, téléchargements et vidéos pour les joueurs et maîtres du jeu D&D.': 'Le Grimoire de Jaja: handy sheets, downloads and videos for D&D players and Dungeon Masters.',
-    'Téléchargements du Grimoire de Jaja : guides, écrans de MD, compétences, sorts et autres fiches D&D en français et en anglais.': 'Le Grimoire de Jaja downloads: guides, DM screens, skills, spells and other D&D sheets in French and English.',
+    /* ----- Titres d'onglet et descriptions ----- */
+    'Le Grimoire de Jaja — Aides de jeu D&D5.5': 'Le Grimoire de Jaja — D&D5.5 Game Aids',
+    'Les Parchemins — Le Grimoire de Jaja': 'The Scrolls — Le Grimoire de Jaja',
+    'Le Grimoire de Jaja : fiches pratiques à lire ou à télécharger pour les joueurs et maîtres du jeu de Donjons & Dragons 5.5 (D&D5.5).': 'Le Grimoire de Jaja: handy sheets to read or download for Dungeons & Dragons 5.5 (D&D5.5) players and Dungeon Masters.',
+    'Les Parchemins du Grimoire de Jaja : fiches D&D5.5 à lire en un clic ou à télécharger, en français et en anglais.': 'The Scrolls of Le Grimoire de Jaja: D&D5.5 sheets to read in one click or download, in French and English.',
 
     /* ----- En-tête et menu ----- */
     'Le Grimoire de Jaja, accueil': 'Le Grimoire de Jaja, home',
     "Le p'tit coup de pouce aux règles de ton jeu de rôle préféré": 'A little boost for the rules of your favorite role-playing game',
     'Navigation principale': 'Main navigation',
     'Présentation': 'About',
-    'Téléchargements': 'Downloads',
+    'Les Parchemins': 'The Scrolls',
     'Ajouts Compatibles': 'Compatible Add-ons',
     '(bientôt disponible)': '(coming soon)',
     'Bientôt disponible': 'Coming soon',
@@ -34,21 +34,22 @@
     'Me contacter': 'Contact me',
 
     /* ----- Accueil ----- */
-    '<span></span> Aides de jeu · Règles · Ressources <span></span>': '<span></span> Game aids · Rules · Resources <span></span>',
-    'Des fiches pratiques pour passer moins de temps à débattre et plus de temps à jouer.': 'Handy cheat sheets so you spend less time arguing and more time playing.',
+    '<span></span> Aides de jeu · Donjons & Dragons 5.5 <span></span>': '<span></span> Game aids · Dungeons & Dragons 5.5 <span></span>',
+    'Des fiches pratiques pour Donjons & Dragons 5.5, pour passer moins de temps à débattre et plus de temps à jouer.': 'Handy cheat sheets for Dungeons & Dragons 5.5, so you spend less time arguing and more time playing.',
+    'Uniquement pour la version 5.5 (règles 2024) : les autres versions du jeu ne sont pas couvertes.': 'Only for version 5.5 (2024 rules): other editions of the game are not covered.',
     'La bibliothèque de fichiers': 'The file library',
     'Une fiche à retrouver ?<br><em>Tout est au même endroit.</em>': 'Looking for a sheet?<br><em>It\'s all in one place.</em>',
-    'Les fiches françaises et anglaises sont classées par thème, avec un lien direct pour chaque fichier.': 'The French and English sheets are sorted by theme, with a direct link for each file.',
-    'Ouvrir les téléchargements <span>↗</span>': 'Open the downloads <span>↗</span>',
+    'Les fiches, en français et en anglais, sont classées par thème : lis-les en un clic ou télécharge-les.': 'The sheets, in French and English, are sorted by theme: read them in one click or download them.',
+    'Ouvrir les parchemins <span>↗</span>': 'Open the scrolls <span>↗</span>',
     'Jaja, un sourire aux lèvres, lisant un grimoire': 'Jaja, smiling, reading a grimoire',
-    'AIDES DE JEU • D&D': 'GAME AIDS • D&D',
+    'AIDES DE JEU • D&D5.5': 'GAME AIDS • D&D5.5',
 
     /* ----- Présentation ----- */
     'Bienvenue dans le grimoire': 'Welcome to the grimoire',
-    "Le Grimoire de Jaja, c'est un site qui regroupe des fiches d'aide, des écrans de MD et des ressources pratiques pour Dungeons & Dragons.": "Le Grimoire de Jaja is a website that gathers help sheets, DM screens and handy resources for Dungeons & Dragons.",
-    'Le but : retrouver vite une règle, préparer une séance et passer moins de temps à débattre pour plus de temps à jouer. Tout est classé par thème dans la page Téléchargements, en français et en anglais.': "The goal: find a rule fast, prepare a session and spend less time arguing so there's more time to play. Everything is sorted by theme on the Downloads page, in French and English.",
+    "Le Grimoire de Jaja, c'est un site qui regroupe des fiches d'aide, des écrans de MD et des ressources pratiques pour Donjons & Dragons 5.5.": "Le Grimoire de Jaja is a website that gathers help sheets, DM screens and handy resources for Dungeons & Dragons 5.5.",
+    'Le but : retrouver vite une règle, préparer une séance et passer moins de temps à débattre pour plus de temps à jouer. Tout est classé par thème dans Les Parchemins, en français et en anglais. Attention : tout suit uniquement les règles de la version 5.5 (2024).': "The goal: find a rule fast, prepare a session and spend less time arguing so there's more time to play. Everything is sorted by theme in The Scrolls, in French and English. Note: everything follows the rules of version 5.5 (2024) only.",
 
-    /* ----- Vidéos ----- */
+    /* ----- Vidéos (section masquée pour l'instant, traductions conservées) ----- */
     'À regarder': 'Worth watching',
     'Vidéos <em>YouTube</em>': '<em>YouTube</em> Videos',
     'Retrouve ici les vidéos pour mieux comprendre les règles en images.': 'Find the videos here to understand the rules better with pictures.',
@@ -80,106 +81,35 @@
     'Arrêter la musique': 'Stop the music',
 
     /* ----- Pied de page ----- */
-    'Des aides pratiques pour les parties de D&D.': 'Handy aids for your D&D games.',
+    'Des aides pratiques pour les parties de D&D5.5.': 'Handy aids for your D&D5.5 games.',
     'Accueil': 'Home',
     'Le Grimoire de Jaja · Site indépendant': 'Le Grimoire de Jaja · Independent site',
 
-    /* ----- Page Téléchargements : en-tête ----- */
-    'Les <em>Téléchargements</em>': 'The <em>Downloads</em>',
-    "Choisis un thème, clique dessus et le menu s'ouvre avec toutes les fiches. Chacune existe en français et en anglais.": 'Pick a theme, click it and the menu opens with all the sheets. Each one exists in French and English.',
-    'Fiche française': 'French sheet',
-    'Les fiches sont mises à jour régulièrement. Une erreur ou une fiche à suggérer ?': 'The sheets are updated regularly. Spotted a mistake or have a sheet to suggest?',
+    /* ----- Page Les Parchemins : en-tête et pied ----- */
+    'Les <em>Parchemins</em>': 'The <em>Scrolls</em>',
+    "Choisis un thème, clique dessus, puis clique sur un parchemin : il s'ouvre en grand, tu n'as plus qu'à faire défiler. Tu peux aussi le télécharger.": 'Pick a theme, click it, then click a scroll: it opens full screen and you just scroll down. You can also download it.',
+    'Les parchemins sont mis à jour régulièrement. Une erreur ou un parchemin à suggérer ?': 'The scrolls are updated regularly. Spotted a mistake or have a scroll to suggest?',
     'Écris-moi': 'Write to me',
     "Retour à l'accueil": 'Back to home',
 
     /* ----- Recherche ----- */
     'Consulte le grimoire': 'Consult the grimoire',
-    'Rechercher une fiche': 'Search for a sheet',
-    'Rechercher une fiche : un sort, une compétence…': 'Search for a sheet: a spell, a skill…',
+    'Rechercher un parchemin': 'Search for a scroll',
+    'Rechercher un parchemin : un sort, une compétence, une action…': 'Search for a scroll: a spell, a skill, an action…',
     'Effacer la recherche': 'Clear the search',
-    'fiche trouvée': 'sheet found',
-    'fiches trouvées': 'sheets found',
-    'Aucune fiche trouvée pour': 'No sheet found for',
+    'parchemin trouvé': 'scroll found',
+    'parchemins trouvés': 'scrolls found',
+    'Aucun parchemin trouvé pour': 'No scroll found for',
 
-    /* ----- Thèmes ----- */
-    'Écrans de MD D&D 2024': 'DM Screens D&D 2024',
-    'Les Compétences': 'Skills',
-    'Les Sorts': 'Spells',
-    'Le Combat': 'Combat',
-    'Les États': 'Conditions',
-    "L'Équipement": 'Equipment',
-    '1 fiche': '1 sheet',
-    '2 fiches': '2 sheets',
-    '3 fiches': '3 sheets',
-    '18 fiches': '18 sheets',
+    /* ----- Lecteur de parchemin (lecteur.js) ----- */
+    'Lire le parchemin': 'Read the scroll',
+    'Télécharger': 'Download',
+    'Lecteur de parchemin': 'Scroll reader',
+    'Chargement du parchemin…': 'Loading the scroll…',
+    "Ce parchemin ne peut pas s'afficher ici.": "This scroll can't be displayed here.",
+    'Ouvrir le fichier': 'Open the file'
 
-    'Pour bien démarrer et garder les repères essentiels sous la main.': 'To get started and keep the essentials at hand.',
-    'Les écrans à imprimer, mis à jour pour les règles 2024.': 'Printable screens, updated for the 2024 rules.',
-    'Une fiche par compétence, classées par ordre alphabétique.': 'One sheet per skill, in alphabetical order.',
-    'Pour lancer ses sorts sans fouiller dans les livres.': 'To cast spells without digging through the books.',
-    'Le tour de jeu et les actions possibles, sans débat.': 'Turn order and available actions, no arguments.',
-    "Aveuglé, empoisonné, paralysé… tout ce qu'un état change.": 'Blinded, poisoned, paralyzed… everything a condition changes.',
-    'Armes, armures et outils, avec leurs propriétés.': 'Weapons, armor and tools, with their properties.',
-
-    /* ----- Fiches : Guide ----- */
-    'Guide du joueur': "Player's Guide",
-    "Créer son personnage et comprendre le déroulé d'une partie": 'Create your character and understand how a game flows',
-    'Guide du Maître du Jeu': "Dungeon Master's Guide",
-    'Préparer et mener une séance sans stress': 'Prepare and run a session stress-free',
-
-    /* ----- Fiches : Écrans de MD ----- */
-    'Écran du Maître du Jeu': "Dungeon Master's Screen",
-    'Les règles essentielles, côté MD': 'The essential rules, DM side',
-    'Écran de combat': 'Combat Screen',
-    "Actions, déplacements et initiative en un coup d'œil": 'Actions, movement and initiative at a glance',
-    'Tables de référence': 'Reference Tables',
-    'Degrés de difficulté, dégâts et états': 'Difficulty classes, damage and conditions',
-
-    /* ----- Fiches : Compétences ----- */
-    'Acrobaties': 'Acrobatics',
-    'Arcanes': 'Arcana',
-    'Athlétisme': 'Athletics',
-    'Discrétion': 'Stealth',
-    'Dressage': 'Animal Handling',
-    'Escamotage': 'Sleight of Hand',
-    'Histoire': 'History',
-    'Médecine': 'Medicine',
-    'Perspicacité': 'Insight',
-    'Représentation': 'Performance',
-    'Survie': 'Survival',
-    'Tromperie': 'Deception',
-    'Dextérité': 'Dexterity',
-    'Force': 'Strength',
-    'Sagesse': 'Wisdom',
-    'Charisme': 'Charisma',
-
-    /* ----- Fiches : Sorts ----- */
-    'Lancer un sort': 'Casting a Spell',
-    'Composantes, portée, durée et concentration': 'Components, range, duration and concentration',
-    'Sorts mineurs': 'Cantrips',
-    'Les tours de magie par classe': 'The cantrips for each class',
-    'Sorts par niveau': 'Spells by Level',
-    'Listes classées du niveau 1 au niveau 9': 'Lists sorted from level 1 to level 9',
-
-    /* ----- Fiches : Combat ----- */
-    "Déroulé d'un tour": 'Turn Sequence',
-    'Initiative, déplacement, action et réaction': 'Initiative, movement, action and reaction',
-    'Actions en combat': 'Actions in Combat',
-    'Toutes les actions disponibles': 'All the available actions',
-    'Couvert et visibilité': 'Cover and Visibility',
-    'Abri, obscurité et attaques à distance': 'Cover, darkness and ranged attacks',
-
-    /* ----- Fiches : États ----- */
-    'Tous les états': 'All Conditions',
-    'Effets résumés sur une seule fiche': 'Effects summarized on a single sheet',
-
-    /* ----- Fiches : Équipement ----- */
-    'Armes': 'Weapons',
-    'Dégâts, propriétés et maîtrises': 'Damage, properties and mastery',
-    'Armures': 'Armor',
-    "Classe d'armure, force requise et discrétion": 'Armor class, strength requirement and stealth',
-    'Outils': 'Tools',
-    "Maîtrises d'outils et ce qu'elles permettent": 'Tool proficiencies and what they allow'
+    /* Les noms des thèmes et des parchemins sont dans parchemins.js (ils s'ajoutent tout seuls à cette liste). */
   };
 
   var CLE_STOCKAGE = 'gj-lang';
@@ -333,10 +263,15 @@
     return nav.indexOf('fr') === 0 ? 'fr' : 'en';
   }
 
+  /* Pour ajouter des traductions depuis un autre script (ex. parchemins.js). */
+  function etendre(dico) {
+    Object.keys(dico).forEach(function (fr) { TRADUCTIONS[norm(fr)] = dico[fr]; });
+  }
+
   /* Pour les éléments ajoutés plus tard par d'autres scripts (ex. fenêtre « Écrire »). */
   function enregistrer(racine) { parcourir(racine); }
 
-  window.GJ = { t: t, register: enregistrer, set: function (l) { choisir(l, true); }, get lang() { return langue; } };
+  window.GJ = { t: t, register: enregistrer, extend: etendre, set: function (l) { choisir(l, true); }, get lang() { return langue; } };
 
   var titre = document.querySelector('title');
   if (titre && connu(norm(titre.textContent))) { registre.push({ type: 'title', fr: titre.textContent }); }

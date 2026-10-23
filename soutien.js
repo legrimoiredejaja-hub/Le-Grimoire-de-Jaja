@@ -15,18 +15,32 @@
 
   var PHRASES = {
     fr: [
-      "Un p'tit coup de pouce pour notre travail !",
-      "Tu veux m'aider ? C'est par ici !",
-      'Une potion de mana pour Jaja ?',
-      "Ce grimoire t'a servi ? Soutiens la suite !",
-      'Lance un dé de soutien pour le projet !'
+      'En écu pour mon bon service, M’sieur dame ?',
+      'Les humains ont un don supplémentaire !',
+      'Allez ! Partageons le trésor !',
+      'Tu peux faire un don en action bonus !',
+      'Votre bourse est-elle aussi vide que mon inventaire ?',
+      'Pitié, héros ! J’ai raté mon jet de survie !',
+      'Une petite pièce pour un humble aventurier ?',
+      'Pas besoin de concentration pour être généreux !',
+      'Une potion de soin pour le Grimoire de Jaja ?',
+      'Transformez votre cuivre en aventure !',
+      'Un don pour les gouverner tous !',
+      'Aidez-nous à remplir notre coffre de groupe !'
     ],
     en: [
-      'A little boost for our work!',
-      'Want to help me out? Right this way!',
-      'A mana potion for Jaja?',
-      'Did this grimoire help you? Support what\'s next!',
-      'Roll a die of support for the project!'
+      'A few gold pieces for my good service, kind folks?',
+      'Humans get an extra feat!',
+      'Come on! Let’s share the loot!',
+      'You can donate as a bonus action!',
+      'Is your coin pouch as empty as my inventory?',
+      'Help, heroes! I failed my death save!',
+      'Spare a coin for a humble adventurer?',
+      'No concentration required to be generous!',
+      'A healing potion for the Grimoire de Jaja?',
+      'Turn your copper into adventure!',
+      'One donation to rule them all!',
+      'Help us fill our party’s treasure chest!'
     ]
   };
   var TEXTE_BOUTON = { fr: 'Me soutenir', en: 'Support me' };
