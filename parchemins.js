@@ -49,9 +49,9 @@
       intro: { fr: 'Une fiche par action, classées par ordre alphabétique : cherche « corde », « nager »… ou le nom de la compétence.', en: 'One sheet per action, in alphabetical order: search "rope", "swim"… or the skill name.' },
       tri: true,
       fiches: [
-        { titre: { fr: 'Escalader une corde', en: 'Climb a rope' },
+         { titre: { fr: 'Escalader une corde', en: 'Climb a rope' },
           desc: { fr: 'Athlétisme · Force', en: 'Athletics · Strength' },
-          fichiers: { fr: '', en: '' } },
+          fichiers: { fr: 'parchemins/escalader-une-corde-fr.pdf', en: 'parchemins/escalader-une-corde-us.pdf' } },
         { titre: { fr: 'Nager', en: 'Swim' },
           desc: { fr: 'Athlétisme · Force', en: 'Athletics · Strength' },
           fichiers: { fr: '', en: '' } },
