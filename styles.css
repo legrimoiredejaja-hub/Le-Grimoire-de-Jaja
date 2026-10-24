@@ -113,19 +113,34 @@ a { color: inherit; text-decoration: none; }
 
 /* IMAGE DE JAJA (à droite) : cliquable, elle lance la musique.
    - width : change la taille (minimum, idéal, maximum). Exemple : clamp(200px, 18vw, 340px) */
+.hero-logo-wrap { grid-area: logo; position: relative; z-index: 2; width: clamp(130px, 11vw, 200px); border-radius: 50%; cursor: pointer; }
 .hero-logo {
-  grid-area: logo; position: relative; z-index: 2;
-  width: clamp(130px, 11vw, 200px); height: auto;
+  display: block; width: 100%; height: auto;
   filter: drop-shadow(0 15px 35px rgba(0,0,0,.55));
   cursor: pointer; -webkit-tap-highlight-color: transparent;
-  transition: transform .3s ease;
+  transition: transform .3s ease, filter .3s ease;
 }
-.hero-logo:hover { transform: scale(1.03); }
+/* Au passage de la souris : l'image change de couleur, brille et une note de musique apparaît dessus en transparence.
+   Pour une autre couleur, change hue-rotate (0 à 360). */
+.hero-logo-wrap:hover .hero-logo, .hero-logo-wrap:focus-within .hero-logo {
+  transform: scale(1.05);
+  filter: hue-rotate(170deg) saturate(1.25) brightness(1.2) drop-shadow(0 0 12px rgba(125,220,255,.95)) drop-shadow(0 0 30px rgba(90,170,255,.8));
+}
+.hero-logo-wrap::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none; opacity: 0; transform: scale(.85);
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cg fill='white'%3E%3Cellipse cx='19' cy='48' rx='9' ry='7' transform='rotate(-20 19 48)'/%3E%3Cellipse cx='45' cy='42' rx='9' ry='7' transform='rotate(-20 45 42)'/%3E%3Cpath d='M25 46 V15 L51 8 V40 H46 V20 L30 24 V46 Z'/%3E%3C/g%3E%3C/svg%3E") center / 56% no-repeat;
+  filter: drop-shadow(0 0 6px rgba(20,60,140,.9));
+  transition: opacity .3s ease, transform .3s ease;
+}
+.hero-logo-wrap:hover::after, .hero-logo-wrap:focus-within::after { opacity: .7; transform: scale(1); }
 .hero-logo:focus:not(:focus-visible) { outline: none; }
 .hero-logo:focus-visible { outline: 1px solid var(--gold); outline-offset: 8px; border-radius: 50%; }
-/* Pendant la musique : l'image pulse doucement (seulement un léger agrandissement). */
+/* Pendant la musique : l'image pulse doucement et la note reste visible. */
 @keyframes jaja-pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.045); } }
 .hero-logo.is-playing { animation: jaja-pulse 1.8s ease-in-out infinite; }
+.hero-logo-wrap:has(.is-playing)::after { opacity: .55; transform: scale(1); }
+/* Téléphone / tablette (pas de souris) : la note reste légèrement visible pour inviter à toucher l'image. */
+@media (hover: none) { .hero-logo-wrap::after { opacity: .35; transform: scale(1); } }
 
 .eyebrow { margin: 0 0 18px; color: var(--gold); font: 11px var(--display); letter-spacing: .17em; text-transform: uppercase; }
 .hero-content .eyebrow { display: flex; align-items: center; gap: 12px; }
@@ -338,7 +353,7 @@ html[lang="en"] .download-links .file-row:first-child { order: 2; }
   .brand small { max-width: 230px; font-size: 11px; }
   :root { --gutter: 22px; }
   .hero { min-height: 0; grid-template-columns: 1fr; grid-template-areas: "text" "logo" "card"; padding: 60px 22px; row-gap: 34px; }
-  .hero-logo { width: 40%; max-width: 170px; justify-self: center; }
+  .hero-logo-wrap { width: 40%; max-width: 170px; justify-self: center; }
   .hero-copy { font-size: 18px; }
   .section-wrap { width: calc(100% - 36px); }
   .intro { padding-top: 70px; }
@@ -399,3 +414,15 @@ html.reader-open { overflow: hidden; }
 .sources li { margin: 8px 0; }
 .sources a { color: var(--gold); text-decoration: underline; text-underline-offset: 3px; }
 .attribution { margin: 18px 0; padding: 14px 18px; border-left: 3px solid var(--gold); background: var(--panel); color: var(--muted); font-size: 15px; word-break: break-word; }
+
+/* Présentation : le SRD expliqué et le mode d'emploi */
+.intro-extra { margin-top: 56px; padding-top: 48px; border-top: 1px solid var(--line); }
+.intro-extra h3 { font-size: clamp(26px, 3vw, 38px); }
+.intro-body .intro-text + .intro-text { margin-top: 14px; }
+.howto { margin: 18px 0 0; padding-left: 24px; color: var(--muted); }
+.howto li { margin: 10px 0; padding-left: 4px; }
+.howto li::marker { color: var(--gold); font-family: var(--display); }
+.example-box { margin-top: 24px; padding: 18px 22px; border-left: 3px solid var(--gold); background: var(--panel); }
+.example-box p { margin: 0 0 10px; color: var(--muted); }
+.example-box p:last-child { margin-bottom: 0; }
+.example-box .example-title { color: var(--gold); font: 11px var(--display); letter-spacing: .17em; text-transform: uppercase; }

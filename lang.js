@@ -51,6 +51,24 @@
     "Le Grimoire de Jaja, c'est un site qui regroupe des fiches d'aide, des écrans de MD et des ressources pratiques fondées sur les règles du SRD 5.2.": 'Le Grimoire de Jaja is a website that gathers help sheets, DM screens and handy resources built on the SRD 5.2 rules.',
     'Le but : retrouver vite une règle, préparer une séance et passer moins de temps à débattre pour plus de temps à jouer. Tout est classé par thème dans Les Parchemins, en français et en anglais. Attention : tout suit uniquement le SRD 5.2, compatible avec la 5e édition (2024). Les fiches sont non officielles et gratuites.': "The goal: find a rule fast, prepare a session and spend less time arguing so there's more time to play. Everything is sorted by theme in The Scrolls, in French and English. Note: everything follows the SRD 5.2 only, compatible with the 5th edition (2024). The sheets are unofficial and free.",
 
+    /* ----- Présentation : le SRD et le mode d'emploi ----- */
+    'Pour tout comprendre': 'To understand it all',
+    'Le SRD, c\'est quoi ?': 'What is the SRD?',
+    'SRD, ça veut dire « System Reference Document », c\'est-à-dire « le document de référence des règles ».': 'SRD stands for “System Reference Document”, in other words “the reference document for the rules”.',
+    'Imagine que l\'inventeur d\'un grand jeu te dise : « Voici les règles de base. Tu peux les copier, les expliquer et les partager, à une condition : dire que ça vient de moi. » Ce mode d\'emploi gratuit et offert à tout le monde, c\'est le SRD.': 'Imagine the inventor of a big game telling you: “Here are the basic rules. You can copy them, explain them and share them, on one condition: say that they come from me.” That free instruction booklet, given to everyone, is the SRD.',
+    'Ici, on utilise le SRD 5.2, la version la plus récente, compatible avec les règles de 2024. Chaque parchemin n\'explique donc que des règles que l\'on a le droit de partager.': 'Here we use the SRD 5.2, the most recent version, compatible with the 2024 rules. So every scroll only explains rules that we are allowed to share.',
+    'Les parchemins sont « non officiels » : ce n\'est pas l\'éditeur du jeu qui les a écrits. C\'est Jaja qui range les règles et les explique simplement, pour que tu les retrouves vite.': 'The scrolls are “unofficial”: they were not written by the publisher of the game. Jaja sorts the rules and explains them simply, so you can find them fast.',
+    'Voir les sources et la méthode <span>→</span>': 'See the sources and method <span>→</span>',
+    'Mode d\'emploi': 'How to use it',
+    'Comment utiliser le site ?': 'How do I use the site?',
+    'Trouver la bonne règle en quelques clics, ou même avec un seul mot.': 'Find the right rule in a few clicks, or even with a single word.',
+    'Ouvre Les Parchemins avec le menu en haut de la page.': 'Open The Scrolls from the menu at the top of the page.',
+    'Clique sur un thème (Combat, Compétences, Sorts…), puis sur un parchemin : il s\'ouvre en grand et il n\'y a plus qu\'à faire défiler. La flèche ↓ sert à le télécharger.': 'Click a theme (Combat, Skills, Spells…), then a scroll: it opens full screen and you just scroll down. The ↓ arrow downloads it.',
+    'Choisis ta langue avec les drapeaux : tout le site change, parchemins compris.': 'Pick your language with the flags: the whole site changes, scrolls included.',
+    'Un exemple': 'An example',
+    'Ton personnage veut escalader une corde et ta table hésite sur le jet à faire ? Va dans Les Parchemins, tape « corde » dans la barre de recherche, et le parchemin « Escalader une corde » apparaît tout de suite. Clique dessus : la réponse est sous tes yeux.': 'Your character wants to climb a rope and your table isn\'t sure which roll to make? Go to The Scrolls, type “rope” in the search bar, and the “Climb a rope” scroll shows up right away. Click it: the answer is right in front of you.',
+    'Tu peux aussi chercher un autre mot : « nager », « athlétisme » ou « sorts ».': 'You can also search another word: “swim”, “athletics” or “spells”.',
+
     /* ----- Vidéos (section masquée pour l'instant, traductions conservées) ----- */
     'À regarder': 'Worth watching',
     'Vidéos <em>YouTube</em>': '<em>YouTube</em> Videos',
