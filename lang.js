@@ -16,10 +16,12 @@
 
   var TRADUCTIONS = {
     /* ----- Titres d'onglet et descriptions ----- */
-    'Le Grimoire de Jaja — Aides de jeu D&D5.5': 'Le Grimoire de Jaja — D&D5.5 Game Aids',
+    'Le Grimoire de Jaja — Aides de jeu SRD 5.2': 'Le Grimoire de Jaja — SRD 5.2 Game Aids',
+    'Sources et méthode — Le Grimoire de Jaja': 'Sources and method — Le Grimoire de Jaja',
     'Les Parchemins — Le Grimoire de Jaja': 'The Scrolls — Le Grimoire de Jaja',
-    'Le Grimoire de Jaja : fiches pratiques à lire ou à télécharger pour les joueurs et maîtres du jeu de Donjons & Dragons 5.5 (D&D5.5).': 'Le Grimoire de Jaja: handy sheets to read or download for Dungeons & Dragons 5.5 (D&D5.5) players and Dungeon Masters.',
-    'Les Parchemins du Grimoire de Jaja : fiches D&D5.5 à lire en un clic ou à télécharger, en français et en anglais.': 'The Scrolls of Le Grimoire de Jaja: D&D5.5 sheets to read in one click or download, in French and English.',
+    'Le Grimoire de Jaja : fiches pratiques non officielles à lire ou à télécharger pour les joueurs et maîtres du jeu, basées sur les règles du SRD 5.2.': 'Le Grimoire de Jaja: unofficial handy sheets to read or download for players and game masters, based on the SRD 5.2 rules.',
+    'Les Parchemins du Grimoire de Jaja : fiches non officielles sur combat, compétences, sorts, états et équipement, basées sur le SRD 5.2, en français et en anglais.': 'The Scrolls of Le Grimoire de Jaja: unofficial sheets on combat, skills, spells, conditions and equipment, based on the SRD 5.2, in French and English.',
+    "D'où viennent les règles du Grimoire de Jaja : SRD 5.2 sous licence CC BY 4.0, étiquettes, méthode, polices et visuels.": 'Where the rules of Le Grimoire de Jaja come from: SRD 5.2 under the CC BY 4.0 licence, labels, method, fonts and visuals.',
 
     /* ----- En-tête et menu ----- */
     'Le Grimoire de Jaja, accueil': 'Le Grimoire de Jaja, home',
@@ -34,20 +36,20 @@
     'Me contacter': 'Contact me',
 
     /* ----- Accueil ----- */
-    '<span></span> Aides de jeu · Donjons & Dragons 5.5 <span></span>': '<span></span> Game aids · Dungeons & Dragons 5.5 <span></span>',
-    'Des fiches pratiques pour Donjons & Dragons 5.5, pour passer moins de temps à débattre et plus de temps à jouer.': 'Handy cheat sheets for Dungeons & Dragons 5.5, so you spend less time arguing and more time playing.',
-    'Uniquement pour la version 5.5 (règles 2024) : les autres versions du jeu ne sont pas couvertes.': 'Only for version 5.5 (2024 rules): other editions of the game are not covered.',
+    '<span></span> Aides de jeu · Règles SRD 5.2 <span></span>': '<span></span> Game aids · SRD 5.2 rules <span></span>',
+    'Des fiches pratiques basées sur les règles du SRD 5.2, pour passer moins de temps à débattre et plus de temps à jouer.': 'Handy cheat sheets based on the SRD 5.2 rules, so you spend less time arguing and more time playing.',
+    'Basé sur le SRD 5.2, compatible avec les règles de la 5e édition (2024). Fiches non officielles : les autres versions du jeu ne sont pas couvertes.': 'Based on the SRD 5.2, compatible with the 5th edition (2024) rules. Unofficial sheets: other editions of the game are not covered.',
     'La bibliothèque de fichiers': 'The file library',
-    'Une fiche à retrouver ?<br><em>Tout est au même endroit.</em>': 'Looking for a sheet?<br><em>It\'s all in one place.</em>',
+    'Un problème avec les règles ?<br><em>C\'est par ici.</em>': 'A problem with the rules?<br><em>Right this way.</em>',
     'Les fiches, en français et en anglais, sont classées par thème : lis-les en un clic ou télécharge-les.': 'The sheets, in French and English, are sorted by theme: read them in one click or download them.',
     'Ouvrir les parchemins <span>↗</span>': 'Open the scrolls <span>↗</span>',
     'Jaja, un sourire aux lèvres, lisant un grimoire': 'Jaja, smiling, reading a grimoire',
-    'AIDES DE JEU • D&D5.5': 'GAME AIDS • D&D5.5',
+    'AIDES DE JEU • SRD 5.2': 'GAME AIDS • SRD 5.2',
 
     /* ----- Présentation ----- */
     'Bienvenue dans le grimoire': 'Welcome to the grimoire',
-    "Le Grimoire de Jaja, c'est un site qui regroupe des fiches d'aide, des écrans de MD et des ressources pratiques pour Donjons & Dragons 5.5.": "Le Grimoire de Jaja is a website that gathers help sheets, DM screens and handy resources for Dungeons & Dragons 5.5.",
-    'Le but : retrouver vite une règle, préparer une séance et passer moins de temps à débattre pour plus de temps à jouer. Tout est classé par thème dans Les Parchemins, en français et en anglais. Attention : tout suit uniquement les règles de la version 5.5 (2024).': "The goal: find a rule fast, prepare a session and spend less time arguing so there's more time to play. Everything is sorted by theme in The Scrolls, in French and English. Note: everything follows the rules of version 5.5 (2024) only.",
+    "Le Grimoire de Jaja, c'est un site qui regroupe des fiches d'aide, des écrans de MD et des ressources pratiques fondées sur les règles du SRD 5.2.": 'Le Grimoire de Jaja is a website that gathers help sheets, DM screens and handy resources built on the SRD 5.2 rules.',
+    'Le but : retrouver vite une règle, préparer une séance et passer moins de temps à débattre pour plus de temps à jouer. Tout est classé par thème dans Les Parchemins, en français et en anglais. Attention : tout suit uniquement le SRD 5.2, compatible avec la 5e édition (2024). Les fiches sont non officielles et gratuites.': "The goal: find a rule fast, prepare a session and spend less time arguing so there's more time to play. Everything is sorted by theme in The Scrolls, in French and English. Note: everything follows the SRD 5.2 only, compatible with the 5th edition (2024). The sheets are unofficial and free.",
 
     /* ----- Vidéos (section masquée pour l'instant, traductions conservées) ----- */
     'À regarder': 'Worth watching',
@@ -61,10 +63,7 @@
     'Une question ou une suggestion ?': 'A question or a suggestion?',
     'Restons en <em>contact</em>': "Let's stay in <em>touch</em>",
     'Une erreur à signaler, une idée de fiche ou simplement un avis ? Envoie-moi un e-mail.': 'A mistake to report, an idea for a sheet or just some feedback? Send me an email.',
-    'Clique ici pour écrire un e-mail au Grimoire de Jaja': 'Click here to write an email to Le Grimoire de Jaja',
-    'Des corbeaux volent vers une hutte de sorcière. Clique ici pour écrire un e-mail.': "Ravens flying toward a witch's hut. Click here to write an email.",
-    'CLIQUE': 'CLICK',
-    'ICI': 'HERE',
+    'Clique sur Jaja pour écrire un e-mail au Grimoire de Jaja': 'Click Jaja to write an email to Le Grimoire de Jaja',
     "Clique pour m'écrire à": 'Click to write me at',
 
     /* ----- Fenêtre « Écrire » (contact.js) ----- */
@@ -80,8 +79,43 @@
     'Lancer une musique du Grimoire de Jaja': 'Play a Le Grimoire de Jaja tune',
     'Arrêter la musique': 'Stop the music',
 
+
+    /* ----- Sources et méthode, mentions légales ----- */
+    'Sources et méthode': 'Sources and method',
+    'Transparence': 'Transparency',
+    'Sources et <em>méthode</em>': 'Sources and <em>method</em>',
+    'D\'où vient chaque règle, comment les parchemins sont écrits et ce que tu peux en attendre.': 'Where each rule comes from, how the scrolls are written and what you can expect from them.',
+    'D\'où viennent les règles': 'Where the rules come from',
+    'Le texte des règles vient uniquement du System Reference Document 5.2 (SRD 5.2) de Wizards of the Coast LLC, publié sous licence Creative Commons CC BY 4.0. Les fiches sont compatibles avec les règles de la 5e édition (2024). Ce site est indépendant et n\'est ni affilié ni approuvé par Wizards of the Coast.': 'The rules text comes only from the System Reference Document 5.2 (SRD 5.2) by Wizards of the Coast LLC, published under the Creative Commons CC BY 4.0 licence. The sheets are compatible with the 5th edition (2024) rules. This site is independent and is neither affiliated with nor endorsed by Wizards of the Coast.',
+    'La mention sur chaque fiche': 'The notice on every sheet',
+    'Chaque parchemin porte la mention exacte : « SRD 5.2 (CC BY 4.0) · fiche non officielle, interprétation de nos recherches ».': 'Every scroll carries this exact notice: “SRD 5.2 (CC BY 4.0) · unofficial sheet, interpretation from our own research”.',
+    'Les étiquettes': 'The labels',
+    'Chaque règle d\'une fiche porte une étiquette qui dit d\'où elle vient :': 'Every rule on a sheet carries a label saying where it comes from:',
+    'SRD': 'SRD',
+    'Hors SRD': 'Not in the SRD',
+    'Règle de table': 'House rule',
+    'Interprétation': 'Interpretation',
+    ': la règle est écrite dans le SRD 5.2.': ': the rule is written in the SRD 5.2.',
+    ': la règle n\'est pas dans le SRD 5.2 (voir ci-dessous).': ': the rule is not in the SRD 5.2 (see below).',
+    ': un choix de table, pas une règle officielle.': ': a table choice, not an official rule.',
+    ': notre lecture d\'un passage qui peut se comprendre de plusieurs façons.': ': our reading of a passage that can be understood in several ways.',
+    'Notre méthode': 'Our method',
+    'Le texte de règle vient du SRD uniquement.': 'The rules text comes from the SRD only.',
+    'Ce qui est hors SRD est retiré, ou paraphrasé très court avec l\'étiquette « Fan Content » et la mention de la politique de contenu de fans de Wizards of the Coast.': 'Anything outside the SRD is removed, or paraphrased very briefly with the “Fan Content” label and a mention of Wizards of the Coast\'s Fan Content Policy.',
+    'Pas de marques ni de logos, et les titres ne reprennent pas le nom du jeu.': 'No trademarks or logos, and titles do not use the name of the game.',
+    'Pas de contenu d\'autrui sans accord écrit ou réécriture complète.': 'No one else\'s content without written permission or a complete rewrite.',
+    'Le site est gratuit, les dons n\'ouvrent droit à aucune contrepartie et aucune fiche contenant du hors SRD n\'est vendue.': 'The site is free, donations give no reward in return and no sheet containing non-SRD material is sold.',
+    'Polices et visuels': 'Fonts and visuals',
+    'Polices : Cinzel, Crimson Text et Caveat, via Google Fonts, sous licence SIL Open Font License 1.1.': 'Fonts: Cinzel, Crimson Text and Caveat, via Google Fonts, under the SIL Open Font License 1.1.',
+    'Illustration de Jaja, fanions et petits dessins : créations propres au Grimoire de Jaja.': 'Jaja illustration, flags and small drawings: original creations of Le Grimoire de Jaja.',
+    'Bouton de soutien : widget Ko-fi.': 'Support button: Ko-fi widget.',
+    'Un problème avec les règles ?': 'A problem with the rules?',
+    'Une erreur ou un passage à corriger ?': 'A mistake or a passage to fix?',
+    'Ce site contient du contenu du System Reference Document 5.2 (SRD 5.2) de Wizards of the Coast LLC, sous licence CC BY 4.0. Fiches non officielles, interprétation de nos recherches. Site indépendant, non affilié à Wizards of the Coast.': 'This site contains material from the System Reference Document 5.2 (SRD 5.2) by Wizards of the Coast LLC, licensed under CC BY 4.0. Unofficial sheets, interpretation from our own research. Independent site, not affiliated with Wizards of the Coast.',
+    'Site gratuit : les dons n\'ouvrent droit à aucune contrepartie et aucune fiche n\'est vendue.': 'Free site: donations give no reward in return and no sheet is sold.',
+
     /* ----- Pied de page ----- */
-    'Des aides pratiques pour les parties de D&D5.5.': 'Handy aids for your D&D5.5 games.',
+    'Aides de jeu non officielles basées sur le SRD 5.2.': 'Unofficial game aids based on the SRD 5.2.',
     'Accueil': 'Home',
     'Le Grimoire de Jaja · Site indépendant': 'Le Grimoire de Jaja · Independent site',
 

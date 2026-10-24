@@ -15,6 +15,10 @@
    │ 3) Envoie le tout sur GitHub : le parchemin s'ouvre en grand au clic (on n'a plus
    │    qu'à faire défiler) et un petit bouton ↓ permet de le télécharger.
    │
+   │ ÉTIQUETTE (facultatif) : ajoute  etiquette: 'SRD'  (par défaut), 'hors SRD', 'règle de table' ou 'interprétation'
+   │ dans un bloc de parchemin. Elle s'affiche sous le nom ; la mention SRD s'ajoute toute seule.
+   │ Le hors SRD doit rester retiré ou très court, avec la mention « Fan Content ».
+   │
    │ POUR AJOUTER UN THÈME : copie un bloc entier { titre: ..., intro: ..., fiches: [...] }.
    │ « tri: true » = les parchemins se rangent par ordre alphabétique (dans chaque langue).
    │ « tri: false » = ils restent dans l'ordre où tu les écris (utile pour un ordre logique).
@@ -111,8 +115,8 @@
 
     /* ---------- 6. ÉCRANS DE MD ---------- */
     {
-      titre: { fr: 'Écrans de MD D&D5.5', en: 'DM Screens D&D5.5' },
-      intro: { fr: 'Les écrans à imprimer, pour les règles 5.5 (2024).', en: 'Printable screens, for the 5.5 (2024) rules.' },
+      titre: { fr: 'Écrans de MD', en: 'DM Screens' },
+      intro: { fr: 'Les écrans à imprimer, fondés sur le SRD 5.2.', en: 'Printable screens, built on the SRD 5.2.' },
       tri: false,
       fiches: [
         { titre: { fr: 'Écran du Maître du Jeu', en: "Dungeon Master's Screen" },
@@ -128,6 +132,9 @@
     }
   ];
 
+  var ETIQUETTES = { 'SRD': 'SRD', 'hors SRD': 'Hors SRD', 'règle de table': 'Règle de table', 'interprétation': 'Interprétation' };
+  var MENTION = 'SRD 5.2 (CC BY 4.0) · fiche non officielle, interprétation de nos recherches';
+
   /* ============ À partir d'ici, plus rien à modifier ============ */
 
   var conteneur = document.getElementById('parchemins');
@@ -142,6 +149,7 @@
     dico[n + (n > 1 ? ' parchemins' : ' parchemin')] = n + (n > 1 ? ' scrolls' : ' scroll');
     theme.fiches.forEach(function (f) { lier(f.titre); lier(f.desc); });
   });
+  dico[MENTION] = 'SRD 5.2 (CC BY 4.0) · unofficial sheet, interpretation from our own research';
   if (window.GJ && window.GJ.extend) { window.GJ.extend(dico); }
 
   /* 2) La page est construite en français ; GJ la traduit ensuite selon le fanion choisi. */
@@ -195,12 +203,16 @@
       var texte = el('div');
       texte.appendChild(el('h3', '', fiche.titre.fr));
       texte.appendChild(el('p', '', fiche.desc.fr));
+      var cle = fiche.etiquette && ETIQUETTES[fiche.etiquette] ? fiche.etiquette : 'SRD';
+      var etiquette = el('span', 'tag tag-' + cle.replace(/\s+/g, '-'), ETIQUETTES[cle]);
+      texte.appendChild(etiquette);
       info.appendChild(texte);
       item.appendChild(info);
       var liens = el('div', 'download-links');
       liens.appendChild(ligneFichier('FR', fiche.fichiers.fr));
       liens.appendChild(ligneFichier('EN', fiche.fichiers.en));
       item.appendChild(liens);
+      item.appendChild(el('p', 'fiche-mention', MENTION));
       panneau.appendChild(item);
     });
 

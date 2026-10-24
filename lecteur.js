@@ -13,7 +13,7 @@
   var PDFJS = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js';
   var PDFJS_WORKER = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
 
-  var fenetre = null, barreTitre = null, boutonTelecharger = null, corps = null, pages = null;
+  var mention = null, fenetre = null, barreTitre = null, boutonTelecharger = null, corps = null, pages = null;
   var jeton = 0;          // Change à chaque ouverture / fermeture pour ignorer les anciens dessins.
   var courant = null;     // Parchemin ouvert : { liste, titre }
   var viaHistorique = false;
@@ -46,7 +46,7 @@
     fenetre.setAttribute('aria-label', 'Lecteur de parchemin');
     fenetre.innerHTML =
       '<div class="reader-bar">' +
-        '<p class="reader-title"></p>' +
+        '<div class="reader-heading"><p class="reader-title"></p><p class="reader-mention"></p></div>' +
         '<a class="reader-btn reader-download" download>↓ <span>Télécharger</span></a>' +
         '<button class="reader-btn reader-close" type="button">✕ <span>Fermer</span></button>' +
       '</div>' +
@@ -54,6 +54,7 @@
     document.body.appendChild(fenetre);
     if (window.GJ && window.GJ.register) { window.GJ.register(fenetre); }
     barreTitre = fenetre.querySelector('.reader-title');
+    mention = fenetre.querySelector('.reader-mention');
     boutonTelecharger = fenetre.querySelector('.reader-download');
     corps = fenetre.querySelector('.reader-body');
     pages = fenetre.querySelector('.reader-pages');
@@ -153,6 +154,7 @@
     var liste = lien.getAttribute('data-pages') ? lien.getAttribute('data-pages').split('|') : [url];
     courant = { liste: liste, titre: nom };
     barreTitre.textContent = nom + (langue ? ' · ' + langue : '');
+    mention.textContent = t('SRD 5.2 (CC BY 4.0) · fiche non officielle, interprétation de nos recherches');
     boutonTelecharger.setAttribute('href', liste[0]);
     document.documentElement.classList.add('reader-open');
     history.pushState({ gjReader: true }, '');
