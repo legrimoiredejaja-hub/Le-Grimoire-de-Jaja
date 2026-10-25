@@ -18,9 +18,7 @@
     /* ----- Titres d'onglet et descriptions ----- */
     'Le Grimoire de Jaja — Aides de jeu SRD 5.2': 'Le Grimoire de Jaja — SRD 5.2 Game Aids',
     'Sources et méthode — Le Grimoire de Jaja': 'Sources and method — Le Grimoire de Jaja',
-    'Les Parchemins — Le Grimoire de Jaja': 'The Scrolls — Le Grimoire de Jaja',
     'Le Grimoire de Jaja : fiches pratiques non officielles à lire ou à télécharger pour les joueurs et maîtres du jeu, basées sur les règles du SRD 5.2.': 'Le Grimoire de Jaja: unofficial handy sheets to read or download for players and game masters, based on the SRD 5.2 rules.',
-    'Les Parchemins du Grimoire de Jaja : fiches non officielles sur combat, compétences, sorts, états et équipement, basées sur le SRD 5.2, en français et en anglais.': 'The Scrolls of Le Grimoire de Jaja: unofficial sheets on combat, skills, spells, conditions and equipment, based on the SRD 5.2, in French and English.',
     "D'où viennent les règles du Grimoire de Jaja : SRD 5.2 sous licence CC BY 4.0, étiquettes, méthode, polices et visuels.": 'Where the rules of Le Grimoire de Jaja come from: SRD 5.2 under the CC BY 4.0 licence, labels, method, fonts and visuals.',
 
     /* ----- En-tête et menu ----- */
@@ -28,7 +26,6 @@
     "Le p'tit coup de pouce aux règles de ton jeu de rôle préféré": 'A little boost for the rules of your favorite role-playing game',
     'Navigation principale': 'Main navigation',
     'Présentation': 'About',
-    'Les Parchemins': 'The Scrolls',
     'Ajouts Compatibles': 'Compatible Add-ons',
     '(bientôt disponible)': '(coming soon)',
     'Bientôt disponible': 'Coming soon',
@@ -42,32 +39,59 @@
     'La bibliothèque de fichiers': 'The file library',
     'Un problème avec les règles ?<br><em>C\'est par ici.</em>': 'A problem with the rules?<br><em>Right this way.</em>',
     'Les fiches, en français et en anglais, sont classées par thème : lis-les en un clic ou télécharge-les.': 'The sheets, in French and English, are sorted by theme: read them in one click or download them.',
-    'Ouvrir les parchemins <span>↗</span>': 'Open the scrolls <span>↗</span>',
     'Jaja, un sourire aux lèvres, lisant un grimoire': 'Jaja, smiling, reading a grimoire',
     'AIDES DE JEU • SRD 5.2': 'GAME AIDS • SRD 5.2',
 
     /* ----- Présentation ----- */
     'Bienvenue dans le grimoire': 'Welcome to the grimoire',
     "Le Grimoire de Jaja, c'est un site qui regroupe des fiches d'aide, des écrans de MD et des ressources pratiques fondées sur les règles du SRD 5.2.": 'Le Grimoire de Jaja is a website that gathers help sheets, DM screens and handy resources built on the SRD 5.2 rules.',
-    'Le but : retrouver vite une règle, préparer une séance et passer moins de temps à débattre pour plus de temps à jouer. Tout est classé par thème dans Les Parchemins, en français et en anglais. Attention : tout suit uniquement le SRD 5.2, compatible avec la 5e édition (2024). Les fiches sont non officielles et gratuites.': "The goal: find a rule fast, prepare a session and spend less time arguing so there's more time to play. Everything is sorted by theme in The Scrolls, in French and English. Note: everything follows the SRD 5.2 only, compatible with the 5th edition (2024). The sheets are unofficial and free.",
 
     /* ----- Présentation : le SRD et le mode d'emploi ----- */
     'Pour tout comprendre': 'To understand it all',
     'Le SRD, c\'est quoi ?': 'What is the SRD?',
     'SRD, ça veut dire « System Reference Document », c\'est-à-dire « le document de référence des règles ».': 'SRD stands for “System Reference Document”, in other words “the reference document for the rules”.',
     'Imagine que l\'inventeur d\'un grand jeu te dise : « Voici les règles de base. Tu peux les copier, les expliquer et les partager, à une condition : dire que ça vient de moi. » Ce mode d\'emploi gratuit et offert à tout le monde, c\'est le SRD.': 'Imagine the inventor of a big game telling you: “Here are the basic rules. You can copy them, explain them and share them, on one condition: say that they come from me.” That free instruction booklet, given to everyone, is the SRD.',
-    'Ici, on utilise le SRD 5.2, la version la plus récente, compatible avec les règles de 2024. Chaque parchemin n\'explique donc que des règles que l\'on a le droit de partager.': 'Here we use the SRD 5.2, the most recent version, compatible with the 2024 rules. So every scroll only explains rules that we are allowed to share.',
-    'Les parchemins sont « non officiels » : ce n\'est pas l\'éditeur du jeu qui les a écrits. C\'est Jaja qui range les règles et les explique simplement, pour que tu les retrouves vite.': 'The scrolls are “unofficial”: they were not written by the publisher of the game. Jaja sorts the rules and explains them simply, so you can find them fast.',
     'Voir les sources et la méthode <span>→</span>': 'See the sources and method <span>→</span>',
     'Mode d\'emploi': 'How to use it',
     'Comment utiliser le site ?': 'How do I use the site?',
     'Trouver la bonne règle en quelques clics, ou même avec un seul mot.': 'Find the right rule in a few clicks, or even with a single word.',
-    'Ouvre Les Parchemins avec le menu en haut de la page.': 'Open The Scrolls from the menu at the top of the page.',
-    'Clique sur un thème (Combat, Compétences, Sorts…), puis sur un parchemin : il s\'ouvre en grand et il n\'y a plus qu\'à faire défiler. La flèche ↓ sert à le télécharger.': 'Click a theme (Combat, Skills, Spells…), then a scroll: it opens full screen and you just scroll down. The ↓ arrow downloads it.',
-    'Choisis ta langue avec les drapeaux : tout le site change, parchemins compris.': 'Pick your language with the flags: the whole site changes, scrolls included.',
     'Un exemple': 'An example',
-    'Ton personnage veut escalader une corde et ta table hésite sur le jet à faire ? Va dans Les Parchemins, tape « corde » dans la barre de recherche, et le parchemin « Escalader une corde » apparaît tout de suite. Clique dessus : la réponse est sous tes yeux.': 'Your character wants to climb a rope and your table isn\'t sure which roll to make? Go to The Scrolls, type “rope” in the search bar, and the “Climb a rope” scroll shows up right away. Click it: the answer is right in front of you.',
     'Tu peux aussi chercher un autre mot : « nager », « athlétisme » ou « sorts ».': 'You can also search another word: “swim”, “athletics” or “spells”.',
+
+    /* ----- Le Grimoire : guides à télécharger et pages d'aide à consulter ----- */
+    'Ouvrir le grimoire <span>↗</span>': 'Open the grimoire <span>↗</span>',
+    'Le <em>Grimoire</em>': 'The <em>Grimoire</em>',
+    'Les guides et pages d\'aide — Le Grimoire de Jaja': 'Guides and help pages — Le Grimoire de Jaja',
+    'Le Grimoire de Jaja : guides à télécharger et pages d\'aide à consulter sur le combat, les compétences, les sorts, les états et l\'équipement, basés sur le SRD 5.2, en français et en anglais.': 'Le Grimoire de Jaja: guides to download and help pages to read on combat, skills, spells, conditions and equipment, based on the SRD 5.2, in French and English.',
+    'Télécharge un guide, ou consulte une page d\'aide directement ici : clique sur un thème, puis sur une page, et il n\'y a plus qu\'à faire défiler.': 'Download a guide, or read a help page right here: click a theme, then a page, and you just scroll down.',
+    'Le grimoire est mis à jour régulièrement. Une erreur ou une page à suggérer ?': 'The grimoire is updated regularly. Spotted a mistake or have a page to suggest?',
+    'Rechercher dans le grimoire': 'Search the grimoire',
+    'Rechercher une aide : un sort, une compétence, une action…': 'Search for help: a spell, a skill, an action…',
+    'résultat trouvé': 'result found',
+    'résultats trouvés': 'results found',
+    'Aucun résultat pour': 'No result for',
+    'Lire le guide': 'Read the guide',
+    'Lecteur du grimoire': 'Grimoire reader',
+    'Chargement de la page…': 'Loading the page…',
+    'Ce fichier ne peut pas s\'afficher ici.': 'This file can\'t be displayed here.',
+    'Le but : retrouver vite une règle, préparer une séance et passer moins de temps à débattre pour plus de temps à jouer. Tout est classé par thème dans le grimoire, en français et en anglais. Attention : tout suit uniquement le SRD 5.2, compatible avec la 5e édition (2024). Les guides et les pages d\'aide sont non officiels et gratuits.': 'The goal: find a rule fast, prepare a session and spend less time arguing so there\'s more time to play. Everything is sorted by theme in the grimoire, in French and English. Note: everything follows the SRD 5.2 only, compatible with the 5th edition (2024). The guides and help pages are unofficial and free.',
+    'Ici, on utilise le SRD 5.2, la version la plus récente, compatible avec les règles de 2024. Chaque guide et chaque page d\'aide n\'explique donc que des règles que l\'on a le droit de partager.': 'Here we use the SRD 5.2, the most recent version, compatible with the 2024 rules. So every guide and help page only explains rules that we are allowed to share.',
+    'Les guides et les pages d\'aide sont « non officiels » : ce n\'est pas l\'éditeur du jeu qui les a écrits. C\'est Jaja qui range les règles et les explique simplement, pour que tu les retrouves vite.': 'The guides and help pages are “unofficial”: they were not written by the publisher of the game. Jaja sorts the rules and explains them simply, so you can find them fast.',
+    'Clique sur « Ouvrir le grimoire » dans le menu en haut de la page.': 'Click “Open the grimoire” in the menu at the top of the page.',
+    'Pour un guide, la flèche ↓ le télécharge. Pour une page d\'aide, clique sur un thème (Combat, Compétences, Sorts…), puis sur une page : elle s\'ouvre en grand et il n\'y a plus qu\'à faire défiler.': 'For a guide, the ↓ arrow downloads it. For a help page, click a theme (Combat, Skills, Spells…), then a page: it opens full screen and you just scroll down.',
+    'Choisis ta langue avec les drapeaux : tout le site change, pages comprises.': 'Pick your language with the flags: the whole site changes, pages included.',
+    'Ton personnage veut escalader une corde et ta table hésite sur le jet à faire ? Ouvre le grimoire, tape « corde » dans la barre de recherche, et la page « Escalader une corde » apparaît tout de suite. Clique dessus : la réponse est sous tes yeux.': 'Your character wants to climb a rope and your table isn\'t sure which roll to make? Open the grimoire, type “rope” in the search bar, and the “Climb a rope” page shows up right away. Click it: the answer is right in front of you.',
+    'D\'où vient chaque règle, comment les guides et les pages d\'aide sont écrits et ce que tu peux en attendre.': 'Where each rule comes from, how the guides and help pages are written and what you can expect from them.',
+    'Chaque guide et chaque page d\'aide porte la mention exacte : « SRD 5.2 (CC BY 4.0) · fiche non officielle, interprétation de nos recherches ».': 'Every guide and help page carries this exact notice: “SRD 5.2 (CC BY 4.0) · unofficial sheet, interpretation from our own research”.',
+    'Ouvrir le grimoire': 'Open the grimoire',
+    'Lire en grand ou emporter': 'Read it full screen or take it with you',
+    'Les guides à télécharger': 'Guides to download',
+    'Pour les lire ici, en grand, ou les télécharger et les garder avec toi.': 'Read them here, full screen, or download them and keep them with you.',
+    'À consulter sur le site': 'To read on the site',
+    'Les pages d\'aide à consulter': 'Help pages to read',
+    'Des pages en très bonne qualité, à lire ici même : reviens quand tu veux, elles sont toujours à jour.': 'Very high-quality pages, to read right here: come back whenever you like, they are always up to date.',
+    'Consulter la page': 'Read the page',
+    'Écran du Maître du Jeu': 'Dungeon Master\'s Screen',
 
     /* ----- Vidéos (section masquée pour l'instant, traductions conservées) ----- */
     'À regarder': 'Worth watching',
@@ -102,11 +126,9 @@
     'Sources et méthode': 'Sources and method',
     'Transparence': 'Transparency',
     'Sources et <em>méthode</em>': 'Sources and <em>method</em>',
-    'D\'où vient chaque règle, comment les parchemins sont écrits et ce que tu peux en attendre.': 'Where each rule comes from, how the scrolls are written and what you can expect from them.',
     'D\'où viennent les règles': 'Where the rules come from',
     'Le texte des règles vient uniquement du System Reference Document 5.2 (SRD 5.2) de Wizards of the Coast LLC, publié sous licence Creative Commons CC BY 4.0. Les fiches sont compatibles avec les règles de la 5e édition (2024). Ce site est indépendant et n\'est ni affilié ni approuvé par Wizards of the Coast.': 'The rules text comes only from the System Reference Document 5.2 (SRD 5.2) by Wizards of the Coast LLC, published under the Creative Commons CC BY 4.0 licence. The sheets are compatible with the 5th edition (2024) rules. This site is independent and is neither affiliated with nor endorsed by Wizards of the Coast.',
     'La mention sur chaque fiche': 'The notice on every sheet',
-    'Chaque parchemin porte la mention exacte : « SRD 5.2 (CC BY 4.0) · fiche non officielle, interprétation de nos recherches ».': 'Every scroll carries this exact notice: “SRD 5.2 (CC BY 4.0) · unofficial sheet, interpretation from our own research”.',
     'Les étiquettes': 'The labels',
     'Chaque règle d\'une fiche porte une étiquette qui dit d\'où elle vient :': 'Every rule on a sheet carries a label saying where it comes from:',
     'SRD': 'SRD',
@@ -138,27 +160,15 @@
     'Le Grimoire de Jaja · Site indépendant': 'Le Grimoire de Jaja · Independent site',
 
     /* ----- Page Les Parchemins : en-tête et pied ----- */
-    'Les <em>Parchemins</em>': 'The <em>Scrolls</em>',
-    "Choisis un thème, clique dessus, puis clique sur un parchemin : il s'ouvre en grand, tu n'as plus qu'à faire défiler. Tu peux aussi le télécharger.": 'Pick a theme, click it, then click a scroll: it opens full screen and you just scroll down. You can also download it.',
-    'Les parchemins sont mis à jour régulièrement. Une erreur ou un parchemin à suggérer ?': 'The scrolls are updated regularly. Spotted a mistake or have a scroll to suggest?',
     'Écris-moi': 'Write to me',
     "Retour à l'accueil": 'Back to home',
 
     /* ----- Recherche ----- */
     'Consulte le grimoire': 'Consult the grimoire',
-    'Rechercher un parchemin': 'Search for a scroll',
-    'Rechercher un parchemin : un sort, une compétence, une action…': 'Search for a scroll: a spell, a skill, an action…',
     'Effacer la recherche': 'Clear the search',
-    'parchemin trouvé': 'scroll found',
-    'parchemins trouvés': 'scrolls found',
-    'Aucun parchemin trouvé pour': 'No scroll found for',
 
     /* ----- Lecteur de parchemin (lecteur.js) ----- */
-    'Lire le parchemin': 'Read the scroll',
     'Télécharger': 'Download',
-    'Lecteur de parchemin': 'Scroll reader',
-    'Chargement du parchemin…': 'Loading the scroll…',
-    "Ce parchemin ne peut pas s'afficher ici.": "This scroll can't be displayed here.",
     'Ouvrir le fichier': 'Open the file'
 
     /* Les noms des thèmes et des parchemins sont dans parchemins.js (ils s'ajoutent tout seuls à cette liste). */

@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#100f10">
-  <meta name="description" content="Les Parchemins du Grimoire de Jaja : fiches non officielles sur combat, compétences, sorts, états et équipement, basées sur le SRD 5.2, en français et en anglais.">
-  <title>Les Parchemins — Le Grimoire de Jaja</title>
+  <meta name="description" content="Le Grimoire de Jaja : guides à télécharger et pages d'aide à consulter sur le combat, les compétences, les sorts, les états et l'équipement, basés sur le SRD 5.2, en français et en anglais.">
+  <title>Les guides et pages d'aide — Le Grimoire de Jaja</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Crimson+Text:wght@400;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=30">
+  <link rel="stylesheet" href="styles.css?v=40">
 </head>
 <body>
   <div class="topline" aria-hidden="true"></div>
@@ -22,7 +22,7 @@
     <button class="menu-toggle" aria-expanded="false" aria-controls="navigation">Menu <span>☰</span></button>
     <nav id="navigation" class="navigation" aria-label="Navigation principale">
       <a href="index.html#presentation">Présentation</a>
-      <a class="active" href="telechargements.html" aria-current="page">Les Parchemins</a>
+      <a class="active" href="telechargements.html" aria-current="page">Ouvrir le grimoire</a>
       <span class="nav-soon" aria-disabled="true" title="Bientôt disponible"><i class="soon-cross" aria-hidden="true">✕</i><span>Ajouts Compatibles</span><span class="sr-only"> (bientôt disponible)</span></span>
       <!-- VIDÉOS YOUTUBE (masqué pour l'instant) : pour remettre ce lien, supprime le mot « hidden » ci-dessous
            (et lis le mode d'emploi « VIDÉOS YOUTUBE » dans index.html). -->
@@ -34,31 +34,31 @@
   <main>
     <section class="downloads-hero section-wrap">
       <p class="eyebrow">La bibliothèque de fichiers</p>
-      <h1>Les <em>Parchemins</em></h1>
-      <p class="hero-copy">Choisis un thème, clique dessus, puis clique sur un parchemin : il s'ouvre en grand, tu n'as plus qu'à faire défiler. Tu peux aussi le télécharger.</p>
+      <h1>Le <em>Grimoire</em></h1>
+      <p class="hero-copy">Télécharge un guide, ou consulte une page d'aide directement ici : clique sur un thème, puis sur une page, et il n'y a plus qu'à faire défiler.</p>
     </section>
 
     <!-- RECHERCHE : tape un nom de sort, de compétence… (voir recherche.js) -->
     <section class="search-box section-wrap">
       <p class="search-eyebrow" aria-hidden="true"><span></span><b>Consulte le grimoire</b><span></span></p>
-      <label class="sr-only" for="search">Rechercher un parchemin</label>
+      <label class="sr-only" for="search">Rechercher dans le grimoire</label>
       <div class="search-field">
         <svg class="search-icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
           <circle cx="13" cy="13" r="8.5" fill="none" stroke="#c7a96b" stroke-width="2.2"/>
           <path d="M19.5 19.5L28 28" stroke="#c7a96b" stroke-width="3.2" stroke-linecap="round"/>
           <path d="M13 7.2L14.5 11.5L18.8 13L14.5 14.5L13 18.8L11.5 14.5L7.2 13L11.5 11.5Z" fill="#f1dfb0"/>
         </svg>
-        <input id="search" type="search" placeholder="Rechercher un parchemin : un sort, une compétence, une action…" autocomplete="off" spellcheck="false">
+        <input id="search" type="search" placeholder="Rechercher dans le grimoire : un sort, une compétence, une action…" autocomplete="off" spellcheck="false">
         <button class="search-clear" type="button" aria-label="Effacer la recherche" hidden>✕</button>
       </div>
       <p class="search-status" role="status" aria-live="polite"></p>
     </section>
 
-    <!-- Les thèmes et parchemins sont construits par parchemins.js (c'est là qu'on ajoute les fichiers). -->
+    <!-- Les guides et pages d'aide sont construits par parchemins.js (c'est là qu'on ajoute les fichiers). -->
     <section class="downloads-content section-wrap">
       <div id="parchemins"></div>
 
-      <p class="download-note">Les parchemins sont mis à jour régulièrement. Une erreur ou un parchemin à suggérer ? <a href="mailto:legrimoiredeJaja@gmail.com" data-mail>Écris-moi</a>.</p>
+      <p class="download-note">Le grimoire est mis à jour régulièrement. Une erreur ou une page à suggérer ? <a href="mailto:legrimoiredeJaja@gmail.com" data-mail>Écris-moi</a>.</p>
       <p class="downloads-back"><a class="text-link" href="index.html"><span>←</span> Retour à l'accueil</a></p>
     </section>
   </main>
@@ -66,24 +66,24 @@
   <footer class="site-footer">
     <a class="footer-brand" href="index.html">✦ LE GRIMOIRE DE JAJA</a>
     <p>Aides de jeu non officielles basées sur le SRD 5.2.</p>
-    <div class="footer-links"><a href="index.html">Accueil</a><a href="telechargements.html">Les Parchemins</a><a href="sources.html">Sources et méthode</a><a href="mailto:legrimoiredeJaja@gmail.com" data-mail>Contact</a></div>
+    <div class="footer-links"><a href="index.html">Accueil</a><a href="telechargements.html">Ouvrir le grimoire</a><a href="sources.html">Sources et méthode</a><a href="mailto:legrimoiredeJaja@gmail.com" data-mail>Contact</a></div>
     <p class="footer-legal">Ce site contient du contenu du System Reference Document 5.2 (SRD 5.2) de Wizards of the Coast LLC, sous licence CC BY 4.0. Fiches non officielles, interprétation de nos recherches. Site indépendant, non affilié à Wizards of the Coast.</p>
     <p class="footer-legal">Site gratuit : les dons n'ouvrent droit à aucune contrepartie et aucune fiche n'est vendue.</p>
     <small>© <span id="year"></span> Le Grimoire de Jaja · Site indépendant</small>
   </footer>
   <script src="script.js"></script>
   <!-- Langue FR / US : fanions et traductions (voir lang.js) -->
-  <script src="lang.js?v=30"></script>
-  <!-- La liste des parchemins (c'est ici qu'on ajoute les fichiers) -->
-  <script src="parchemins.js?v=30"></script>
+  <script src="lang.js?v=40"></script>
+  <!-- La liste des guides et pages d'aide (c'est ici qu'on ajoute les fichiers) -->
+  <script src="parchemins.js?v=40"></script>
   <!-- Fenêtre « Écrire au Grimoire » -->
-  <script src="contact.js?v=30"></script>
-  <!-- Recherche dans les parchemins -->
-  <script src="recherche.js?v=30"></script>
-  <!-- Lecteur plein écran des parchemins -->
-  <script src="lecteur.js?v=30"></script>
+  <script src="contact.js?v=40"></script>
+  <!-- Recherche dans le grimoire -->
+  <script src="recherche.js?v=40"></script>
+  <!-- Lecteur plein écran (guides et pages d'aide) -->
+  <script src="lecteur.js?v=40"></script>
   <!-- SOUTIEN : bouton Ko-fi « Support me » + phrase aléatoire avec une flèche (voir soutien.js) -->
   <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
-  <script src="soutien.js?v=30"></script>
+  <script src="soutien.js?v=40"></script>
 </body>
 </html>

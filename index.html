@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Crimson+Text:wght@400;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=33">
+  <link rel="stylesheet" href="styles.css?v=40">
 </head>
 <body>
   <div class="topline" aria-hidden="true"></div>
@@ -26,7 +26,7 @@
     <button class="menu-toggle" aria-expanded="false" aria-controls="navigation">Menu <span>☰</span></button>
     <nav id="navigation" class="navigation" aria-label="Navigation principale">
       <a href="#presentation">Présentation</a>
-      <a href="telechargements.html">Les Parchemins</a>
+      <a href="telechargements.html">Ouvrir le grimoire</a>
       <!-- AJOUTS COMPATIBLES : pas encore disponible, donc non cliquable et marqué d'une croix rouge douce.
            Le jour où la page existe : remplace ce <span> par <a href="ajouts.html">Ajouts Compatibles</a> -->
       <span class="nav-soon" aria-disabled="true" title="Bientôt disponible"><i class="soon-cross" aria-hidden="true">✕</i><span>Ajouts Compatibles</span><span class="sr-only"> (bientôt disponible)</span></span>
@@ -52,12 +52,12 @@
         <p class="eyebrow">La bibliothèque de fichiers</p>
         <h2>Un problème avec les règles ?<br><em>C'est par ici.</em></h2>
         <p>Les fiches, en français et en anglais, sont classées par thème : lis-les en un clic ou télécharge-les.</p>
-        <a class="button button-outline" href="telechargements.html">Ouvrir les parchemins <span>↗</span></a>
+        <a class="button button-outline" href="telechargements.html">Ouvrir le grimoire <span>↗</span></a>
       </div>
 
       <!-- IMAGE DE JAJA : cliquable, un clic lance une musique au hasard (voir musique.js). Sa taille se règle avec .hero-logo-wrap dans styles.css. Au passage de la souris : elle change de couleur et une note de musique apparaît. -->
       <div class="hero-logo-wrap">
-        <img class="hero-logo" src="Le%20Grimoire%20de%20Jaja.png?v=33" alt="Jaja, un sourire aux lèvres, lisant un grimoire" role="button" tabindex="0" aria-pressed="false" aria-label="Lancer une musique du Grimoire de Jaja">
+        <img class="hero-logo" src="Le%20Grimoire%20de%20Jaja.png?v=40" alt="Jaja, un sourire aux lèvres, lisant un grimoire" role="button" tabindex="0" aria-pressed="false" aria-label="Lancer une musique du Grimoire de Jaja">
       </div>
       
       
@@ -73,7 +73,7 @@
         </div>
         <div class="intro-body">
           <p class="lead">Le Grimoire de Jaja, c'est un site qui regroupe des fiches d'aide, des écrans de MD et des ressources pratiques fondées sur les règles du SRD 5.2.</p>
-          <p class="intro-text">Le but : retrouver vite une règle, préparer une séance et passer moins de temps à débattre pour plus de temps à jouer. Tout est classé par thème dans Les Parchemins, en français et en anglais. Attention : tout suit uniquement le SRD 5.2, compatible avec la 5e édition (2024). Les fiches sont non officielles et gratuites.</p>
+          <p class="intro-text">Le but : retrouver vite une règle, préparer une séance et passer moins de temps à débattre pour plus de temps à jouer. Tout est classé par thème dans le grimoire, en français et en anglais. Attention : tout suit uniquement le SRD 5.2, compatible avec la 5e édition (2024). Les guides et les pages d'aide sont non officiels et gratuits.</p>
         </div>
       </div>
 
@@ -86,8 +86,8 @@
         <div class="intro-body">
           <p class="lead">SRD, ça veut dire « System Reference Document », c'est-à-dire « le document de référence des règles ».</p>
           <p class="intro-text">Imagine que l'inventeur d'un grand jeu te dise : « Voici les règles de base. Tu peux les copier, les expliquer et les partager, à une condition : dire que ça vient de moi. » Ce mode d'emploi gratuit et offert à tout le monde, c'est le SRD.</p>
-          <p class="intro-text">Ici, on utilise le SRD 5.2, la version la plus récente, compatible avec les règles de 2024. Chaque parchemin n'explique donc que des règles que l'on a le droit de partager.</p>
-          <p class="intro-text">Les parchemins sont « non officiels » : ce n'est pas l'éditeur du jeu qui les a écrits. C'est Jaja qui range les règles et les explique simplement, pour que tu les retrouves vite.</p>
+          <p class="intro-text">Ici, on utilise le SRD 5.2, la version la plus récente, compatible avec les règles de 2024. Chaque guide et chaque page d'aide n'explique donc que des règles que l'on a le droit de partager.</p>
+          <p class="intro-text">Les guides et les pages d'aide sont « non officiels » : ce n'est pas l'éditeur du jeu qui les a écrits. C'est Jaja qui range les règles et les explique simplement, pour que tu les retrouves vite.</p>
           <p class="intro-text"><a class="text-link" href="sources.html">Voir les sources et la méthode <span>→</span></a></p>
         </div>
       </div>
@@ -101,13 +101,13 @@
         <div class="intro-body">
           <p class="lead">Trouver la bonne règle en quelques clics, ou même avec un seul mot.</p>
           <ol class="howto">
-            <li>Ouvre Les Parchemins avec le menu en haut de la page.</li>
-            <li>Clique sur un thème (Combat, Compétences, Sorts…), puis sur un parchemin : il s'ouvre en grand et il n'y a plus qu'à faire défiler. La flèche ↓ sert à le télécharger.</li>
-            <li>Choisis ta langue avec les drapeaux : tout le site change, parchemins compris.</li>
+            <li>Clique sur « Ouvrir le grimoire » dans le menu en haut de la page.</li>
+            <li>Pour un guide, la flèche ↓ le télécharge. Pour une page d'aide, clique sur un thème (Combat, Compétences, Sorts…), puis sur une page : elle s'ouvre en grand et il n'y a plus qu'à faire défiler.</li>
+            <li>Choisis ta langue avec les drapeaux : tout le site change, pages comprises.</li>
           </ol>
           <div class="example-box">
             <p class="example-title">Un exemple</p>
-            <p>Ton personnage veut escalader une corde et ta table hésite sur le jet à faire ? Va dans Les Parchemins, tape « corde » dans la barre de recherche, et le parchemin « Escalader une corde » apparaît tout de suite. Clique dessus : la réponse est sous tes yeux.</p>
+            <p>Ton personnage veut escalader une corde et ta table hésite sur le jet à faire ? Ouvre le grimoire, tape « corde » dans la barre de recherche, et la page « Escalader une corde » apparaît tout de suite. Clique dessus : la réponse est sous tes yeux.</p>
             <p>Tu peux aussi chercher un autre mot : « nager », « athlétisme » ou « sorts ».</p>
           </div>
         </div>
@@ -166,7 +166,7 @@
           <p>Une erreur à signaler, une idée de fiche ou simplement un avis ? Envoie-moi un e-mail.</p>
         </div>
         <a class="contact-jaja" href="mailto:legrimoiredeJaja@gmail.com" data-mail aria-label="Clique sur Jaja pour écrire un e-mail au Grimoire de Jaja">
-          <img src="Le%20Grimoire%20de%20Jaja%202.png?v=33" alt="Jaja, un sourire aux lèvres, lisant un grimoire" loading="lazy">
+          <img src="Le%20Grimoire%20de%20Jaja%202.png?v=40" alt="Jaja, un sourire aux lèvres, lisant un grimoire" loading="lazy">
         </a>
       </div>
       <p class="contact-mail">Clique pour m'écrire à <a href="mailto:legrimoiredeJaja@gmail.com">legrimoiredeJaja@gmail.com</a></p>
@@ -177,7 +177,7 @@
   <footer class="site-footer">
     <a class="footer-brand" href="index.html">✦ LE GRIMOIRE DE JAJA</a>
     <p>Aides de jeu non officielles basées sur le SRD 5.2.</p>
-    <div class="footer-links"><a href="index.html">Accueil</a><a href="telechargements.html">Les Parchemins</a><a href="sources.html">Sources et méthode</a><a href="mailto:legrimoiredeJaja@gmail.com" data-mail>Contact</a></div>
+    <div class="footer-links"><a href="index.html">Accueil</a><a href="telechargements.html">Ouvrir le grimoire</a><a href="sources.html">Sources et méthode</a><a href="mailto:legrimoiredeJaja@gmail.com" data-mail>Contact</a></div>
     <p class="footer-legal">Ce site contient du contenu du System Reference Document 5.2 (SRD 5.2) de Wizards of the Coast LLC, sous licence CC BY 4.0. Fiches non officielles, interprétation de nos recherches. Site indépendant, non affilié à Wizards of the Coast.</p>
     <p class="footer-legal">Site gratuit : les dons n'ouvrent droit à aucune contrepartie et aucune fiche n'est vendue.</p>
     <small>© <span id="year"></span> Le Grimoire de Jaja · Site indépendant</small>
@@ -186,12 +186,12 @@
   <script src="script.js"></script>
   <!-- Musique de Jaja : liste des morceaux dans musique.js -->
   <!-- Langue FR / US : fanions et traductions (voir lang.js) -->
-  <script src="lang.js?v=33"></script>
-  <script src="musique.js?v=33"></script>
+  <script src="lang.js?v=40"></script>
+  <script src="musique.js?v=40"></script>
   <!-- Fenêtre « Écrire au Grimoire » -->
-  <script src="contact.js?v=33"></script>
+  <script src="contact.js?v=40"></script>
   <!-- SOUTIEN : bouton Ko-fi « Support me » + phrase aléatoire avec une flèche (voir soutien.js) -->
   <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
-  <script src="soutien.js?v=33"></script>
+  <script src="soutien.js?v=40"></script>
 </body>
 </html>

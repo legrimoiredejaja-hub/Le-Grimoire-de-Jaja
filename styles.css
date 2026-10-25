@@ -426,3 +426,12 @@ html.reader-open { overflow: hidden; }
 .example-box p { margin: 0 0 10px; color: var(--muted); }
 .example-box p:last-child { margin-bottom: 0; }
 .example-box .example-title { color: var(--gold); font: 11px var(--display); letter-spacing: .17em; text-transform: uppercase; }
+
+/* Le Grimoire : deux sections (guides à télécharger, pages d'aide à consulter) */
+.library-section + .library-section { margin-top: 64px; }
+.library-head { margin-bottom: 22px; }
+.library-title { margin: 0 0 8px; font-size: clamp(28px, 3.6vw, 42px); }
+.library-intro { max-width: 640px; margin: 0; color: var(--muted); }
+.guides-list { border-bottom: 1px solid var(--line); }
+/* Lecteur en lecture seule : pas de bouton de téléchargement, on ne peut pas sélectionner l'image */
+.reader-readonly .reader-pages canvas, .reader-readonly .reader-pages img { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }

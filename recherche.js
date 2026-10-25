@@ -1,7 +1,7 @@
 /* ============================================================
-   RECHERCHE dans les parchemins (page Les Parchemins).
-   On tape un mot (« athlétisme », « sort », « armure »…) : seules les
-   fiches correspondantes restent affichées et leur thème s'ouvre.
+   RECHERCHE dans le grimoire (guides et pages d'aide).
+   On tape un mot (« athlétisme », « sort », « armure »…) : seuls les
+   résultats correspondants restent affichés et leur thème s'ouvre.
    La recherche ignore les majuscules et les accents, et suit la langue
    choisie avec les fanions (FR ou US).
    ============================================================ */
@@ -11,7 +11,8 @@
   var champ = document.getElementById('search');
   var effacer = document.querySelector('.search-clear');
   var statut = document.querySelector('.search-status');
-  var themes = document.querySelectorAll('.download-category');
+  var themes = document.querySelectorAll('.download-category, .guides-list');
+  var sections = document.querySelectorAll('.library-section');
   if (!champ || !themes.length) { return; }
 
   var etatInitial = null; // Thèmes ouverts avant la recherche, pour les remettre ensuite.
@@ -39,10 +40,11 @@
       Array.prototype.forEach.call(themes, function (theme, i) {
         theme.hidden = false;
         Array.prototype.forEach.call(theme.querySelectorAll('.download-item'), function (f) { f.hidden = false; });
-        if (etatInitial) { theme.open = etatInitial[i]; }
+        if (etatInitial && 'open' in theme) { theme.open = etatInitial[i]; }
       });
       etatInitial = null;
       statut.textContent = '';
+      Array.prototype.forEach.call(sections, function (s) { s.hidden = false; });
       return;
     }
 
@@ -52,8 +54,9 @@
 
     var total = 0;
     Array.prototype.forEach.call(themes, function (theme) {
-      var titre = simplifier(theme.querySelector('.cat-title').textContent);
-      var themeCorrespond = correspond(titre, mots);
+      var titreEl = theme.querySelector('.cat-title');
+      var titre = titreEl ? simplifier(titreEl.textContent) : '';
+      var themeCorrespond = titre ? correspond(titre, mots) : false;
       var trouvees = 0;
       Array.prototype.forEach.call(theme.querySelectorAll('.download-item'), function (fiche) {
         var texte = simplifier(fiche.querySelector('.download-info').textContent);
@@ -62,14 +65,16 @@
         if (ok) { trouvees++; }
       });
       theme.hidden = trouvees === 0;
-      if (trouvees > 0) { theme.open = true; }
+      if (trouvees > 0 && 'open' in theme) { theme.open = true; }
       total += trouvees;
     });
 
+    Array.prototype.forEach.call(sections, function (s) { s.hidden = !s.querySelector('.download-item:not([hidden])'); });
+
     if (total === 0) {
-      statut.textContent = t('Aucun parchemin trouvé pour') + ' « ' + champ.value.trim() + ' »';
+      statut.textContent = t('Aucun résultat pour') + ' « ' + champ.value.trim() + ' »';
     } else {
-      statut.textContent = total + ' ' + t(total === 1 ? 'parchemin trouvé' : 'parchemins trouvés');
+      statut.textContent = total + ' ' + t(total === 1 ? 'résultat trouvé' : 'résultats trouvés');
     }
   }
 
