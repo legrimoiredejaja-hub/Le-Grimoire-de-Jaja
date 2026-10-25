@@ -38,7 +38,6 @@
     'Basé sur le SRD 5.2, compatible avec les règles de la 5e édition (2024). Fiches non officielles : les autres versions du jeu ne sont pas couvertes.': 'Based on the SRD 5.2, compatible with the 5th edition (2024) rules. Unofficial sheets: other editions of the game are not covered.',
     'La bibliothèque de fichiers': 'The file library',
     'Un problème avec les règles ?<br><em>C\'est par ici.</em>': 'A problem with the rules?<br><em>Right this way.</em>',
-    'Les fiches, en français et en anglais, sont classées par thème : lis-les en un clic ou télécharge-les.': 'The sheets, in French and English, are sorted by theme: read them in one click or download them.',
     'Jaja, un sourire aux lèvres, lisant un grimoire': 'Jaja, smiling, reading a grimoire',
     'AIDES DE JEU • SRD 5.2': 'GAME AIDS • SRD 5.2',
 
@@ -92,6 +91,10 @@
     'Des pages en très bonne qualité, à lire ici même : reviens quand tu veux, elles sont toujours à jour.': 'Very high-quality pages, to read right here: come back whenever you like, they are always up to date.',
     'Consulter la page': 'Read the page',
     'Écran du Maître du Jeu': 'Dungeon Master\'s Screen',
+
+    'Les guides et les pages d\'aide, en français et en anglais, sont classés par thème. Tape un mot pour trouver une règle tout de suite.': 'The guides and help pages, in French and English, are sorted by theme. Type a word to find a rule right away.',
+    'Rechercher une règle': 'Search for a rule',
+    'Une règle ? Tape « corde », « sorts »…': 'A rule? Type “rope”, “spells”…',
 
     /* ----- Vidéos (section masquée pour l'instant, traductions conservées) ----- */
     'À regarder': 'Worth watching',

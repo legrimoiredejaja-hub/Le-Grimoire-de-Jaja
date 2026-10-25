@@ -85,5 +85,10 @@
   effacer.addEventListener('click', function () { champ.value = ''; filtrer(); champ.focus(); });
   /* Si on change de langue pendant une recherche, on la refait avec les nouveaux textes. */
   document.addEventListener('gj-lang-change', filtrer);
+  /* Arrivée depuis la recherche rapide de l'accueil (?q=corde) : le champ est déjà rempli. */
+  try {
+    var q = new URLSearchParams(window.location.search).get('q');
+    if (q) { champ.value = q; }
+  } catch (e) { /* tant pis */ }
   filtrer();
 })();

@@ -130,6 +130,9 @@
 
   /* ============ À partir d'ici, plus rien à modifier ============ */
 
+  /* La liste est aussi mise à disposition de la recherche rapide de l'accueil. */
+  if (window.GJ) { window.GJ.catalogue = { guides: GUIDES, themes: THEMES }; }
+
   var conteneur = document.getElementById('parchemins');
   if (!conteneur) { return; }
 

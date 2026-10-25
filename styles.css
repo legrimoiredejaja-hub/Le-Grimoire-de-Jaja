@@ -435,3 +435,23 @@ html.reader-open { overflow: hidden; }
 .guides-list { border-bottom: 1px solid var(--line); }
 /* Lecteur en lecture seule : pas de bouton de téléchargement, on ne peut pas sélectionner l'image */
 .reader-readonly .reader-pages canvas, .reader-readonly .reader-pages img { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
+
+/* Recherche rapide de l'accueil (dans la carte « Un problème avec les règles ? ») */
+.hero-card .quick-search { max-width: 480px; margin: 0 auto 22px; text-align: left; }
+.hero-card .quick-search .search-field { margin: 8px 8px 0; }
+.quick-search .search-field input { font-size: 18px; padding: 15px 20px 15px 56px; }
+.quick-results { list-style: none; margin: 12px 8px 0; padding: 0; }
+.quick-results .quick-item { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 12px 0; border-top: 1px solid var(--line); }
+.quick-item .quick-text { min-width: 0; }
+.quick-item h3 { margin: 0 0 2px; font-size: 18px; }
+.hero-card .quick-item p { margin: 0; max-width: none; color: var(--muted); font-size: 14px; }
+.quick-links { display: flex; gap: 6px; flex: none; }
+.quick-links .file-link { flex: none; padding: 8px 10px; gap: 8px; font-size: 14px; }
+.quick-empty { padding: 12px 2px; color: var(--muted); font-style: italic; }
+.quick-more { margin: 10px 8px 0; text-align: right; font-size: 14px; }
+.quick-more a { color: var(--gold); }
+@media (max-width: 560px) {
+  .quick-results .quick-item { flex-direction: column; align-items: stretch; }
+  .quick-links .file-link { flex: 1; }
+  .quick-links .file-name { display: none; }
+}
