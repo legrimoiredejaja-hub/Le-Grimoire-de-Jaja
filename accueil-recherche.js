@@ -1,10 +1,10 @@
 /* ============================================================
    RECHERCHE RAPIDE de la page d'accueil.
-   On tape un mot (« corde », « sorts », « combat »…) et les règles
+   On tape un mot (« corde », « assourdi », « sorts »…) et les règles
    correspondantes apparaissent tout de suite, sans changer de page :
    un clic ouvre la fiche en grand (même lecteur que dans le grimoire).
    - La touche Entrée (ou « Voir tout ») ouvre le grimoire avec la recherche déjà remplie.
-   - Les titres viennent de la liste de parchemins.js (rien à modifier ici).
+   - Les titres et les tags (mots-clés) viennent de la liste de parchemins.js : rien à modifier ici.
    - On peut chercher en français ou en anglais, quelle que soit la langue du site.
    ============================================================ */
 (function () {
@@ -14,12 +14,12 @@
   var champ = document.getElementById('quick-q');
   var liste = document.querySelector('.quick-results');
   var plus = document.querySelector('.quick-more');
-  if (!form || !champ || !liste) { return; }
+  if (!form || !champ || !liste || !window.GJ || !window.GJ.chercher) { return; }
 
   var MAX = 5;
   var TEXTES = {
-    fr: { vide: 'Aucune aide trouvée pour', guide: 'Guide', page: "Page d'aide", bientot: 'bientôt', tout: 'Voir tous les résultats dans le grimoire ↗', lire: 'Lire' },
-    en: { vide: 'No help found for', guide: 'Guide', page: 'Help page', bientot: 'soon', tout: 'See all results in the grimoire ↗', lire: 'Read' }
+    fr: { vide: 'Aucune aide trouvée pour', guide: 'Guide', page: "Page d'aide", bientot: 'bientôt', tout: 'Voir tous les résultats dans le grimoire ↗', lire: 'Lire', trouve: 'Trouvé avec :', essaie: 'Essaie :' },
+    en: { vide: 'No help found for', guide: 'Guide', page: 'Help page', bientot: 'soon', tout: 'See all results in the grimoire ↗', lire: 'Read', trouve: 'Found with:', essaie: 'Try:' }
   };
 
   function langue() { return (window.GJ && window.GJ.lang === 'en') ? 'en' : 'fr'; }
@@ -27,25 +27,6 @@
     return String(s).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/\s+/g, ' ').trim();
   }
   function fichiers(f) { return Array.isArray(f) ? f : (f ? [f] : []); }
-
-  /* Toutes les entrées cherchables : guides et pages d'aide. */
-  function entrees() {
-    var cat = window.GJ && window.GJ.catalogue;
-    if (!cat) { return []; }
-    var tout = [];
-    cat.guides.forEach(function (g) { tout.push({ fiche: g, theme: null, guide: true }); });
-    cat.themes.forEach(function (th) {
-      th.fiches.forEach(function (f) { tout.push({ fiche: f, theme: th, guide: false }); });
-    });
-    return tout;
-  }
-
-  function texteCherchable(e) {
-    var f = e.fiche, th = e.theme;
-    var morceaux = [f.titre.fr, f.titre.en, f.desc.fr, f.desc.en];
-    if (th) { morceaux.push(th.titre.fr, th.titre.en); }
-    return ' ' + simplifier(morceaux.join(' ').replace(/[·,.:;()«»]/g, ' '));
-  }
 
   function lien(code, url, e, T) {
     var a = document.createElement('a');
@@ -65,11 +46,7 @@
     var L = langue(), T = TEXTES[L];
     liste.textContent = '';
     if (!requete) { liste.hidden = true; plus.hidden = true; return; }
-    var mots = requete.split(' ');
-    var trouvees = entrees().filter(function (e) {
-      var texte = texteCherchable(e);
-      return mots.every(function (m) { return texte.indexOf(' ' + m) !== -1; });
-    });
+    var trouvees = window.GJ.chercher(champ.value);
 
     liste.hidden = false;
     if (!trouvees.length) {
@@ -81,7 +58,8 @@
       return;
     }
 
-    trouvees.slice(0, MAX).forEach(function (e) {
+    trouvees.slice(0, MAX).forEach(function (r) {
+      var e = { fiche: r.entree.fiche, theme: r.entree.theme, guide: r.entree.guide };
       var item = document.createElement('li');
       item.className = 'download-item quick-item';
       var texte = document.createElement('div');
@@ -91,6 +69,13 @@
       var p = document.createElement('p');
       p.textContent = (e.guide ? T.guide : (e.theme.titre[L])) + ' · ' + e.fiche.desc[L];
       texte.appendChild(h); texte.appendChild(p);
+      if (r.tags.length) {
+        var m = document.createElement('p');
+        m.className = 'match-line';
+        m.appendChild(document.createTextNode(T.trouve + ' '));
+        r.tags.forEach(function (mot) { var b = document.createElement('b'); b.textContent = mot; m.appendChild(b); });
+        texte.appendChild(m);
+      }
       var liens = document.createElement('div');
       liens.className = 'quick-links';
       var fr = fichiers(e.fiche.fichiers.fr), en = fichiers(e.fiche.fichiers.en);
@@ -105,8 +90,29 @@
     plus.hidden = false;
   }
 
+  /* Recherches fréquentes sous la barre : un clic lance la recherche. */
+  var suggestions = document.createElement('div');
+  suggestions.className = 'tag-suggestions';
+  form.insertBefore(suggestions, liste);
+  function dessinerSuggestions() {
+    var L = langue();
+    suggestions.textContent = '';
+    var l = document.createElement('span');
+    l.className = 'tag-suggestions-label';
+    l.textContent = TEXTES[L].essaie;
+    suggestions.appendChild(l);
+    (window.GJ.suggestions[L] || []).forEach(function (mot) {
+      var b = document.createElement('button');
+      b.type = 'button'; b.className = 'tag-chip'; b.textContent = mot;
+      b.addEventListener('click', function () { champ.value = mot; dessiner(); champ.focus(); });
+      suggestions.appendChild(b);
+    });
+  }
+  dessinerSuggestions();
+
   champ.addEventListener('input', dessiner);
   document.addEventListener('gj-lang-change', function () {
+    dessinerSuggestions();
     var L = langue();
     var a = plus.querySelector('a'); if (a) { a.textContent = TEXTES[L].tout; }
     dessiner();

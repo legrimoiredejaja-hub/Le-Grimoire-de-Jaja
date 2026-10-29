@@ -18,6 +18,12 @@
    │ 3) Envoie le tout sur GitHub : le fichier s'ouvre en grand au clic (on n'a plus
    │    qu'à faire défiler) et (pour les guides seulement) un petit bouton ↓ permet de le télécharger.
    │
+   │ TAGS (mots-clés de recherche) : dans chaque bloc, la ligne  tags: { fr: '...', en: '...' }  liste les mots
+   │ que les visiteurs pourraient taper, séparés par des virgules. Exemple : sur la fiche des états, « assourdi »
+   │ fait retrouver « Tous les états ». Ajoute autant de mots que tu veux (synonymes, noms d'actions, d'états…).
+   │ On cherche aussi bien en français qu'en anglais, quelle que soit la langue du site.
+   │ Les « Recherches fréquentes » proposées sous la barre se règlent dans SUGGESTIONS, juste après THEMES.
+   │
    │ ÉTIQUETTE (facultatif) : ajoute  etiquette: 'SRD'  (par défaut), 'hors SRD', 'règle de table' ou 'interprétation'
    │ dans un bloc. Elle s'affiche sous le nom ; la mention SRD s'ajoute toute seule.
    │ Le hors SRD doit rester retiré ou très court, avec la mention « Fan Content ».
@@ -34,9 +40,13 @@
   var GUIDES = [
     { titre: { fr: 'Écran du Maître du Jeu', en: "Dungeon Master's Screen" },
       desc: { fr: 'Les règles essentielles, côté MD', en: 'The essential rules, DM side' },
+      tags: { fr: "écran, maître du jeu, md, mj, degré de difficulté, dd, jet de sauvegarde, règles essentielles",
+              en: "screen, dungeon master, dm, game master, difficulty class, dc, saving throw, essential rules" },
       fichiers: { fr: '', en: '' } },
     { titre: { fr: 'Guide de combat', en: 'Combat Guide' },
       desc: { fr: "Le déroulé d'un tour, de l'initiative aux réactions", en: 'The turn sequence, from initiative to reactions' },
+      tags: { fr: "combat, initiative, tour de jeu, ordre du tour, action, action bonus, réaction, déplacement, attaque, se battre",
+              en: "combat, initiative, turn, turn order, action, bonus action, reaction, movement, attack, fight" },
       fichiers: { fr: '', en: '' } }
   ];
 
@@ -51,9 +61,13 @@
       fiches: [
         { titre: { fr: 'Actions en combat', en: 'Actions in Combat' },
           desc: { fr: 'Toutes les actions disponibles', en: 'All the available actions' },
+          tags: { fr: "attaquer, foncer, se désengager, esquiver, aider, se cacher, influencer, magie, se préparer, chercher, étudier, utiliser, action, action bonus, réaction",
+                  en: "attack, dash, disengage, dodge, help, hide, influence, magic, ready, search, study, utilize, action, bonus action, reaction" },
           fichiers: { fr: '', en: '' } },
         { titre: { fr: 'Couvert et visibilité', en: 'Cover and Visibility' },
           desc: { fr: 'Abri, obscurité et attaques à distance', en: 'Cover, darkness and ranged attacks' },
+          tags: { fr: "couvert, abri, couvert partiel, couvert important, couvert total, obscurité, pénombre, lumière, vision, vue, invisible, attaque à distance, caché",
+                  en: "cover, half cover, three-quarters cover, total cover, darkness, dim light, light, vision, sight, heavily obscured, lightly obscured, ranged attack, hidden" },
           fichiers: { fr: '', en: '' } }
       ]
     },
@@ -66,12 +80,18 @@
       fiches: [
         { titre: { fr: 'Escalader une corde', en: 'Climb a rope' },
           desc: { fr: 'Athlétisme · Force', en: 'Athletics · Strength' },
+          tags: { fr: "grimper, escalade, escalader, corde, mur, falaise, athlétisme, force, vitesse",
+                  en: "climb, climbing, rope, wall, cliff, athletics, strength, speed" },
           fichiers: { fr: 'parchemins/escalader-une-corde-fr.pdf', en: 'parchemins/escalader-une-corde-us.pdf' } },
         { titre: { fr: 'Nager', en: 'Swim' },
           desc: { fr: 'Athlétisme · Force', en: 'Athletics · Strength' },
+          tags: { fr: "nage, nager, eau, noyade, se noyer, rivière, mer, courant, athlétisme, force, vitesse",
+                  en: "swim, swimming, water, drowning, river, sea, current, athletics, strength, speed" },
           fichiers: { fr: '', en: '' } },
         { titre: { fr: 'Sauter', en: 'Jump' },
           desc: { fr: 'Athlétisme · Force', en: 'Athletics · Strength' },
+          tags: { fr: "saut, sauter, bond, distance, hauteur, saut en longueur, saut en hauteur, athlétisme, force",
+                  en: "jump, leap, distance, height, long jump, high jump, athletics, strength" },
           fichiers: { fr: '', en: '' } }
       ]
     },
@@ -84,12 +104,18 @@
       fiches: [
         { titre: { fr: 'Lancer un sort', en: 'Casting a Spell' },
           desc: { fr: 'Composantes, portée, durée et concentration', en: 'Components, range, duration and concentration' },
+          tags: { fr: "sort, lancer un sort, incantation, composantes, verbale, gestuelle, matérielle, portée, durée, concentration, rituel, emplacement de sort, magie",
+                  en: "spell, cast a spell, casting, components, verbal, somatic, material, range, duration, concentration, ritual, spell slot, magic" },
           fichiers: { fr: '', en: '' } },
         { titre: { fr: 'Sorts mineurs', en: 'Cantrips' },
           desc: { fr: 'Les tours de magie par classe', en: 'The cantrips for each class' },
+          tags: { fr: "sort mineur, sorts mineurs, tour de magie, magie, lanceur de sorts",
+                  en: "cantrip, cantrips, minor spell, magic, spellcaster" },
           fichiers: { fr: '', en: '' } },
         { titre: { fr: 'Sorts par niveau', en: 'Spells by Level' },
           desc: { fr: 'Listes classées du niveau 1 au niveau 9', en: 'Lists sorted from level 1 to level 9' },
+          tags: { fr: "sorts, liste de sorts, niveau 1, niveau 2, niveau 3, niveau 4, niveau 5, niveau 6, niveau 7, niveau 8, niveau 9, emplacement, classe, magicien, clerc, druide",
+                  en: "spells, spell list, level 1, level 2, level 3, level 4, level 5, level 6, level 7, level 8, level 9, slot, class, wizard, cleric, druid" },
           fichiers: { fr: '', en: '' } }
       ]
     },
@@ -102,6 +128,8 @@
       fiches: [
         { titre: { fr: 'Tous les états', en: 'All Conditions' },
           desc: { fr: 'Effets résumés sur une seule page', en: 'Effects summarized on a single page' },
+          tags: { fr: "état, états, condition, aveuglé, aveugle, charmé, assourdi, sourd, épuisement, effrayé, peur, agrippé, neutralisé, incapable d'agir, invisible, paralysé, pétrifié, empoisonné, à terre, entravé, immobilisé, étourdi, inconscient",
+                  en: "condition, conditions, blinded, charmed, deafened, exhaustion, frightened, fear, grappled, incapacitated, invisible, paralyzed, petrified, poisoned, prone, restrained, stunned, unconscious" },
           fichiers: { fr: '', en: '' } }
       ]
     },
@@ -114,24 +142,88 @@
       fiches: [
         { titre: { fr: 'Armes', en: 'Weapons' },
           desc: { fr: 'Dégâts, propriétés et maîtrises', en: 'Damage, properties and mastery' },
+          tags: { fr: "arme, armes, épée, dague, arc, arbalète, hache, masse, lance, rapière, bâton, dégâts, maîtrise d'arme, propriétés, polyvalente, légère, finesse, portée, lancer",
+                  en: "weapon, weapons, sword, dagger, bow, crossbow, axe, mace, spear, rapier, quarterstaff, damage, weapon mastery, properties, versatile, light, finesse, range, thrown" },
           fichiers: { fr: '', en: '' } },
         { titre: { fr: 'Armures', en: 'Armor' },
           desc: { fr: "Classe d'armure, force requise et discrétion", en: 'Armor class, strength requirement and stealth' },
+          tags: { fr: "armure, armures, classe d'armure, ca, bouclier, cotte de mailles, cuir, plate, force requise, discrétion, désavantage, enfiler, retirer",
+                  en: "armor, armour, armor class, ac, shield, chain mail, leather, plate, strength requirement, stealth, disadvantage, don, doff" },
           fichiers: { fr: '', en: '' } },
         { titre: { fr: 'Outils', en: 'Tools' },
           desc: { fr: "Maîtrises d'outils et ce qu'elles permettent", en: 'Tool proficiencies and what they allow' },
+          tags: { fr: "outil, outils, maîtrise d'outils, outils de voleur, crochetage, serrure, artisan, kit, instrument, jeu, véhicule, déguisement",
+                  en: "tool, tools, tool proficiency, thieves' tools, lockpicking, lock, artisan, kit, instrument, gaming set, vehicle, disguise" },
           fichiers: { fr: '', en: '' } }
       ]
     }
   ];
 
+
+  /* Recherches fréquentes proposées sous les barres de recherche (un clic = la recherche se lance). */
+  var SUGGESTIONS = {
+    fr: ['corde', 'assourdi', 'initiative', 'abri', 'concentration', 'armure'],
+    en: ['rope', 'deafened', 'initiative', 'cover', 'concentration', 'armor']
+  };
+
+  /* ============ MOTEUR DE RECHERCHE (partagé par l'accueil et le grimoire) ============ */
+  function simpl(s) {
+    return ' ' + String(s).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[·,.:;()«»'’\-]/g, ' ').replace(/\s+/g, ' ').trim();
+  }
+  var ENTREES = [];
+  GUIDES.forEach(function (g, j) { ENTREES.push({ cle: 'g' + j, fiche: g, theme: null, guide: true }); });
+  THEMES.forEach(function (th, i) {
+    th.fiches.forEach(function (f, j) { ENTREES.push({ cle: 't' + i + '-' + j, fiche: f, theme: th, guide: false }); });
+  });
+  ENTREES.forEach(function (e) {
+    var f = e.fiche;
+    e.simpleTitre = simpl(f.titre.fr + ' ' + f.titre.en);
+    e.simpleDesc = simpl([f.desc.fr, f.desc.en, e.theme ? e.theme.titre.fr + ' ' + e.theme.titre.en : 'guide guides'].join(' '));
+    e.listeTags = [];
+    ['fr', 'en'].forEach(function (L) {
+      var brut = f.tags && f.tags[L] ? f.tags[L].split(',') : [];
+      brut.forEach(function (t) { t = t.trim(); if (t) { e.listeTags.push({ texte: t, simple: simpl(t) }); } });
+    });
+  });
+
+  /* Retourne les fiches qui correspondent, les plus pertinentes d'abord :
+     [ { entree, score, tags: [mots-clés qui ont fait trouver la fiche] } ] */
+  function chercher(requete) {
+    var q = simpl(requete).trim();
+    if (!q) { return []; }
+    var mots = q.split(' ').filter(function (m) { return m.length > 1; });
+    if (!mots.length) { mots = [q]; }
+    var res = [];
+    ENTREES.forEach(function (e, ordre) {
+      var score = 0, ok = true, trouves = [];
+      mots.forEach(function (m) {
+        var aiguille = ' ' + m;
+        if (e.simpleTitre.indexOf(aiguille) !== -1) { score += 3; return; }
+        var tags = e.listeTags.filter(function (t) { return t.simple.indexOf(aiguille) !== -1; });
+        if (tags.length) {
+          score += 2;
+          tags.slice(0, 2).forEach(function (t) { if (trouves.indexOf(t.texte) === -1) { trouves.push(t.texte); } });
+          return;
+        }
+        if (e.simpleDesc.indexOf(aiguille) !== -1) { score += 1; return; }
+        ok = false;
+      });
+      if (ok) { res.push({ entree: e, score: score, ordre: ordre, tags: trouves.slice(0, 3) }); }
+    });
+    res.sort(function (a, b) { return b.score - a.score || a.ordre - b.ordre; });
+    return res;
+  }
+
+  if (window.GJ) {
+    window.GJ.catalogue = { guides: GUIDES, themes: THEMES, entrees: ENTREES };
+    window.GJ.chercher = chercher;
+    window.GJ.suggestions = SUGGESTIONS;
+  }
+
   var ETIQUETTES = { 'SRD': 'SRD', 'hors SRD': 'Hors SRD', 'règle de table': 'Règle de table', 'interprétation': 'Interprétation' };
   var MENTION = 'SRD 5.2 (CC BY 4.0) · fiche non officielle, interprétation de nos recherches';
 
   /* ============ À partir d'ici, plus rien à modifier ============ */
-
-  /* La liste est aussi mise à disposition de la recherche rapide de l'accueil. */
-  if (window.GJ) { window.GJ.catalogue = { guides: GUIDES, themes: THEMES }; }
 
   var conteneur = document.getElementById('parchemins');
   if (!conteneur) { return; }
@@ -183,8 +275,9 @@
     return ligne;
   }
 
-  function carte(fiche, j, telechargeable) {
+  function carte(fiche, j, telechargeable, cle) {
     var item = el('div', 'download-item');
+    item.setAttribute('data-key', cle);
     var info = el('div', 'download-info');
     info.appendChild(el('span', 'download-number', deux(j + 1)));
     var texte = el('div');
@@ -214,7 +307,7 @@
   var sectionGuides = el('section', 'library-section');
   sectionGuides.appendChild(entete('', 'Lire en grand ou emporter', 'Les guides à télécharger', 'Pour les lire ici, en grand, ou les télécharger et les garder avec toi.'));
   var liste = el('div', 'guides-list');
-  GUIDES.forEach(function (g, j) { liste.appendChild(carte(g, j, true)); });
+  GUIDES.forEach(function (g, j) { liste.appendChild(carte(g, j, true, 'g' + j)); });
   sectionGuides.appendChild(liste);
   conteneur.appendChild(sectionGuides);
 
@@ -235,7 +328,7 @@
     var panneau = el('div', 'category-panel');
     if (theme.tri) { panneau.setAttribute('data-sort', ''); }
     panneau.appendChild(el('p', 'category-intro', theme.intro.fr));
-    theme.fiches.forEach(function (fiche, j) { panneau.appendChild(carte(fiche, j, false)); });
+    theme.fiches.forEach(function (fiche, j) { panneau.appendChild(carte(fiche, j, false, 't' + i + '-' + j)); });
     details.appendChild(panneau);
     sectionPages.appendChild(details);
   });

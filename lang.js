@@ -94,7 +94,11 @@
 
     'Les guides et les pages d\'aide, en français et en anglais, sont classés par thème. Tape un mot pour trouver une règle tout de suite.': 'The guides and help pages, in French and English, are sorted by theme. Type a word to find a rule right away.',
     'Rechercher une règle': 'Search for a rule',
-    'Une règle ? Tape « corde », « sorts »…': 'A rule? Type “rope”, “spells”…',
+
+    'Essaie :': 'Try:',
+    'Trouvé avec :': 'Found with:',
+    'Guide': 'Guide',
+    'Une règle ? Tape « corde », « assourdi »…': 'A rule? Type “rope”, “deafened”…',
 
     /* ----- Vidéos (section masquée pour l'instant, traductions conservées) ----- */
     'À regarder': 'Worth watching',
