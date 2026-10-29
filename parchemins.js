@@ -47,12 +47,7 @@
       desc: { fr: "Le déroulé d'un tour, de l'initiative aux réactions", en: 'The turn sequence, from initiative to reactions' },
       tags: { fr: "combat, initiative, tour de jeu, ordre du tour, action, action bonus, réaction, déplacement, attaque, se battre",
               en: "combat, initiative, turn, turn order, action, bonus action, reaction, movement, attack, fight" },
-      fichiers: { fr: 'parchemins/Guide_de_Combat%20-%20Le%20Grimoire%20de%20Jaja%20-%20FR%20SRD.pdf', en: 'parchemins/Combat_Guide%20-%20Le%20Grimoire%20de%20Jaja%20-%20US%20SRD.pdf' } },
-    { titre: { fr: 'Les règles du site', en: 'Site Rules' },
-      desc: { fr: 'Comment lire les fiches et ce que couvre le grimoire', en: 'How to read the sheets and what the grimoire covers' },
-      tags: { fr: "règles du site, règles, mode d'emploi, comment lire, grimoire, étiquettes, srd, guide",
-              en: "site rules, rules, how to use, how to read, grimoire, labels, srd, guide" },
-      fichiers: { fr: "parchemins/regles_du_site_grimoire.pdf", en: "parchemins/regles_du_site_grimoire_US.pdf" } }
+      fichiers: { fr: 'parchemins/Guide_de_Combat%20-%20Le%20Grimoire%20de%20Jaja%20-%20FR%20SRD.pdf', en: 'parchemins/Combat_Guide%20-%20Le%20Grimoire%20de%20Jaja%20-%20US%20SRD.pdf' } }
   ];
 
   /* ======================= 2. LES PAGES D'AIDE À CONSULTER ======================= */
