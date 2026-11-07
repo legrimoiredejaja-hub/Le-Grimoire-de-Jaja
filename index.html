@@ -1,14 +1,17 @@
 <!doctype html>
-<!-- 01. Déclare un document HTML moderne. -->
+
 <html lang="fr">
-<!-- 02. Contient les réglages de la page, invisibles dans le contenu. -->
+
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#100f10">
   <meta name="description" content="Le Grimoire de Jaja : fiches pratiques non officielles à lire ou à télécharger pour les joueurs et maîtres du jeu, basées sur les règles du SRD 5.2.">
   <title>Le Grimoire de Jaja — Aides de jeu SRD 5.2</title>
-  <!-- Polices décoratives pour conserver le style médiéval du site. -->
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Crimson+Text:wght@400;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
@@ -17,7 +20,6 @@
 <body>
   <div class="topline" aria-hidden="true"></div>
 
-  <!-- En-tête : nom du site et liens de navigation. -->
   <header class="site-header">
     <a class="brand" href="index.html" aria-label="Le Grimoire de Jaja, accueil">
       <span class="brand-mark" aria-hidden="true">✦</span>
@@ -26,19 +28,19 @@
     <button class="menu-toggle" aria-expanded="false" aria-controls="navigation">Menu <span>☰</span></button>
     <nav id="navigation" class="navigation" aria-label="Navigation principale">
       <a href="#presentation">Présentation</a>
-      <a href="telechargements.html">Ouvrir le grimoire</a>
+      <a class="nav-open" href="telechargements.html">Ouvrir le grimoire</a>
       <!-- AJOUTS COMPATIBLES : pas encore disponible, donc non cliquable et marqué d'une croix rouge douce.
            Le jour où la page existe : remplace ce <span> par <a href="ajouts.html">Ajouts Compatibles</a> -->
       <span class="nav-soon" aria-disabled="true" title="Bientôt disponible"><i class="soon-cross" aria-hidden="true">✕</i><span>Ajouts Compatibles</span><span class="sr-only"> (bientôt disponible)</span></span>
       <!-- VIDÉOS YOUTUBE (masqué pour l'instant) : pour remettre ce lien dans le menu, supprime simplement le mot « hidden » ci-dessous.
            Fais la même chose pour la section « VIDÉOS YOUTUBE » plus bas dans ce fichier. -->
       <a href="#videos" hidden>Vidéos YouTube</a>
-      <a class="nav-support" href="mailto:legrimoiredeJaja@gmail.com" data-mail>Me contacter</a>
+      <a class="nav-support" href="#contact" data-mail>Me contacter</a>
     </nav>
   </header>
 
   <main>
-    <!-- ACCUEIL : le titre à gauche, la bibliothèque au centre, l'image de Jaja à droite. -->
+    
     <section class="hero" id="accueil">
       <div class="hero-content">
         <p class="eyebrow"><span></span> Aides de jeu · Règles SRD 5.2 <span></span></p>
@@ -50,9 +52,9 @@
 
       <div class="hero-card">
         <p class="eyebrow">La bibliothèque de fichiers</p>
-        <h2>Un problème avec les règles ?<br><em>C'est par ici.</em></h2>
+        <h2>Un problème avec les règles&nbsp;?<br><em>C'est par ici.</em></h2>
         <p>Les guides et les pages d'aide, en français et en anglais, sont classés par thème. Tape un mot pour trouver une règle tout de suite.</p>
-        <!-- RECHERCHE RAPIDE : tape « corde », « sorts »… et les règles apparaissent ici (voir accueil-recherche.js). -->
+        
         <form class="quick-search" role="search" action="telechargements.html" method="get">
           <label class="sr-only" for="quick-q">Rechercher une règle</label>
           <div class="search-field">
@@ -66,19 +68,26 @@
           <ul class="quick-results" hidden></ul>
           <div class="quick-more" hidden><a href="telechargements.html">Voir tous les résultats dans le grimoire ↗</a></div>
         </form>
-        <a class="button button-outline" href="telechargements.html">Ouvrir le grimoire <span>↗</span></a>
+        <a class="button button-primary button-glow" href="telechargements.html">Ouvrir le grimoire <span>↗</span></a>
       </div>
 
-      <!-- IMAGE DE JAJA : cliquable, un clic lance une musique au hasard (voir musique.js). Sa taille se règle avec .hero-logo-wrap dans styles.css. Au passage de la souris : elle change de couleur et une note de musique apparaît. -->
       <div class="hero-logo-wrap">
         <img class="hero-logo" src="Le%20Grimoire%20de%20Jaja.png?v=60" alt="Jaja, un sourire aux lèvres, lisant un grimoire" role="button" tabindex="0" aria-pressed="false" aria-label="Lancer une musique du Grimoire de Jaja">
       </div>
-      
-      
+
       <div class="hero-side-note" aria-hidden="true">AIDES DE JEU • SRD 5.2</div>
     </section>
 
-    <!-- PRÉSENTATION : titre à gauche, texte à droite. -->
+    
+    <section class="promo-guides section-wrap" id="guides" aria-labelledby="promo-titre">
+      <div class="promo-inner">
+        <p class="eyebrow">Gratuit · à emporter à ta table</p>
+        <h2 id="promo-titre">L'Écran du MJ et le Guide de combat sont à télécharger ici</h2>
+        <p class="promo-text">Lis-les en grand sur le site ou télécharge-les en PDF, en français et en anglais. Pense à les garder sous la main pour ta prochaine partie !</p>
+        <div class="promo-cards"></div>
+      </div>
+    </section>
+
     <section class="intro section-wrap" id="presentation">
       <div class="intro-split">
         <div class="section-heading">
@@ -91,7 +100,6 @@
         </div>
       </div>
 
-      <!-- LE SRD EXPLIQUÉ SIMPLEMENT -->
       <div class="intro-split intro-extra" id="srd">
         <div class="section-heading">
           <p class="eyebrow">Pour tout comprendre</p>
@@ -106,7 +114,6 @@
         </div>
       </div>
 
-      <!-- COMMENT UTILISER LE SITE -->
       <div class="intro-split intro-extra" id="mode-emploi">
         <div class="section-heading">
           <p class="eyebrow">Mode d'emploi</p>
@@ -169,9 +176,6 @@
       </div>
     </section>
 
-    <!-- CONTACT : le texte à gauche, l'image « Le Grimoire de Jaja 2 » à côté, au centre de la page.
-         L'image brille au passage de la souris et sert de bouton pour écrire un message.
-         Si ton fichier image porte un autre nom, change-le dans la ligne <img> ci-dessous. -->
     <section class="contact-section section-wrap" id="contact">
       <div class="contact-row">
         <div class="contact-text">
@@ -179,36 +183,34 @@
           <h2>Restons en <em>contact</em></h2>
           <p>Une erreur à signaler, une idée de fiche ou simplement un avis ? Envoie-moi un e-mail.</p>
         </div>
-        <a class="contact-jaja" href="mailto:legrimoiredeJaja@gmail.com" data-mail aria-label="Clique sur Jaja pour écrire un e-mail au Grimoire de Jaja">
+        <a class="contact-jaja" href="#contact" data-mail aria-label="Clique sur Jaja pour écrire un e-mail au Grimoire de Jaja">
           <img src="Le%20Grimoire%20de%20Jaja%202.png?v=60" alt="Jaja, un sourire aux lèvres, lisant un grimoire" loading="lazy">
         </a>
       </div>
-      <p class="contact-mail">Clique pour m'écrire à <a href="mailto:legrimoiredeJaja@gmail.com">legrimoiredeJaja@gmail.com</a></p>
+      <p class="contact-mail">Clique pour m'écrire à <a href="#contact" data-mail data-affiche></a></p>
     </section>
   </main>
 
-  <!-- Pied de page : liens utiles et année automatique. -->
   <footer class="site-footer">
     <a class="footer-brand" href="index.html">✦ LE GRIMOIRE DE JAJA</a>
     <p>Aides de jeu non officielles basées sur le SRD 5.2.</p>
-    <div class="footer-links"><a href="index.html">Accueil</a><a href="telechargements.html">Ouvrir le grimoire</a><a href="sources.html">Sources et méthode</a><a href="mailto:legrimoiredeJaja@gmail.com" data-mail>Contact</a></div>
+    <div class="footer-links"><a href="index.html">Accueil</a><a href="telechargements.html">Ouvrir le grimoire</a><a href="sources.html">Sources et méthode</a><a href="#contact" data-mail>Contact</a></div>
     <p class="footer-legal">Ce site contient du contenu du System Reference Document 5.2 (SRD 5.2) de Wizards of the Coast LLC, sous licence CC BY 4.0. Fiches non officielles, interprétation de nos recherches. Site indépendant, non affilié à Wizards of the Coast.</p>
     <p class="footer-legal">Site gratuit : les dons n'ouvrent droit à aucune contrepartie et aucune fiche n'est vendue.</p>
     <small>© <span id="year"></span> Le Grimoire de Jaja · Site indépendant</small>
   </footer>
 
   <script src="script.js"></script>
-  <!-- Musique de Jaja : liste des morceaux dans musique.js -->
-  <!-- Langue FR / US : fanions et traductions (voir lang.js) -->
+
   <script src="lang.js?v=60"></script>
   <script src="musique.js?v=60"></script>
-  <!-- Liste des guides et pages d'aide, lecteur plein écran et recherche rapide de l'accueil -->
+  
   <script src="parchemins.js?v=60"></script>
   <script src="lecteur.js?v=60"></script>
   <script src="accueil-recherche.js?v=60"></script>
-  <!-- Fenêtre « Écrire au Grimoire » -->
+  
   <script src="contact.js?v=60"></script>
-  <!-- SOUTIEN : bouton Ko-fi « Support me » + phrase aléatoire avec une flèche (voir soutien.js) -->
+  
   <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
   <script src="soutien.js?v=60"></script>
 </body>
