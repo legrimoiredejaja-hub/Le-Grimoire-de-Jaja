@@ -178,7 +178,25 @@
             fr: "état, états, condition, aveuglé, charmé, assourdi, sourd, épuisement, effrayé, peur, agrippé, neutralisé, incapable d'agir, invisible, paralysé, pétrifié, empoisonné, à terre, entravé, étourdi, inconscient",
             en: "condition, conditions, blinded, charmed, deafened, exhaustion, frightened, grappled, incapacitated, invisible, paralyzed, petrified, poisoned, prone, restrained, stunned, unconscious"
           },
-          fichiers: { fr: "", en: "" }
+          fichiers: { fr: "parchemins/fiche_les_etats_parchemin.pdf", en: "parchemins/fiche_les_etats_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Utiliser un bouclier", en: "Using a Shield" },
+          desc: { fr: "Équiper, retirer et bénéficier d'un bouclier", en: "Don, doff and benefit from a shield" },
+          tags: {
+            fr: "bouclier, boucliers, équiper, retirer, classe d'armure, ca, armure, formation, main libre",
+            en: "shield, shields, don, doff, armor class, ac, armor, training, free hand"
+          },
+          fichiers: { fr: "parchemins/fiche_utiliser_un_bouclier_parchemin.pdf", en: "parchemins/fiche_utiliser_un_bouclier_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Attaque d'opportunité", en: "Opportunity Attack" },
+          desc: { fr: "Quand quitter la portée d'un ennemi coûte une attaque", en: "When leaving an enemy's reach costs you an attack" },
+          tags: {
+            fr: "attaque d'opportunité, opportunité, réaction, désengager, se désengager, quitter la portée, fuir, déplacement, portée",
+            en: "opportunity attack, reaction, disengage, leave reach, flee, movement, reach"
+          },
+          fichiers: { fr: "parchemins/fiche_attaque_opportunite_parchemin.pdf", en: "parchemins/fiche_attaque_opportunite_parchemin_US.pdf" }
         }
       ]
     },
