@@ -126,6 +126,87 @@
             en: "swim, swimming, water, drowning, underwater, breath, hold breath, river, sea, current"
           },
           fichiers: { fr: "parchemins/fiche_natation_sous_marine_parchemin.pdf", en: "parchemins/fiche_natation_sous_marine_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Perception", en: "Perception" },
+          desc: { fr: "Sagesse · repérer, entendre, remarquer", en: "Wisdom · spot, hear, notice" },
+          tags: {
+            fr: "perception, repérer, entendre, remarquer, guetter, sagesse, fouiller, vigilance",
+            en: "perception, spot, hear, notice, watch, wisdom, search, alertness"
+          },
+          fichiers: { fr: "parchemins/fiche_perception_parchemin.pdf", en: "parchemins/fiche_perception_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Perspicacité", en: "Insight" },
+          desc: { fr: "Sagesse · deviner les intentions", en: "Wisdom · read intentions" },
+          tags: {
+            fr: "perspicacité, mensonge, intentions, deviner, sagesse, sentir, lire quelqu'un",
+            en: "insight, lie, intentions, guess, wisdom, read someone, motive"
+          },
+          fichiers: { fr: "parchemins/fiche_perspicacite_parchemin.pdf", en: "parchemins/fiche_perspicacite_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Médecine", en: "Medicine" },
+          desc: { fr: "Sagesse · soigner et stabiliser", en: "Wisdom · treat and stabilize" },
+          tags: {
+            fr: "médecine, soigner, stabiliser, blessure, maladie, sagesse, premiers secours",
+            en: "medicine, heal, stabilize, wound, disease, wisdom, first aid"
+          },
+          fichiers: { fr: "parchemins/fiche_medecine_parchemin.pdf", en: "parchemins/fiche_medecine_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Survie", en: "Survival" },
+          desc: { fr: "Sagesse · pister, s'orienter, se nourrir", en: "Wisdom · track, navigate, forage" },
+          tags: {
+            fr: "survie, pister, traces, orienter, chasser, chercher de la nourriture, sagesse",
+            en: "survival, track, tracks, navigate, hunt, forage, wisdom"
+          },
+          fichiers: { fr: "parchemins/fiche_survie_parchemin.pdf", en: "parchemins/fiche_survie_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Nature", en: "Nature" },
+          desc: { fr: "Intelligence · savoir sur la nature", en: "Intelligence · knowledge of nature" },
+          tags: {
+            fr: "nature, plantes, animaux, météo, terrain, savoir, intelligence",
+            en: "nature, plants, animals, weather, terrain, lore, intelligence"
+          },
+          fichiers: { fr: "parchemins/fiche_nature_parchemin.pdf", en: "parchemins/fiche_nature_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Religion", en: "Religion" },
+          desc: { fr: "Intelligence · savoir sur les dieux", en: "Intelligence · knowledge of the gods" },
+          tags: {
+            fr: "religion, dieux, symboles, rites, mort-vivant, savoir, intelligence",
+            en: "religion, gods, symbols, rites, undead, lore, intelligence"
+          },
+          fichiers: { fr: "parchemins/fiche_religion_parchemin.pdf", en: "parchemins/fiche_religion_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Persuasion", en: "Persuasion" },
+          desc: { fr: "Charisme · convaincre avec tact", en: "Charisma · convince with tact" },
+          tags: {
+            fr: "persuasion, convaincre, négocier, diplomatie, charisme, marchander",
+            en: "persuasion, convince, negotiate, diplomacy, charisma, haggle"
+          },
+          fichiers: { fr: "parchemins/fiche_persuasion_parchemin.pdf", en: "parchemins/fiche_persuasion_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Tromperie", en: "Deception" },
+          desc: { fr: "Charisme · mentir et dissimuler", en: "Charisma · lie and disguise" },
+          tags: {
+            fr: "tromperie, mentir, mensonge, bluffer, déguisement, charisme, duper",
+            en: "deception, lie, bluff, disguise, charisma, trick"
+          },
+          fichiers: { fr: "parchemins/fiche_tromperie_parchemin.pdf", en: "parchemins/fiche_tromperie_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Représentation", en: "Performance" },
+          desc: { fr: "Charisme · divertir un public", en: "Charisma · entertain an audience" },
+          tags: {
+            fr: "représentation, spectacle, musique, chanter, danser, jouer, charisme, public",
+            en: "performance, show, music, sing, dance, act, charisma, audience"
+          },
+          fichiers: { fr: "parchemins/fiche_representation_parchemin.pdf", en: "parchemins/fiche_representation_parchemin_US.pdf" }
         }
       ]
     },
@@ -197,6 +278,69 @@
             en: "opportunity attack, reaction, disengage, leave reach, flee, movement, reach"
           },
           fichiers: { fr: "parchemins/fiche_attaque_opportunite_parchemin.pdf", en: "parchemins/fiche_attaque_opportunite_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Les actions en combat", en: "Actions in Combat" },
+          desc: { fr: "Toutes les actions possibles à son tour", en: "Every action available on your turn" },
+          tags: {
+            fr: "actions, action, attaquer, foncer, se désengager, esquiver, aider, se cacher, préparer, utiliser un objet, tour",
+            en: "actions, action, attack, dash, disengage, dodge, help, hide, ready, use an object, turn"
+          },
+          fichiers: { fr: "parchemins/fiche_actions_en_combat_parchemin.pdf", en: "parchemins/fiche_actions_en_combat_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Le couvert", en: "Cover" },
+          desc: { fr: "Abri partiel, important ou total", en: "Half, three-quarters and total cover" },
+          tags: {
+            fr: "couvert, abri, se cacher derrière, classe d'armure, ca, tir, obstacle",
+            en: "cover, half cover, three-quarters cover, total cover, armor class, ac, obstacle"
+          },
+          fichiers: { fr: "parchemins/fiche_couvert_parchemin.pdf", en: "parchemins/fiche_couvert_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Avantage et désavantage", en: "Advantage and Disadvantage" },
+          desc: { fr: "Quand lancer deux d20, et lequel garder", en: "When to roll two d20s, and which to keep" },
+          tags: {
+            fr: "avantage, désavantage, deux dés, d20, relancer, se compensent, jet",
+            en: "advantage, disadvantage, two dice, d20, reroll, cancel out, roll"
+          },
+          fichiers: { fr: "parchemins/fiche_avantage_desavantage_parchemin.pdf", en: "parchemins/fiche_avantage_desavantage_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Dégâts, résistances et vulnérabilités", en: "Damage, Resistance and Vulnerability" },
+          desc: { fr: "Types de dégâts et ce qui les modifie", en: "Damage types and what changes them" },
+          tags: {
+            fr: "dégâts, résistance, vulnérabilité, immunité, type de dégâts, moitié, double, critique",
+            en: "damage, resistance, vulnerability, immunity, damage type, half, double, critical"
+          },
+          fichiers: { fr: "parchemins/fiche_degats_resistances_parchemin.pdf", en: "parchemins/fiche_degats_resistances_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Les maîtrises d'armes", en: "Weapon Mastery" },
+          desc: { fr: "Entaille, Sape, Ralentissement et les autres", en: "Cleave, Sap, Slow and the others" },
+          tags: {
+            fr: "maîtrise, maîtrises d'armes, arme, entaille, sape, ralentissement, harcèlement, éraflure, coup d'appoint, déstabilisation, poussée",
+            en: "mastery, weapon mastery, weapon, cleave, sap, slow, vex, graze, nick, topple, push"
+          },
+          fichiers: { fr: "parchemins/fiche_maitrises_d_armes_parchemin.pdf", en: "parchemins/fiche_maitrises_d_armes_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Le déplacement", en: "Movement" },
+          desc: { fr: "Vitesse, terrain difficile, ramper, grimper", en: "Speed, difficult terrain, crawling, climbing" },
+          tags: {
+            fr: "déplacement, vitesse, terrain difficile, ramper, grimper, se relever, à terre, mètres, cases",
+            en: "movement, speed, difficult terrain, crawl, climb, stand up, prone, feet, squares"
+          },
+          fichiers: { fr: "parchemins/fiche_deplacement_parchemin.pdf", en: "parchemins/fiche_deplacement_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Armures et armes : propriétés", en: "Armor and Weapons: Properties" },
+          desc: { fr: "Finesse, Allonge, Lancer, Polyvalente…", en: "Finesse, Reach, Thrown, Versatile…" },
+          tags: {
+            fr: "armure, armes, propriétés, finesse, allonge, lancer, polyvalente, deux mains, légère, lourde, munition, chargement",
+            en: "armor, weapons, properties, finesse, reach, thrown, versatile, two-handed, light, heavy, ammunition, loading"
+          },
+          fichiers: { fr: "parchemins/fiche_armures_et_armes_proprietes_parchemin.pdf", en: "parchemins/fiche_armures_et_armes_proprietes_parchemin_US.pdf" }
         }
       ]
     },
@@ -232,6 +376,42 @@
             en: "hit points, hp, healing, heal, death, dying, unconscious, death saving throw, stabilize, 0 hp, damage"
           },
           fichiers: { fr: "parchemins/fiche_pv_soins_mort_parchemin.pdf", en: "parchemins/fiche_pv_soins_mort_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Lumière, vision et obscurité", en: "Light, Vision and Darkness" },
+          desc: { fr: "Lumière vive, faible lumière et noir total", en: "Bright light, dim light and darkness" },
+          tags: {
+            fr: "lumière, vision, obscurité, vision dans le noir, faible lumière, noir, torche, aveugle, lourdement obscurci",
+            en: "light, vision, darkness, darkvision, dim light, dark, torch, blind, heavily obscured"
+          },
+          fichiers: { fr: "parchemins/fiche_lumiere_et_vision_parchemin.pdf", en: "parchemins/fiche_lumiere_et_vision_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Dangers de l'environnement", en: "Environmental Hazards" },
+          desc: { fr: "Chutes, feu, froid, étouffement, famine", en: "Falling, fire, cold, suffocation, starvation" },
+          tags: {
+            fr: "danger, dangers, environnement, chute, feu, froid, chaleur, noyade, étouffement, faim, soif, poison",
+            en: "hazard, hazards, environment, fall, fire, cold, heat, drowning, suffocation, hunger, thirst, poison"
+          },
+          fichiers: { fr: "parchemins/fiche_dangers_environnement_parchemin.pdf", en: "parchemins/fiche_dangers_environnement_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Voyage et exploration", en: "Travel and Exploration" },
+          desc: { fr: "Rythme de marche et activités de voyage", en: "Travel pace and travel activities" },
+          tags: {
+            fr: "voyage, exploration, rythme, marche, distance, vitesse, éclaireur, se perdre, voyager",
+            en: "travel, exploration, pace, walking, distance, speed, scout, getting lost, journey"
+          },
+          fichiers: { fr: "parchemins/fiche_voyage_et_exploration_parchemin.pdf", en: "parchemins/fiche_voyage_et_exploration_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "La perception passive", en: "Passive Perception" },
+          desc: { fr: "Le 10 + bonus qui remarque sans chercher", en: "The 10 + bonus that notices without looking" },
+          tags: {
+            fr: "perception passive, passive, remarquer, 10 +, sans chercher, embuscade, piège",
+            en: "passive perception, passive, notice, 10 +, without looking, ambush, trap"
+          },
+          fichiers: { fr: "parchemins/fiche_perception_passive_parchemin.pdf", en: "parchemins/fiche_perception_passive_parchemin_US.pdf" }
         }
       ]
     },
@@ -303,6 +483,33 @@
             en: "bonus action, spell, spells, rule, one spell, turn, shield, healing word"
           },
           fichiers: { fr: "parchemins/fiche_sorts_action_bonus_parchemin.pdf", en: "parchemins/fiche_sorts_action_bonus_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "La concentration", en: "Concentration" },
+          desc: { fr: "Ce qui la maintient et ce qui la brise", en: "What keeps it and what breaks it" },
+          tags: {
+            fr: "concentration, se concentrer, rompre, dégâts, sauvegarde de constitution, sort",
+            en: "concentration, concentrate, break, damage, constitution save, spell"
+          },
+          fichiers: { fr: "parchemins/fiche_concentration_parchemin.pdf", en: "parchemins/fiche_concentration_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Composantes et focaliseur", en: "Components and Focus" },
+          desc: { fr: "Verbale, somatique, matérielle", en: "Verbal, somatic, material" },
+          tags: {
+            fr: "composantes, composante, verbale, somatique, matérielle, focaliseur, focaliseur arcanique, sac à composantes, main libre",
+            en: "components, component, verbal, somatic, material, focus, arcane focus, component pouch, free hand"
+          },
+          fichiers: { fr: "parchemins/fiche_composantes_et_focaliseur_parchemin.pdf", en: "parchemins/fiche_composantes_et_focaliseur_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Zones d'effet et lignes de vue", en: "Areas of Effect and Lines of Sight" },
+          desc: { fr: "Cône, cube, cylindre, ligne, sphère", en: "Cone, cube, cylinder, line, sphere" },
+          tags: {
+            fr: "zone, zones d'effet, cône, cube, cylindre, ligne, sphère, ligne de vue, origine, portée",
+            en: "area, areas of effect, cone, cube, cylinder, line, sphere, line of sight, origin, range"
+          },
+          fichiers: { fr: "parchemins/fiche_zones_d_effet_parchemin.pdf", en: "parchemins/fiche_zones_d_effet_parchemin_US.pdf" }
         }
       ]
     },
@@ -545,6 +752,146 @@
             en: "spell, spells, level 3, spirit guardians, spirits, guardians, aura, area, radiant damage, cleric, concentration, wisdom"
           },
           fichiers: { fr: "parchemins/fiche_esprits_gardiens_parchemin.pdf", en: "parchemins/fiche_esprits_gardiens_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Hâte", en: "Haste" },
+          desc: { fr: "Sort de niveau 3", en: "Level 3 spell" },
+          tags: {
+            fr: "sort, sorts, niveau 3, hâte, vitesse, action supplémentaire, concentration, allié",
+            en: "spell, spells, level 3, haste, speed, extra action, concentration, ally"
+          },
+          fichiers: { fr: "parchemins/fiche_hate_parchemin.pdf", en: "parchemins/fiche_hate_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Lenteur", en: "Slow" },
+          desc: { fr: "Sort de niveau 3", en: "Level 3 spell" },
+          tags: {
+            fr: "sort, sorts, niveau 3, lenteur, ralentir, ennemi, sagesse, concentration",
+            en: "spell, spells, level 3, slow, slowed, enemy, wisdom, concentration"
+          },
+          fichiers: { fr: "parchemins/fiche_lenteur_parchemin.pdf", en: "parchemins/fiche_lenteur_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Flou", en: "Blur" },
+          desc: { fr: "Sort de niveau 2", en: "Level 2 spell" },
+          tags: {
+            fr: "sort, sorts, niveau 2, flou, désavantage, attaque, défense, concentration",
+            en: "spell, spells, level 2, blur, disadvantage, attack, defense, concentration"
+          },
+          fichiers: { fr: "parchemins/fiche_flou_parchemin.pdf", en: "parchemins/fiche_flou_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Cécité/Surdité", en: "Blindness/Deafness" },
+          desc: { fr: "Sort de niveau 2", en: "Level 2 spell" },
+          tags: {
+            fr: "sort, sorts, niveau 2, cécité, surdité, aveuglé, assourdi, aveugle, sourd, constitution",
+            en: "spell, spells, level 2, blindness, deafness, blinded, deafened, blind, deaf, constitution"
+          },
+          fichiers: { fr: "parchemins/fiche_cecite_surdite_parchemin.pdf", en: "parchemins/fiche_cecite_surdite_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Arme spirituelle", en: "Spiritual Weapon" },
+          desc: { fr: "Sort de niveau 2", en: "Level 2 spell" },
+          tags: {
+            fr: "sort, sorts, niveau 2, arme spirituelle, arme, action bonus, clerc, force",
+            en: "spell, spells, level 2, spiritual weapon, weapon, bonus action, cleric, force"
+          },
+          fichiers: { fr: "parchemins/fiche_arme_spirituelle_parchemin.pdf", en: "parchemins/fiche_arme_spirituelle_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Détection des pensées", en: "Detect Thoughts" },
+          desc: { fr: "Sort de niveau 2", en: "Level 2 spell" },
+          tags: {
+            fr: "sort, sorts, niveau 2, détection des pensées, pensées, télépathie, lire dans l'esprit, concentration",
+            en: "spell, spells, level 2, detect thoughts, thoughts, telepathy, read minds, concentration"
+          },
+          fichiers: { fr: "parchemins/fiche_detection_des_pensees_parchemin.pdf", en: "parchemins/fiche_detection_des_pensees_parchemin_US.pdf" }
+        }
+      ]
+    },
+    {
+      titre: { fr: "Règles générales et personnage", en: "General Rules and Character" },
+      intro: { fr: "Jets, inspiration, dons, outils et objets magiques.", en: "Checks, inspiration, feats, tools and magic items." },
+      tri: false,
+      fiches: [
+        {
+          titre: { fr: "Jets d'attribut et de sauvegarde", en: "Ability Checks and Saving Throws" },
+          desc: { fr: "Le d20, le bonus et le DD", en: "The d20, the bonus and the DC" },
+          tags: {
+            fr: "jet d'attribut, test de caractéristique, jet de sauvegarde, sauvegarde, d20, dd, degré de difficulté, bonus de maîtrise",
+            en: "ability check, saving throw, save, d20, dc, difficulty class, proficiency bonus"
+          },
+          fichiers: { fr: "parchemins/fiche_jets_attribut_sauvegarde_parchemin.pdf", en: "parchemins/fiche_jets_attribut_sauvegarde_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "L'inspiration héroïque", en: "Heroic Inspiration" },
+          desc: { fr: "Gagner, garder et dépenser l'inspiration", en: "Gain, keep and spend inspiration" },
+          tags: {
+            fr: "inspiration, inspiration héroïque, relancer, récompense, humain",
+            en: "inspiration, heroic inspiration, reroll, reward, human"
+          },
+          fichiers: { fr: "parchemins/fiche_inspiration_heroique_parchemin.pdf", en: "parchemins/fiche_inspiration_heroique_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Le multiclassage", en: "Multiclassing" },
+          desc: { fr: "Prérequis, niveaux et emplacements de sort", en: "Prerequisites, levels and spell slots" },
+          tags: {
+            fr: "multiclassage, multiclasse, prérequis, niveau, plusieurs classes, emplacements de sorts",
+            en: "multiclassing, multiclass, prerequisite, level, several classes, spell slots"
+          },
+          fichiers: { fr: "parchemins/fiche_multiclassage_parchemin.pdf", en: "parchemins/fiche_multiclassage_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Les dons", en: "Feats" },
+          desc: { fr: "Dons d'origine, généraux et de style de combat", en: "Origin, general and fighting style feats" },
+          tags: {
+            fr: "don, dons, origine, général, style de combat, amélioration de caractéristique",
+            en: "feat, feats, origin, general, fighting style, ability score improvement"
+          },
+          fichiers: { fr: "parchemins/fiche_dons_parchemin.pdf", en: "parchemins/fiche_dons_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "L'utilisation d'outils", en: "Using Tools" },
+          desc: { fr: "Maîtrise d'outils et jets associés", en: "Tool proficiency and related checks" },
+          tags: {
+            fr: "outil, outils, maîtrise d'outils, kit, artisan, voleur, jet, utiliser un outil",
+            en: "tool, tools, tool proficiency, kit, artisan, thieves, check, use a tool"
+          },
+          fichiers: { fr: "parchemins/fiche_utilisation_d_outils_parchemin.pdf", en: "parchemins/fiche_utilisation_d_outils_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Harmonisation et objets magiques", en: "Attunement and Magic Items" },
+          desc: { fr: "Qui peut porter quoi, et combien", en: "Who can wear what, and how many" },
+          tags: {
+            fr: "harmonisation, s'harmoniser, objet magique, objets magiques, trois objets, repos court, raretés",
+            en: "attunement, attune, magic item, magic items, three items, short rest, rarity"
+          },
+          fichiers: { fr: "parchemins/fiche_harmonisation_objets_magiques_parchemin.pdf", en: "parchemins/fiche_harmonisation_objets_magiques_parchemin_US.pdf" }
+        }
+      ]
+    },
+    {
+      titre: { fr: "Guide du MD", en: "DM Guide" },
+      intro: { fr: "Fixer les difficultés et préparer les rencontres.", en: "Setting difficulties and preparing encounters." },
+      tri: false,
+      fiches: [
+        {
+          titre: { fr: "DD et difficulté", en: "DCs and Difficulty" },
+          desc: { fr: "Fixer le bon degré de difficulté", en: "Setting the right difficulty class" },
+          tags: {
+            fr: "dd, degré de difficulté, difficulté, facile, difficile, md, mj, fixer, jet",
+            en: "dc, difficulty class, difficulty, easy, hard, dm, gm, set, roll"
+          },
+          fichiers: { fr: "parchemins/fiche_dd_et_difficulte_parchemin.pdf", en: "parchemins/fiche_dd_et_difficulte_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Les rencontres", en: "Encounters" },
+          desc: { fr: "Préparer et équilibrer une rencontre", en: "Prepare and balance an encounter" },
+          tags: {
+            fr: "rencontre, rencontres, équilibrer, monstres, facteur de puissance, md, mj, préparer, combat",
+            en: "encounter, encounters, balance, monsters, challenge rating, cr, dm, gm, prepare, combat"
+          },
+          fichiers: { fr: "parchemins/fiche_rencontres_parchemin.pdf", en: "parchemins/fiche_rencontres_parchemin_US.pdf" }
         }
       ]
     }
