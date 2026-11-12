@@ -341,6 +341,168 @@
             en: "armor, weapons, properties, finesse, reach, thrown, versatile, two-handed, light, heavy, ammunition, loading"
           },
           fichiers: { fr: "parchemins/fiche_armures_et_armes_proprietes_parchemin.pdf", en: "parchemins/fiche_armures_et_armes_proprietes_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Se préparer", en: "Ready" },
+          desc: { fr: "Préparer une action pour plus tard", en: "Prepare an action for later" },
+          tags: {
+            fr: "se préparer, préparer, action préparée, déclencheur, réaction, attendre, sort préparé",
+            en: "ready, readied action, trigger, reaction, wait, readied spell"
+          },
+          fichiers: { fr: "parchemins/fiche_se_preparer_parchemin.pdf", en: "parchemins/fiche_se_preparer_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Les réactions", en: "Reactions" },
+          desc: { fr: "Ce qu'est une réaction et quand l'utiliser", en: "What a reaction is and when to use it" },
+          tags: {
+            fr: "réaction, réactions, déclencheur, attaque d'opportunité, une par tour, tour de table",
+            en: "reaction, reactions, trigger, opportunity attack, once per round"
+          },
+          fichiers: { fr: "parchemins/fiche_reactions_parchemin.pdf", en: "parchemins/fiche_reactions_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Monter une monture", en: "Mounted Combat" },
+          desc: { fr: "Monter, descendre et combattre à cheval", en: "Mounting, dismounting and fighting from a mount" },
+          tags: {
+            fr: "monture, cheval, monter, descendre, combat monté, chevaucher, destrier, déplacement",
+            en: "mount, horse, mounting, dismounting, mounted combat, ride, steed, movement"
+          },
+          fichiers: { fr: "parchemins/fiche_monter_une_monture_parchemin.pdf", en: "parchemins/fiche_monter_une_monture_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Mettre hors de combat", en: "Knocking Out" },
+          desc: { fr: "Assommer plutôt que tuer", en: "Knock out instead of killing" },
+          tags: {
+            fr: "assommer, hors de combat, non létal, épargner, 0 pv, inconscient, capturer, mettre à terre",
+            en: "knock out, nonlethal, spare, 0 hp, unconscious, capture, subdue"
+          },
+          fichiers: { fr: "parchemins/fiche_mettre_hors_de_combat_parchemin.pdf", en: "parchemins/fiche_mettre_hors_de_combat_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Se cacher en combat", en: "Hiding in Combat" },
+          desc: { fr: "Action Se cacher, discrétion et être repéré", en: "The Hide action, stealth and being spotted" },
+          tags: {
+            fr: "se cacher, cacher, discrétion, furtif, invisible, repérer, perception, couvert, embuscade",
+            en: "hide, hiding, stealth, unseen, spot, perception, cover, ambush"
+          },
+          fichiers: { fr: "parchemins/fiche_se_cacher_en_combat_parchemin.pdf", en: "parchemins/fiche_se_cacher_en_combat_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Attaque sournoise", en: "Sneak Attack" },
+          desc: { fr: "Quand et comment ajouter les dégâts sournois", en: "When and how to add sneak damage" },
+          tags: {
+            fr: "attaque sournoise, sournoise, roublard, avantage, allié adjacent, dégâts supplémentaires, finesse, distance",
+            en: "sneak attack, rogue, advantage, adjacent ally, extra damage, finesse, ranged"
+          },
+          fichiers: { fr: "parchemins/fiche_attaque_sournoise_parchemin.pdf", en: "parchemins/fiche_attaque_sournoise_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Embuscade", en: "Ambush" },
+          desc: { fr: "Attaquer par surprise depuis une cachette", en: "Attacking by surprise from hiding" },
+          tags: {
+            fr: "embuscade, guet-apens, surprise, caché, discrétion, attaque surprise, initiative",
+            en: "ambush, surprise, hidden, stealth, surprise attack, initiative"
+          },
+          fichiers: { fr: "parchemins/fiche_embuscade_parchemin.pdf", en: "parchemins/fiche_embuscade_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Couloirs et flanquement", en: "Corridors and Flanking" },
+          desc: { fr: "Se placer en couloir ou entourer un ennemi", en: "Positioning in corridors or surrounding an enemy" },
+          tags: {
+            fr: "couloir, flanquement, flanquer, encercler, position, placement, étroit, grille",
+            en: "corridor, flanking, flank, surround, position, placement, narrow, grid"
+          },
+          fichiers: { fr: "parchemins/fiche_couloir_et_flanquement_parchemin.pdf", en: "parchemins/fiche_couloir_et_flanquement_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Coups critiques", en: "Critical Hits" },
+          desc: { fr: "Quand un 20 naturel double les dés de dégâts", en: "When a natural 20 doubles the damage dice" },
+          tags: {
+            fr: "coup critique, critique, 20 naturel, dégâts doublés, échec critique, 1 naturel",
+            en: "critical hit, critical, natural 20, double damage, critical miss, natural 1"
+          },
+          fichiers: { fr: "parchemins/fiche_coups_critiques_parchemin.pdf", en: "parchemins/fiche_coups_critiques_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Fuir, se rendre, prisonniers", en: "Fleeing, Surrendering, Prisoners" },
+          desc: { fr: "Quitter un combat, se rendre et garder des captifs", en: "Leaving a fight, surrendering and holding captives" },
+          tags: {
+            fr: "fuir, fuite, se rendre, reddition, prisonnier, captif, moral, retraite, désengager",
+            en: "flee, fleeing, surrender, prisoner, captive, morale, retreat, disengage"
+          },
+          fichiers: { fr: "parchemins/fiche_fuir_un_combat_parchemin.pdf", en: "parchemins/fiche_fuir_un_combat_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Attaques à distance au contact", en: "Ranged Attacks in Melee" },
+          desc: { fr: "Tirer quand un ennemi est tout proche", en: "Shooting when an enemy is right next to you" },
+          tags: {
+            fr: "distance, au contact, désavantage, arc, arbalète, tirer, adjacent, proche, mêlée",
+            en: "ranged, in melee, disadvantage, bow, crossbow, shoot, adjacent, close, melee"
+          },
+          fichiers: { fr: "parchemins/fiche_attaques_distance_contact_parchemin.pdf", en: "parchemins/fiche_attaques_distance_contact_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Combat à deux armes", en: "Two-Weapon Fighting" },
+          desc: { fr: "Attaquer avec deux armes légères", en: "Attacking with two light weapons" },
+          tags: {
+            fr: "deux armes, arme légère, attaque supplémentaire, action bonus, dague, deux mains, ambidextre",
+            en: "two weapons, light weapon, extra attack, bonus action, dagger, dual wield"
+          },
+          fichiers: { fr: "parchemins/fiche_combat_deux_armes_parchemin.pdf", en: "parchemins/fiche_combat_deux_armes_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Désarmer", en: "Disarming" },
+          desc: { fr: "Faire lâcher son arme à un adversaire", en: "Making an opponent drop their weapon" },
+          tags: {
+            fr: "désarmer, désarmement, arme, lâcher, objet tenu, maîtrise, attaque spéciale",
+            en: "disarm, disarming, weapon, drop, held object, mastery, special attack"
+          },
+          fichiers: { fr: "parchemins/fiche_desarmer_parchemin.pdf", en: "parchemins/fiche_desarmer_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Pousser", en: "Shoving" },
+          desc: { fr: "Repousser ou jeter à terre une créature", en: "Pushing back or knocking a creature prone" },
+          tags: {
+            fr: "pousser, bousculer, repousser, à terre, jeter, projeter, falaise, force, athlétisme",
+            en: "shove, push, knock prone, prone, hurl, cliff, strength, athletics"
+          },
+          fichiers: { fr: "parchemins/fiche_pousser_parchemin.pdf", en: "parchemins/fiche_pousser_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Taille des créatures et espace", en: "Creature Size and Space" },
+          desc: { fr: "Combien de place prend chaque créature", en: "How much room each creature takes" },
+          tags: {
+            fr: "taille, espace, grande, petite, très grande, gigantesque, case, grille, se faufiler",
+            en: "size, space, large, small, huge, gargantuan, square, grid, squeeze"
+          },
+          fichiers: { fr: "parchemins/fiche_taille_et_espace_parchemin.pdf", en: "parchemins/fiche_taille_et_espace_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Combat sous l'eau", en: "Underwater Combat" },
+          desc: { fr: "Attaquer, lancer des sorts et se déplacer sous l'eau", en: "Attacking, casting and moving underwater" },
+          tags: {
+            fr: "sous l'eau, sous-marin, nager, noyade, désavantage, feu, flèche, aquatique",
+            en: "underwater, swim, drowning, disadvantage, fire, arrow, aquatic"
+          },
+          fichiers: { fr: "parchemins/fiche_combat_sous_leau_parchemin.pdf", en: "parchemins/fiche_combat_sous_leau_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Combat en vol", en: "Flying Combat" },
+          desc: { fr: "Voler, planer et tomber pendant un combat", en: "Flying, hovering and falling during a fight" },
+          tags: {
+            fr: "vol, voler, planer, chute, altitude, vitesse de vol, volant, tomber",
+            en: "flying, fly, hover, fall, altitude, fly speed, falling"
+          },
+          fichiers: { fr: "parchemins/fiche_combat_en_vol_parchemin.pdf", en: "parchemins/fiche_combat_en_vol_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Poursuites", en: "Chases" },
+          desc: { fr: "Mener une course-poursuite sans la figer", en: "Running a chase without bogging it down" },
+          tags: {
+            fr: "poursuite, course, fuite, rattraper, foncer, obstacle, vitesse, tour de jeu",
+            en: "chase, pursuit, run, catch up, dash, obstacle, speed, round"
+          },
+          fichiers: { fr: "parchemins/fiche_poursuites_parchemin.pdf", en: "parchemins/fiche_poursuites_parchemin_US.pdf" }
         }
       ]
     },
@@ -412,6 +574,132 @@
             en: "passive perception, passive, notice, 10 +, without looking, ambush, trap"
           },
           fichiers: { fr: "parchemins/fiche_perception_passive_parchemin.pdf", en: "parchemins/fiche_perception_passive_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Résistance à l'alcool", en: "Alcohol Tolerance" },
+          desc: { fr: "Boire, tenir le coup et ses conséquences", en: "Drinking, holding it and the consequences" },
+          tags: {
+            fr: "alcool, boire, ivresse, ivre, résistance, constitution, taverne, gueule de bois, poison",
+            en: "alcohol, drinking, drunk, tolerance, constitution, tavern, hangover, poison"
+          },
+          fichiers: { fr: "parchemins/fiche_resistance_alcool_parchemin.pdf", en: "parchemins/fiche_resistance_alcool_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Chute, étouffement, feu et froid", en: "Falling, Suffocation, Fire and Cold" },
+          desc: { fr: "Les dégâts du quotidien dangereux", en: "The everyday damaging hazards" },
+          tags: {
+            fr: "chute, tomber, étouffement, suffocation, noyade, feu, brûlure, froid, gel, hauteur",
+            en: "fall, falling, suffocation, drowning, fire, burn, cold, freezing, height"
+          },
+          fichiers: { fr: "parchemins/fiche_chute_etouffement_feu_froid_parchemin.pdf", en: "parchemins/fiche_chute_etouffement_feu_froid_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Portes, serrures et objets", en: "Doors, Locks and Objects" },
+          desc: { fr: "Forcer, crocheter et abîmer les objets", en: "Forcing, picking and damaging objects" },
+          tags: {
+            fr: "porte, serrure, crocheter, forcer, enfoncer, objet, CA d'objet, points de vie d'objet, coffre",
+            en: "door, lock, pick, force, break, object, object ac, object hit points, chest"
+          },
+          fichiers: { fr: "parchemins/fiche_portes_serrures_objets_parchemin.pdf", en: "parchemins/fiche_portes_serrures_objets_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Météo et climats extrêmes", en: "Weather and Extreme Climates" },
+          desc: { fr: "Chaleur, froid, vent, pluie et tempêtes", en: "Heat, cold, wind, rain and storms" },
+          tags: {
+            fr: "météo, climat, chaleur, froid extrême, vent, pluie, tempête, neige, brouillard",
+            en: "weather, climate, heat, extreme cold, wind, rain, storm, snow, fog"
+          },
+          fichiers: { fr: "parchemins/fiche_meteo_et_climats_extremes_parchemin.pdf", en: "parchemins/fiche_meteo_et_climats_extremes_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Tours de garde et veille", en: "Watches and Keeping Guard" },
+          desc: { fr: "Organiser la nuit et repérer les intrus", en: "Organizing the night and spotting intruders" },
+          tags: {
+            fr: "garde, veille, tour de garde, camp, nuit, repos, perception, sentinelle, bivouac",
+            en: "watch, guard, night watch, camp, night, rest, perception, sentry, bivouac"
+          },
+          fichiers: { fr: "parchemins/fiche_tours_de_garde_parchemin.pdf", en: "parchemins/fiche_tours_de_garde_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Maladies", en: "Diseases" },
+          desc: { fr: "Contracter, subir et soigner une maladie", en: "Catching, suffering and curing a disease" },
+          tags: {
+            fr: "maladie, maladies, contagion, fièvre, guérison, épidémie, infecté, soin",
+            en: "disease, diseases, contagion, fever, cure, epidemic, infected, healing"
+          },
+          fichiers: { fr: "parchemins/fiche_maladies_parchemin.pdf", en: "parchemins/fiche_maladies_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Poisons", en: "Poisons" },
+          desc: { fr: "Types de poison, sauvegardes et effets", en: "Poison types, saves and effects" },
+          tags: {
+            fr: "poison, poisons, empoisonné, toxine, venin, antidote, sauvegarde de constitution, lame empoisonnée",
+            en: "poison, poisons, poisoned, toxin, venom, antidote, constitution save, poisoned blade"
+          },
+          fichiers: { fr: "parchemins/fiche_poisons_parchemin.pdf", en: "parchemins/fiche_poisons_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Drogues et substances", en: "Drugs and Substances" },
+          desc: { fr: "Substances à effet et risques de dépendance", en: "Substances with effects and risks of dependency" },
+          tags: {
+            fr: "drogue, substance, potion, dépendance, sevrage, effet, risque, herbe, alcool",
+            en: "drug, substance, potion, dependency, withdrawal, effect, risk, herb, alcohol"
+          },
+          fichiers: { fr: "parchemins/fiche_drogues_et_substances_parchemin.pdf", en: "parchemins/fiche_drogues_et_substances_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Temps libre : entraînement", en: "Downtime: Training" },
+          desc: { fr: "Utiliser le temps libre pour apprendre ou s'entraîner", en: "Using downtime to learn or train" },
+          tags: {
+            fr: "temps libre, entraînement, entraîner, apprendre, langue, outil, jours, coût",
+            en: "downtime, training, train, learn, language, tool, days, cost"
+          },
+          fichiers: { fr: "parchemins/fiche_temps_libre_entrainement_parchemin.pdf", en: "parchemins/fiche_temps_libre_entrainement_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Temps libre : fabrication d'objets", en: "Downtime: Crafting" },
+          desc: { fr: "Fabriquer un objet pendant le temps libre", en: "Crafting an item during downtime" },
+          tags: {
+            fr: "temps libre, fabrication, fabriquer, artisanat, outils d'artisan, coût, jours, objet",
+            en: "downtime, crafting, craft, artisan, artisan's tools, cost, days, item"
+          },
+          fichiers: { fr: "parchemins/fiche_temps_libre_fabrication_parchemin.pdf", en: "parchemins/fiche_temps_libre_fabrication_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Temps libre : travail", en: "Downtime: Work" },
+          desc: { fr: "Gagner sa vie entre deux aventures", en: "Earning a living between adventures" },
+          tags: {
+            fr: "temps libre, travail, métier, gagner de l'argent, salaire, vie courante, revenu",
+            en: "downtime, work, job, earn money, wage, lifestyle, income"
+          },
+          fichiers: { fr: "parchemins/fiche_temps_libre_travail_parchemin.pdf", en: "parchemins/fiche_temps_libre_travail_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Capacité de charge", en: "Carrying Capacity" },
+          desc: { fr: "Combien on peut porter, tirer et soulever", en: "How much you can carry, drag and lift" },
+          tags: {
+            fr: "charge, capacité de charge, poids, encombrement, porter, soulever, force, 7,5 kg, tirer",
+            en: "carry, carrying capacity, weight, encumbrance, lift, drag, strength"
+          },
+          fichiers: { fr: "parchemins/fiche_capacite_de_charge_parchemin.pdf", en: "parchemins/fiche_capacite_de_charge_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Monnaies et prix", en: "Coins and Prices" },
+          desc: { fr: "Les pièces, leur valeur et les prix courants", en: "The coins, their value and common prices" },
+          tags: {
+            fr: "monnaie, pièces, or, argent, cuivre, platine, électrum, prix, coût, valeur, échange",
+            en: "coin, coins, gold, silver, copper, platinum, electrum, price, cost, value, exchange"
+          },
+          fichiers: { fr: "parchemins/fiche_monnaies_et_prix_parchemin.pdf", en: "parchemins/fiche_monnaies_et_prix_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Vivres et eau", en: "Food and Water" },
+          desc: { fr: "Combien manger et boire, et que risque-t-on", en: "How much to eat and drink, and the risks" },
+          tags: {
+            fr: "vivres, nourriture, eau, soif, faim, ration, épuisement, manger, boire, jeûne",
+            en: "food, water, thirst, hunger, ration, exhaustion, eat, drink, starvation"
+          },
+          fichiers: { fr: "parchemins/fiche_vivres_et_eau_parchemin.pdf", en: "parchemins/fiche_vivres_et_eau_parchemin_US.pdf" }
         }
       ]
     },
@@ -510,6 +798,60 @@
             en: "area, areas of effect, cone, cube, cylinder, line, sphere, line of sight, origin, range"
           },
           fichiers: { fr: "parchemins/fiche_zones_d_effet_parchemin.pdf", en: "parchemins/fiche_zones_d_effet_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Créatures invoquées et compagnons", en: "Summoned Creatures and Companions" },
+          desc: { fr: "Qui agit, quand et avec quelles actions", en: "Who acts, when and with which actions" },
+          tags: {
+            fr: "créature invoquée, invocation, compagnon, familier, monture, animal, initiative, ordre, commander",
+            en: "summoned creature, summon, companion, familiar, mount, animal, initiative, command"
+          },
+          fichiers: { fr: "parchemins/fiche_creatures_invoquees_compagnons_parchemin.pdf", en: "parchemins/fiche_creatures_invoquees_compagnons_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Forme sauvage", en: "Wild Shape" },
+          desc: { fr: "Se transformer en bête : règles et limites", en: "Turning into a beast: rules and limits" },
+          tags: {
+            fr: "forme sauvage, druide, bête, métamorphose, transformation, pv, utilisations, équipement",
+            en: "wild shape, druid, beast, transformation, hit points, uses, equipment"
+          },
+          fichiers: { fr: "parchemins/fiche_forme_sauvage_parchemin.pdf", en: "parchemins/fiche_forme_sauvage_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Les rituels", en: "Rituals" },
+          desc: { fr: "Lancer un sort en rituel, sans emplacement", en: "Casting a spell as a ritual, without a slot" },
+          tags: {
+            fr: "rituel, rituels, 10 minutes, sans emplacement, adepte des rituels, sort rituel",
+            en: "ritual, rituals, 10 minutes, no slot, ritual caster, ritual spell"
+          },
+          fichiers: { fr: "parchemins/fiche_rituels_parchemin.pdf", en: "parchemins/fiche_rituels_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Les emplacements de sort", en: "Spell Slots" },
+          desc: { fr: "Dépenser, récupérer et lancer à un niveau supérieur", en: "Spend, recover and cast at a higher level" },
+          tags: {
+            fr: "emplacement de sort, emplacements, niveau supérieur, repos, récupération, lancer, incantation",
+            en: "spell slot, spell slots, higher level, rest, recovery, cast, upcasting"
+          },
+          fichiers: { fr: "parchemins/fiche_emplacements_de_sort_parchemin.pdf", en: "parchemins/fiche_emplacements_de_sort_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Sorts à sauvegarde", en: "Saving Throw Spells" },
+          desc: { fr: "DD, jets de sauvegarde et effets en cas de réussite", en: "DC, saving throws and effects on a success" },
+          tags: {
+            fr: "sort à sauvegarde, jet de sauvegarde, DD des sorts, réussite, échec, moitié des dégâts, zone",
+            en: "saving throw spell, saving throw, spell dc, success, failure, half damage, area"
+          },
+          fichiers: { fr: "parchemins/fiche_sorts_a_sauvegarde_parchemin.pdf", en: "parchemins/fiche_sorts_a_sauvegarde_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Mourir et ressusciter", en: "Dying and Resurrection" },
+          desc: { fr: "Mort, retour à la vie et limites des sorts", en: "Death, coming back and the limits of spells" },
+          tags: {
+            fr: "mourir, mort, ressusciter, résurrection, réanimer, retour à la vie, rappel à la vie, cadavre",
+            en: "dying, death, resurrect, resurrection, revive, return to life, raise dead, corpse"
+          },
+          fichiers: { fr: "parchemins/fiche_mourir_et_ressusciter_parchemin.pdf", en: "parchemins/fiche_mourir_et_ressusciter_parchemin_US.pdf" }
         }
       ]
     },
@@ -867,6 +1209,33 @@
             en: "attunement, attune, magic item, magic items, three items, short rest, rarity"
           },
           fichiers: { fr: "parchemins/fiche_harmonisation_objets_magiques_parchemin.pdf", en: "parchemins/fiche_harmonisation_objets_magiques_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Langues et communication", en: "Languages and Communication" },
+          desc: { fr: "Parler, écrire et se faire comprendre", en: "Speaking, writing and being understood" },
+          tags: {
+            fr: "langue, langues, communiquer, traduire, écrire, alphabet, dialecte, commun, télépathie",
+            en: "language, languages, communicate, translate, write, script, dialect, common, telepathy"
+          },
+          fichiers: { fr: "parchemins/fiche_langues_et_communication_parchemin.pdf", en: "parchemins/fiche_langues_et_communication_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Propriété : maison, guilde, forteresse", en: "Property: House, Guild, Stronghold" },
+          desc: { fr: "Acheter, tenir et défendre un lieu à soi", en: "Buying, running and defending a place of your own" },
+          tags: {
+            fr: "propriété, maison, guilde, forteresse, château, domaine, acheter, bâtiment, entretien",
+            en: "property, house, guild, stronghold, castle, estate, buy, building, upkeep"
+          },
+          fichiers: { fr: "parchemins/fiche_propriete_maison_forteresse_parchemin.pdf", en: "parchemins/fiche_propriete_maison_forteresse_parchemin_US.pdf" }
+        },
+        {
+          titre: { fr: "Attitude des PNJ et jeu social", en: "NPC Attitude and Social Play" },
+          desc: { fr: "Amical, indifférent ou hostile : jouer les échanges", en: "Friendly, indifferent or hostile: running social exchanges" },
+          tags: {
+            fr: "attitude, PNJ, amical, hostile, indifférent, social, persuasion, négocier, réaction, dialogue",
+            en: "attitude, npc, friendly, hostile, indifferent, social, persuasion, negotiate, reaction, dialogue"
+          },
+          fichiers: { fr: "parchemins/fiche_attitude_pnj_jeu_social_parchemin.pdf", en: "parchemins/fiche_attitude_pnj_jeu_social_parchemin_US.pdf" }
         }
       ]
     },
